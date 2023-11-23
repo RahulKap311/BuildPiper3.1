@@ -20,6 +20,7 @@ import com.buildpiper.pages.PreRequisitesPage;
 import com.buildpiper.pages.ServiceCreationPage;
 import com.buildpiper.utils.ExcelUtility;
 import com.buildpiper.utils.FrameworkConfig;
+import com.buildpiper.utils.XlsReadData;
 import com.buildpiper.utils.testDataUtil;
 
 /**
@@ -91,7 +92,7 @@ public class ServiceCreationTestcases extends BaseTest {
 //				reader.getCellData("userPreReqData", "schedulerWorker", 2),
 //				reader.getCellData("userPreReqData", "versioningWorker", 2));
 //		new PreRequisitesPage().accountPreRequisites();
-		new PreRequisitesPage().switchUser();
+		//new PreRequisitesPage().switchUser();
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
 				reader.getCellData("MicroServiceData", "buildRadioButtonName", 2), list,
@@ -132,11 +133,13 @@ public class ServiceCreationTestcases extends BaseTest {
 	@Test(groups = { "Regression" }, priority = 0)
 //	@RetryCountIfFailed(2)
 	public void ServiceOverviewSearch() throws Exception {
-    String ServiceName="automation-682046mu117xjpt";
+	XlsReadData reader = new XlsReadData(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\BuildPiperTestData.xlsx");
+	int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "ServiceOverviewSearch");
 		new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(5);
 		new ServiceCreationPage().SearchService(
-				reader.getCellData("MicroServiceData", "applicationName", 2),ServiceName);
+				reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
 		//new EnvironmentCreationPage().SeacrhEnvironmentOverviewbyEnvironment(EnvName);
 	}	
 	

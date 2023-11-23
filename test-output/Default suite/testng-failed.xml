@@ -6,7 +6,7 @@
       <class name="com.buildpiper.testcases.ServiceCreationTestcases">
         <methods>
           <include name="setUp"/>
-          <include name="ServiceOverviewSearch"/>
+          <include name="createServ"/>
           <include name="testName"/>
           <include name="tearDown"/>
           <include name="Reportsetup"/>

@@ -196,24 +196,30 @@ public class ServiceCreationPage extends BasePage {
 	WebElement statusCheck;
 	@FindBy(xpath = "//span[@id='healthstatus']")
 	WebElement healthStatus;
-	@FindBy(xpath = "//div[@class='build-section']/span/span[contains(@class,'status-chip status-chip')]")
+	@FindBy(xpath = "//span[text()='Promoted On: ']")
+	WebElement promotedOn;	
+	@FindBy(xpath = "//div[@class='build-section']//div[contains(@class,'status-chip status-chip')]")
 	WebElement runningBuildStatus;
-	@FindBy(xpath = "(//p[text()='Artifact']/../span)[1]")
-	WebElement buildArtifact;
+	@FindBy(xpath = "//div[text()='Artifact ']/../span")
+	WebElement buildArtifact;	
 	@FindBy(xpath = "//span[text()='Commit ID: ']/../div/span")
 	WebElement commitID;
 	@FindBy(xpath = "//span[text()='Commit Msg: ']/../div/span")
 	WebElement commitMessage;
 	@FindBy(xpath = "//span[text()='Build on: ']/following-sibling::span")
 	WebElement buildOn;
-	@FindBy(xpath = "//span[text()='Build By: ']/following-sibling::span")
-	WebElement buildBy;
+	@FindBy(xpath = "//span[text()='Promoted By: ']/following-sibling::span")
+	WebElement promotedBy;
+	
+	
+	@FindBy(xpath = "(//div[@class='service-lising-detailed-card card']//span[@class='tab-label-inner'][1])[1]")
+	WebElement deployNumber;
+	@FindBy(xpath = "(//p[text()='Artifact']/../span)[1]")
+	WebElement deployArtifact;
 	@FindBy(xpath = "//span[text()='Manifest Applied']/span/span")
 	WebElement deployManifestApplied;
 	@FindBy(xpath = "//span[text()='Rollout']/span/span")
 	WebElement deployRollout;
-	@FindBy(xpath = "(//p[text()='Artifact']/../span)[2]")
-	WebElement deployArtifact;
 	@FindBy(xpath = "//span[text()='Deployed On: ']/following-sibling::span")
 	WebElement deployOn;
 	@FindBy(xpath = "//span[text()='Deployed By: ']/following-sibling::span")
@@ -222,6 +228,11 @@ public class ServiceCreationPage extends BasePage {
 	WebElement deployUptime;
 	@FindBy(xpath = "//span[text()='Restart: ']/following-sibling::span")
 	WebElement deployRestart;
+	
+
+	
+	
+	
 	@FindBy(xpath = "//button[@title='Build']")
 	WebElement build;
 	@FindBy(xpath = "//button[@title='Deploy']")
@@ -234,35 +245,51 @@ public class ServiceCreationPage extends BasePage {
 	WebElement monitoring;
 	@FindBy(xpath = "//a[text()='Build #']")
 	WebElement historyBuild;
-	@FindBy(xpath = "//p[contains(@title,'tag : ')]")
+	@FindBy(xpath = "(//p[contains(@title,'tag : ')])[1]")
 	WebElement historyTag;
-	@FindBy(xpath = "//p[contains(@title,'no_cache : ')]")
+	@FindBy(xpath = "(//p[contains(@title,'no_cache : ')])[1]")
 	WebElement historyCacheorNoCache;
-	@FindBy(xpath = "//p[contains(@title,'is_deploy : ')]")
+	@FindBy(xpath = "(//p[contains(@title,'is_deploy : ')])[1]")
 	WebElement historyIsDeploy;
-	@FindBy(xpath = "//p[contains(@title,'custom_tag : ')]")
+	@FindBy(xpath = "(//p[contains(@title,'custom_tag : ')])[1]")
 	WebElement historyCustomtag;
-	@FindBy(xpath = "//p[contains(@title,'branch_name : ')]")
+	@FindBy(xpath = "(//p[contains(@title,'branch_name : ')])[1]")
 	WebElement historyBranchname;
-	@FindBy(xpath = "//p[contains(@title,'activity_master_code : ')]")
+	@FindBy(xpath = "//input[@placeholder='Artifact']")
+	WebElement searchArtifact;
+	@FindBy(xpath = "(//p[contains(@title,'activity_master_code : ')])[1]")
 	WebElement historyActivity_MasterCode;
+	
+	@FindBy(xpath = "(//p[contains(@title,'dry_run : ')])[1]")
+	WebElement deployDryrun;
+	@FindBy(xpath = "(//p[contains(@title,'component_id : ')])[1]")
+	WebElement deployComponentid;
+	@FindBy(xpath = "(//p[contains(@title,'deploy_by_user : ')])[1]")
+	WebElement deploybyuser;
+	@FindBy(xpath = "(//p[contains(@title,'deployment_type : ')])[1]")
+	WebElement deploymenttype;
+	@FindBy(xpath = "(//p[contains(@title,'deployment_status_check : ')])[1]")
+	WebElement deploymentstatuscheck;
+	
+	
+	
 	@FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']")
 	WebElement historywindow_closeButton;
-	@FindBy(xpath = "//div[@class='history-body']/div/a")
+	@FindBy(xpath = "(//div[@class='history-body']/div/a)[1]")
 	WebElement history_buildType;
-	@FindBy(xpath = "//div[@class='history-body']/div/p[1]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/p[1])[1]")
 	WebElement history_buildStatus;
-	@FindBy(xpath = "//div[@class='history-body']/div/p[2]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/p[2])[1]")
 	WebElement history_buildDuration;
-	@FindBy(xpath = "//div[@class='history-body']/div/p[3]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/p[3])[1]")
 	WebElement history_buildDateandTime;
-	@FindBy(xpath = "//div[@class='history-body']/div/p[4]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/div/p)[1]")
 	WebElement history_buildArtifact;
-	@FindBy(xpath = "//div[@class='history-body']/div/p[5]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/p[4])[1]")
 	WebElement history_buildby;
-	@FindBy(xpath = "(//div[@class='history-body']/div/div/p[1])[1]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/div/p)[2]")
 	WebElement history_CommitID;
-	@FindBy(xpath = "(//div[@class='history-body']/div/div/p[1])[2]")
+	@FindBy(xpath = "(//div[@class='history-body']/div/div/p[1])[3]")
 	WebElement history_CommitMessage;
 	
 	
@@ -439,7 +466,7 @@ public class ServiceCreationPage extends BasePage {
 //					"Unable to validate 'Users in the selected roles will have access to the Environment & Microservices above. To learn more about user access roles and groups read the'");
 
 			///////////////// change //////////////////////////////////
-
+            ui_wait(5);
 			ui_selectValueFromDropDownByXPath(jobTemplateDropdown, "jobTemplateDropdown");
 			Select jobdropdown = new Select(jobTemplateDropdown);
 			jobdropdown.selectByVisibleText(JobTemplateValue);
@@ -1369,7 +1396,7 @@ public class ServiceCreationPage extends BasePage {
 		//Search with RandomString
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
 		ui_click(searchServiceTextBox, "clicks on environment overview tab under applicartion name");
-		ui_clearAndSetValue(searchServiceTextBox, "xjpt");
+		ui_clearAndSetValue(searchServiceTextBox, "xjpt-duplicate");
 		searchServiceTextBox.sendKeys(Keys.ENTER);
 		ui_wait(3);
 		Assert.assertEquals(serviceList.get(0).getText(), Servicename.toUpperCase());
@@ -1381,25 +1408,113 @@ public class ServiceCreationPage extends BasePage {
 		Assert.assertEquals(serviceList.get(0).getText(), Servicename.toUpperCase());
 		//Health Check
 		ui_click(statusCheck, "Click on statusCheck");
-		ui_wait(2);
+		ui_wait(5);
 		Assert.assertEquals(healthStatus.getText(), "SUCCESS");	
-		ui_wait(3);
-		/*
+		ui_wait(5);
+		
 		//Build UI Verify
-		Assert.assertEquals(runningBuildStatus.getText(), "SUCCESS");
+		Assert.assertEquals(ui_IsElementDisplay(promotedOn), true);
 		Assert.assertEquals(ui_IsElementDisplay(buildArtifact), true);
 		Assert.assertEquals(ui_IsElementDisplay(commitID), true);
 		Assert.assertEquals(ui_IsElementDisplay(commitMessage), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildBy), true);
-		*/
+		Assert.assertEquals(ui_IsElementDisplay(promotedBy), true);
+		
 		//get the Value of Build Fields
-		String BuildStatus=runningBuildStatus.getText();
 		String BuildArtifact=buildArtifact.getText();
 		String BuildcommitID=commitID.getText();
 		String BuildcommitMessage=commitMessage.getText();
-		String BuildOn=buildOn.getText();
-		String BuildBy=buildBy.getText();	
+		String BuildBy=promotedBy.getText();	
+		
+		//get the Value of Deployed Fields
+		String DeployNumber=deployNumber.getText();
+		String DeployArtifact=deployArtifact.getText();
+		String DeployManifestApplied=deployManifestApplied.getText();
+		String DeployRollout=deployRollout.getText();
+		String DeployOn=deployOn.getText();
+		String DeployBy=deployBy.getText();
+		
+		
+		//-----------------Service build deploy promote history monitoring icon 
+		Assert.assertEquals(ui_IsElementDisplay(build), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploy), true);
+		Assert.assertEquals(ui_IsElementDisplay(promote), true);
+		Assert.assertEquals(ui_IsElementDisplay(history), true);
+		Assert.assertEquals(ui_IsElementDisplay(monitoring), true);
+			
+		ui_click(history, "Click on History Icon");
+		ui_wait(4);
+		//-----Verify Build UI---
+		Assert.assertEquals(history_buildType.getText(),"Build #1");
+		Assert.assertEquals(history_buildStatus.getText(),"SUCCESS");
+		Assert.assertEquals(BuildArtifact, history_buildArtifact.getText());
+		Assert.assertEquals(BuildBy, history_buildby.getText());
+		Assert.assertEquals(BuildcommitID, history_CommitID.getText());
+		Assert.assertEquals(BuildcommitMessage, history_CommitMessage.getText());
+		
+		Assert.assertEquals(ui_IsElementDisplay(historyTag), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyCacheorNoCache), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyIsDeploy), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyCustomtag), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyBranchname), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyActivity_MasterCode), true);
+		
+		//-------------Search Artifact and Validate--
+		String buildArtifacteValue=history_buildArtifact.getText();
+		ui_click(searchArtifact, "clicks on searchArtifact");
+		ui_clearAndSetValue(searchArtifact, history_buildArtifact.getText());
+		ui_wait(2);
+		searchArtifact.sendKeys(Keys.ENTER);
+		ui_wait(3);
+		Assert.assertEquals(history_buildArtifact.getText(), buildArtifacteValue);
+		
+		//------- switch to Deploy and Validate UI
+		switchServiceType("Deploy");
+		ui_wait(4);
+		Assert.assertEquals(DeployNumber.contains(history_buildType.getText()),true);
+		Assert.assertEquals(DeployManifestApplied, history_buildStatus.getText());
+		Assert.assertEquals(DeployOn, history_buildDateandTime.getText());
+		Assert.assertEquals(DeployArtifact, history_buildArtifact.getText());
+		Assert.assertEquals(DeployBy, history_buildby.getText());
+		
+		Assert.assertEquals(ui_IsElementDisplay(historyTag), true);
+		Assert.assertEquals(ui_IsElementDisplay(deployDryrun), true);
+		Assert.assertEquals(ui_IsElementDisplay(deployComponentid), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploybyuser), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploymenttype), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploymentstatuscheck), true);
+		
+		//------- switch to Deploy and Validate UI-----
+		switchServiceType("Promote");
+		
+		ui_wait(3);
+		
+		ui_click(historywindow_closeButton, "Click on historywindow_closeButton");
+		
+				
+		//-----------------------------Swtich to QA Tab------------------------------------------------------
+		switchEnvironmentTab("QA");
+		ui_wait(4);
+		
+		//Build UI Verify
+		Assert.assertEquals(ui_IsElementDisplay(promotedOn), true);
+		Assert.assertEquals(ui_IsElementDisplay(buildArtifact), true);
+		Assert.assertEquals(ui_IsElementDisplay(commitID), true);
+		Assert.assertEquals(ui_IsElementDisplay(commitMessage), true);
+		Assert.assertEquals(ui_IsElementDisplay(promotedBy), true);
+		
+		//get the Value of Build Fields
+		String BuildArtifactQA=buildArtifact.getText();
+		String BuildcommitIDQA=commitID.getText();
+		String BuildcommitMessageQA=commitMessage.getText();
+		String BuildByQA=promotedBy.getText();	
+		
+		//get the Value of Deployed Fields
+		String DeployNumberQA=deployNumber.getText();
+		String DeployArtifactQA=deployArtifact.getText();
+		String DeployManifestAppliedQA=deployManifestApplied.getText();
+		String DeployRolloutQA=deployRollout.getText();
+		String DeployOnQA=deployOn.getText();
+		String DeployByQA=deployBy.getText();
 		
 		
 		//-----------------Service build deploy promote history monitoring icon 
@@ -1410,95 +1525,58 @@ public class ServiceCreationPage extends BasePage {
 		Assert.assertEquals(ui_IsElementDisplay(monitoring), true);
 				
 		ui_click(history, "Click on History Icon");
+		ui_wait(4);
+		
+		
+		//-----Verify Build UI---
+		Assert.assertEquals(history_buildType.getText(),"Build #1");
+		Assert.assertEquals(history_buildStatus.getText(),"SUCCESS");
+		Assert.assertEquals(BuildArtifactQA, history_buildArtifact.getText());
+		Assert.assertEquals(BuildByQA, history_buildby.getText());
+		Assert.assertEquals(BuildcommitIDQA, history_CommitID.getText());
+		Assert.assertEquals(BuildcommitMessageQA, history_CommitMessage.getText());
+		
+		Assert.assertEquals(ui_IsElementDisplay(historyTag), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyCacheorNoCache), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyIsDeploy), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyCustomtag), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyBranchname), true);
+		Assert.assertEquals(ui_IsElementDisplay(historyActivity_MasterCode), true);
+		
+		//-------------Search Artifact and Validate--
+		String buildArtifacteValue1=history_buildArtifact.getText();
+		ui_click(searchArtifact, "clicks on searchArtifact");
+		ui_clearAndSetValue(searchArtifact, history_buildArtifact.getText());
+		ui_wait(2);
+		searchArtifact.sendKeys(Keys.ENTER);
+		Assert.assertEquals(history_buildArtifact.getText(), buildArtifacteValue1);
+		
+		//------- switch to Deploy and Validate UI
 		switchServiceType("Deploy");
+		ui_wait(4);
+		Assert.assertEquals(DeployNumberQA.contains(history_buildType.getText()),true);
+		Assert.assertEquals(DeployManifestAppliedQA, history_buildStatus.getText());
+		Assert.assertEquals(DeployOnQA, history_buildDateandTime.getText());
+		Assert.assertEquals(DeployArtifactQA, history_buildArtifact.getText());
+		Assert.assertEquals(DeployByQA, history_buildby.getText());
+		
+		Assert.assertEquals(ui_IsElementDisplay(historyTag), true);
+		Assert.assertEquals(ui_IsElementDisplay(deployDryrun), true);
+		Assert.assertEquals(ui_IsElementDisplay(deployComponentid), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploybyuser), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploymenttype), true);
+		Assert.assertEquals(ui_IsElementDisplay(deploymentstatuscheck), true);
+		
+		//------- switch to Deploy and Validate UI-----
 		switchServiceType("Promote");
-		Assert.assertEquals("Build #1", history_buildType.getText());
-		Assert.assertEquals(BuildStatus, history_buildStatus.getText());
-		Assert.assertEquals(BuildOn, history_buildDateandTime.getText());
-		Assert.assertEquals(BuildArtifact, history_buildArtifact.getText());
-		Assert.assertEquals(BuildBy, history_buildby.getText());
-		Assert.assertEquals(BuildcommitID, history_CommitID.getText());
-		Assert.assertEquals(BuildcommitMessage, history_CommitMessage.getText());
 		
 		ui_wait(3);
-		System.out.println(historyTag.getText());
-		System.out.println(historyCacheorNoCache.getText());
-		System.out.println(historyIsDeploy.getText());
-		System.out.println(historyCustomtag.getText());
-		System.out.println(historyBranchname.getText());
-		System.out.println(historyActivity_MasterCode.getText());
-		
-		/*Assert.assertEquals(historyTag.getText(), "");
-		Assert.assertEquals(historyCacheorNoCache.getText(), "");
-		Assert.assertEquals(historyIsDeploy.getText(), "");
-		Assert.assertEquals(historyCustomtag.getText(), "");
-		Assert.assertEquals(historyBranchname.getText(), "");
-		Assert.assertEquals(historyActivity_MasterCode.getText(), "");*/
-		ui_click(historywindow_closeButton, "Click on historywindow_closeButton");
-		
-		
-		//Deploy UI Verify
-		Assert.assertEquals(deployManifestApplied.getText(), "SUCCESS");
-		Assert.assertEquals(deployRollout.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(deployArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployBy), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployUptime), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployRestart), true);
-		
-		//-----------------------------Swtich to QA Tab------------------------------------------------------
-		switchEnvironmentTab("QA");
-		//Build UI Verify
-		Assert.assertEquals(runningBuildStatus.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(buildArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(commitID), true);
-		Assert.assertEquals(ui_IsElementDisplay(commitMessage), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildBy), true);
-		//Deploy UI Verify
-		Assert.assertEquals(deployManifestApplied.getText(), "SUCCESS");
-		Assert.assertEquals(deployRollout.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(deployArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployBy), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployUptime), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployRestart), true);
-		
-		//-----------------------------Swtich to UAT Tab------------------------------------------------------
-		switchEnvironmentTab("UAT");
-		//Build UI Verify
-		Assert.assertEquals(runningBuildStatus.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(buildArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(commitID), true);
-		Assert.assertEquals(ui_IsElementDisplay(commitMessage), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildBy), true);
-		//Deploy UI Verify
-		Assert.assertEquals(deployManifestApplied.getText(), "SUCCESS");
-		Assert.assertEquals(deployRollout.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(deployArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployBy), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployUptime), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployRestart), true);
+
 		
 		//-----------------------------Swtich to PROD Tab------------------------------------------------------
 		switchEnvironmentTab("PROD");
 		//Build UI Verify
-		Assert.assertEquals(runningBuildStatus.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(buildArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(commitID), true);
-		Assert.assertEquals(ui_IsElementDisplay(commitMessage), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(buildBy), true);
 		//Deploy UI Verify
-		Assert.assertEquals(deployManifestApplied.getText(), "SUCCESS");
-		Assert.assertEquals(deployRollout.getText(), "SUCCESS");
-		Assert.assertEquals(ui_IsElementDisplay(deployArtifact), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployOn), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployBy), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployUptime), true);
-		Assert.assertEquals(ui_IsElementDisplay(deployRestart), true);
 		
 		}
 		return this;

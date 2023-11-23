@@ -13,6 +13,7 @@ import com.buildpiper.pages.LoginPage;
 import com.buildpiper.pages.ServiceCreationPage;
 import com.buildpiper.utils.Configuration;
 import com.buildpiper.utils.FrameworkConfig;
+import com.buildpiper.utils.RandomStrings;
 import com.buildpiper.utils.XlsReadData;
 
 /**
@@ -34,7 +35,7 @@ public class BuildPiperTestcasesExecutionComprehensiveTests extends BaseTest {
 	@Test(groups = { "Regression" }, priority = 0)
 	@RetryCountIfFailed(2)
 	public void CreateBasicPipeLine() {
-
+		String pipelineName = "BasicPipeline" + RandomStrings.generateRandomString(9);
 		ArrayList<String> userRoleList = new ArrayList<String>();
 		userRoleList.add("DEV");
 		userRoleList.add("QA");
@@ -48,7 +49,7 @@ public class BuildPiperTestcasesExecutionComprehensiveTests extends BaseTest {
 				reader.getCellData("Pipeline", "jobType", 2), reader.getCellData("Pipeline", "fromEnv", 2),
 				reader.getCellData("Pipeline", "jobType2", 2), reader.getCellData("Pipeline", "toEnv", 2),
 				reader.getCellData("Pipeline", "ArtifactName", 2), reader.getCellData("Pipeline", "jobType3", 2),
-				reader.getCellData("Pipeline", "ArtifactName2", 2), reader.getCellData("Pipeline", "prodEnv", 2));
+				reader.getCellData("Pipeline", "ArtifactName2", 2), reader.getCellData("Pipeline", "prodEnv", 2),pipelineName);
 
 	}
 	

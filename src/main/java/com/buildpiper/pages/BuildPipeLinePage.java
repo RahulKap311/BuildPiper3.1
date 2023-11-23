@@ -1,7 +1,10 @@
 package com.buildpiper.pages;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.json.simple.JSONObject;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +16,10 @@ import com.buildpiper.utils.Configuration;
 import com.buildpiper.utils.Pause;
 import com.buildpiper.utils.RandomStrings;
 
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.specification.RequestSpecification;
 import junit.framework.Assert;
 
 
@@ -24,6 +31,7 @@ import junit.framework.Assert;
 public class BuildPipeLinePage extends BasePage {
 
 	String pipelineName = "BasicPipeline" + RandomStrings.generateRandomString(9);
+	String schedulepipelineName = "SchedulePipeline" + RandomStrings.generateRandomString(9);
 	String StageName1 = "dev" + RandomStrings.generateRandomString(7);
 	String StageName2 = "qa" + RandomStrings.generateRandomString(7) + "fromdev";
 	String StageName3 = "prod" + RandomStrings.generateRandomString(7) + "fromqa";
@@ -228,7 +236,7 @@ public class BuildPipeLinePage extends BasePage {
 	@FindBy(xpath = "//p[text()='Services for the pipeline to run on']/..//div//span")
 	WebElement servicesToRunList;
 	
-	public BuildPipeLinePage createBasicPipeline(String appName,String versionType,String retentionCount,String triggerType,ArrayList<String>pipelineUser,String jobType,String fromEnv,String jobType2,String toEnv,String ArtifactName,String jobType3,String ArtifactName2,String prodEnv) {
+	public BuildPipeLinePage createBasicPipeline(String appName,String versionType,String retentionCount,String triggerType,ArrayList<String>pipelineUser,String jobType,String fromEnv,String jobType2,String toEnv,String ArtifactName,String jobType3,String ArtifactName2,String prodEnv, String pipelineName) {
 		
 //		ui_IsElementDisplay(ui_waitForElementToDisplay(userMenuAppBar, Pause.MEDIUM));
 //		ui_click(userMenuAppBar, "userMenuAppBar");		
@@ -428,13 +436,18 @@ public class BuildPipeLinePage extends BasePage {
 		ui_IsElementDisplay(ui_waitForElementToDisplay(basicInfoText, Pause.MEDIUM));
         Assert.assertEquals(basicInfoText.getText().trim(), "Basic Info");
         ui_click(closeEditTile, "clicks on close pipeline info");
-		ui_wait(5);
+        ui_wait(6);
+		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+        ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+		ui_clearAndSetValue(searchPipeLine, pipelineName);
+		searchPipeLine.sendKeys(Keys.ENTER);
+		ui_wait(6);		
 		ui_IsElementDisplay(ui_waitForElementToDisplay(executePipeLineButton, Pause.MEDIUM));
 		ui_click(executePipeLineButton, "pipeline execution Start");
-		ui_wait(2);
-//		ui_click(executePipeLineButton, "pipeline execution Start");
+		ui_click(executePipeLineButton, "pipeline execution Start");
 //		ui_wait(2);
 //		ui_click(executePipeLineButton, "pipeline execution Start");
+		ui_wait(8);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineHyperLink, Pause.MEDIUM));
 		ui_click(pipelineHyperLink, "clicks pipeline hyperlink");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(viewLogsLink, Pause.MEDIUM));
@@ -717,11 +730,15 @@ public BuildPipeLinePage createAPIJob(String jobType,String Method,String URL,St
 	return this;
 }
 
-public BuildPipeLinePage createRollbackJob(String jobType,String RollbackVersion,Boolean ConditionRuleSelectorNot,Boolean TerminatePipelineOnSuccess,Boolean SkipJob,Boolean SuccessUponSkip) {
+public BuildPipeLinePage createRollbackJob(String jobType,String fromEnv,String RollbackVersion,Boolean ConditionRuleSelectorNot,Boolean TerminatePipelineOnSuccess,Boolean SkipJob,Boolean SuccessUponSkip) {
 	
 	ui_IsElementDisplay(ui_waitForElementToDisplay(selectJobType, Pause.MEDIUM));
 	Select dropdown = new Select(selectJobType);
 	dropdown.selectByVisibleText(jobType);
+	Select dropdown2 = new Select(selectFromEnv);
+	dropdown2.selectByVisibleText(fromEnv);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent, Pause.MEDIUM));
+	ui_click(serviceComponent, "selects service component under the env");
 	Select dropdown1 = new Select(rollbackVersionDropdown);
 	dropdown1.selectByVisibleText(RollbackVersion);
 	if(ConditionRuleSelectorNot.equals(true))
@@ -750,6 +767,189 @@ public BuildPipeLinePage createRollbackJob(String jobType,String RollbackVersion
 	ui_ActionMoveAndClick(addStageBtn, "clicks add stage btn");
 	ui_wait(3);
 	return this;
+}
+
+public BuildPipeLinePage createConfigMapJob(String JobType,String fromEnv,Boolean ConditionRuleSelectorNot,Boolean TerminatePipelineOnSuccess,Boolean NoCache,Boolean SkipJob,Boolean SuccessUponSkip,Boolean DuplicateImage ) {
+	 
+	ui_IsElementDisplay(ui_waitForElementToDisplay(selectJobType, Pause.MEDIUM));
+	Select dropdown1 = new Select(selectJobType);
+	dropdown1.selectByVisibleText(JobType);
+	Select dropdown2 = new Select(selectFromEnv);
+	dropdown2.selectByVisibleText(fromEnv);
+	System.out.println("------"+fromEnv);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent, Pause.MEDIUM));
+	ui_click(serviceComponent, "selects service component under the env");
+	
+	if(ConditionRuleSelectorNot.equals(true))
+	{
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	Select conditionaldropdown1 = new Select(conditionkeyDropdown);
+	conditionaldropdown1.selectByIndex(2);
+	}
+	else {
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	    //Verify no Condition Rule seen 
+	Assert.assertTrue(conditionkeyDropdownOption.size()==1);
+	   // ui_click(conditionkeySaveButton, "conditionkeySaveButton");
+	}
+	if(TerminatePipelineOnSuccess.equals(true)) {
+		ui_click(terminatePipelineOnSuccess, "terminatePipelineOnSuccess");	
+	}
+	if(NoCache.equals(true)) {
+		ui_click(noCache, "noCache");	
+	}
+	if(SkipJob.equals(true)) {
+		ui_click(skipJob, "skipJob");	
+	}
+	if(SuccessUponSkip.equals(true)) {
+		ui_click(successUponSkip, "successUponSkip");	
+	}
+	if(DuplicateImage.equals(true)) {
+		ui_click(duplicateImage, "duplicateImage");	
+	}    
+	ui_click(addStageBtn, "clicks add stage btn");			
+		return this;
+	}
+
+public BuildPipeLinePage createDeploySecretsJob(String JobType,String fromEnv,Boolean ConditionRuleSelectorNot,Boolean TerminatePipelineOnSuccess,Boolean NoCache,Boolean SkipJob,Boolean SuccessUponSkip,Boolean DuplicateImage ) {
+	 	
+	ui_IsElementDisplay(ui_waitForElementToDisplay(selectJobType, Pause.MEDIUM));
+	Select dropdown1 = new Select(selectJobType);
+	dropdown1.selectByVisibleText(JobType);
+	Select dropdown2 = new Select(selectFromEnv);
+	dropdown2.selectByVisibleText(fromEnv);
+	System.out.println("------"+fromEnv);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent, Pause.MEDIUM));
+	ui_click(serviceComponent, "selects service component under the env");
+	
+	if(ConditionRuleSelectorNot.equals(true))
+	{
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	Select conditionaldropdown1 = new Select(conditionkeyDropdown);
+	conditionaldropdown1.selectByIndex(2);
+	}
+	else {
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	    //Verify no Condition Rule seen 
+	Assert.assertTrue(conditionkeyDropdownOption.size()==1);
+	   // ui_click(conditionkeySaveButton, "conditionkeySaveButton");
+	}
+	if(TerminatePipelineOnSuccess.equals(true)) {
+		ui_click(terminatePipelineOnSuccess, "terminatePipelineOnSuccess");	
+	}
+	if(NoCache.equals(true)) {
+		ui_click(noCache, "noCache");	
+	}
+	if(SkipJob.equals(true)) {
+		ui_click(skipJob, "skipJob");	
+	}
+	if(SuccessUponSkip.equals(true)) {
+		ui_click(successUponSkip, "successUponSkip");	
+	}
+	if(DuplicateImage.equals(true)) {
+		ui_click(duplicateImage, "duplicateImage");	
+	}    
+	ui_click(addStageBtn, "clicks add stage btn");			
+		
+	return this;
+	}
+
+public BuildPipeLinePage createInegratedTestingJob(String JobType,String fromEnv,Boolean ConditionRuleSelectorNot,Boolean TerminatePipelineOnSuccess,Boolean SkipJob,Boolean SuccessUponSkip) {
+	 
+	ui_IsElementDisplay(ui_waitForElementToDisplay(selectJobType, Pause.MEDIUM));
+	Select dropdown1 = new Select(selectJobType);
+	dropdown1.selectByVisibleText(JobType);
+	Select dropdown2 = new Select(selectFromEnv);
+	dropdown2.selectByVisibleText(fromEnv);
+	System.out.println("------"+fromEnv);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent, Pause.MEDIUM));
+	ui_click(serviceComponent, "selects service component under the env");
+	
+	if(ConditionRuleSelectorNot.equals(true))
+	{
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	Select conditionaldropdown1 = new Select(conditionkeyDropdown);
+	conditionaldropdown1.selectByIndex(2);
+	}
+	else {
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	    //Verify no Condition Rule seen 
+	Assert.assertTrue(conditionkeyDropdownOption.size()==1);
+	   // ui_click(conditionkeySaveButton, "conditionkeySaveButton");
+	}
+	if(TerminatePipelineOnSuccess.equals(true)) {
+		ui_click(terminatePipelineOnSuccess, "terminatePipelineOnSuccess");	
+	}
+	if(SkipJob.equals(true)) {
+		ui_click(skipJob, "skipJob");	
+	}
+	if(SuccessUponSkip.equals(true)) {
+		ui_click(successUponSkip, "successUponSkip");	
+	} 
+	ui_click(addStageBtn, "clicks add stage btn");			
+		return this;
+	}
+@FindBy(xpath = "//input[@name='suspend_pipeline']/following-sibling::span[2]")
+WebElement suspendpipeline;
+@FindBy(xpath = "//input[@name='pipelines']/..")
+List<WebElement> pipelineList;
+@FindBy(xpath = "//button[text()='Run With Parameters']")
+WebElement runwithparameters;
+@FindBy(xpath = "//input[@name='components']/..")
+List<WebElement> runwithparameter_servicelist;
+@FindBy(xpath = "//button[text()='Run Pipeline']")
+WebElement runpipeline;
+public BuildPipeLinePage createtriggerPipelineJob(String JobType,Boolean ConditionRuleSelectorNot,Boolean TerminatePipelineOnSuccess,Boolean Suspendpipeline,Boolean SkipJob,Boolean SuccessUponSkip) {
+ 	
+	ui_IsElementDisplay(ui_waitForElementToDisplay(selectJobType, Pause.MEDIUM));
+	Select dropdown1 = new Select(selectJobType);
+	dropdown1.selectByVisibleText(JobType);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineList.get(1), Pause.MEDIUM));
+	ui_click(pipelineList.get(1), "selects service component under the env");
+	
+	if(ConditionRuleSelectorNot.equals(true))
+	{
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	Select conditionaldropdown1 = new Select(conditionkeyDropdown);
+	conditionaldropdown1.selectByIndex(2);
+	}
+	else {
+	ui_click(conditionalRule, "conditionalRule");
+	ui_click(addConditionButton, "addConditionButton");
+	    //Verify no Condition Rule seen 
+	Assert.assertTrue(conditionkeyDropdownOption.size()==1);
+	   // ui_click(conditionkeySaveButton, "conditionkeySaveButton");
+	}
+	if(TerminatePipelineOnSuccess.equals(true)) {
+		ui_click(terminatePipelineOnSuccess, "terminatePipelineOnSuccess");	
+	}
+	if(Suspendpipeline.equals(true)) {
+		ui_click(suspendpipeline, "suspendpipeline");	
+	}
+	if(SkipJob.equals(true)) {
+		ui_click(skipJob, "skipJob");	
+	}
+	if(SuccessUponSkip.equals(true)) {
+		ui_click(successUponSkip, "successUponSkip");	
+	}   
+	ui_click(addStageBtn, "clicks add stage btn");			
+		
+	return this;
+	}
+
+public BuildPipeLinePage runwithParameter() {
+ui_click(runwithparameters, "Click on runwithparameters");
+ui_click(runwithparameter_servicelist.get(1), "Click on runwithparameters ServiceList");
+ui_click(runpipeline, "Click on runpipeline");
+	
+return this;
 }
 
 
@@ -830,6 +1030,7 @@ public BuildPipeLinePage createJiraJob(String JobType,String Jiraoperation,Strin
 	}	
 	ui_ActionMoveAndClick(addStageBtn, "clicks add stage btn");
 	ui_ActionClick(addStageBtn, "clicks add stage btn");
+	ui_wait(4);
 	
 	return this;
 }	
@@ -854,7 +1055,7 @@ public BuildPipeLinePage createSchedulePipeline(String appName,String versionTyp
 		if(projectSelection) {
 		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
 		ui_click(continueBtn, "clicks on add pipeline button");
-		ui_setvalue(addNameToNewPipeline, "Gives unique name to pipeline", pipelineName);
+		ui_setvalue(addNameToNewPipeline, "Gives unique name to pipeline", schedulepipelineName);
 		Select dropdown = new Select(selectPipelineVersionDropdown);
 		dropdown.selectByVisibleText(versionType);
 		ui_clearAndSetValue(retentionCountField, retentionCount);
@@ -888,7 +1089,7 @@ public BuildPipeLinePage createSchedulePipeline(String appName,String versionTyp
         //Search Created Pipeline
         ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
         ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
-		ui_clearAndSetValue(searchPipeLine, pipelineName);
+		ui_clearAndSetValue(searchPipeLine, schedulepipelineName);
 		searchPipeLine.sendKeys(Keys.ENTER);
 		ui_wait(10);
 		//Validate Pipeline Status
@@ -935,50 +1136,42 @@ public BuildPipeLinePage createSchedulePipeline(String appName,String versionTyp
         AddNewJobButtonClickUnderThirdStage();
     	
         // adds promote job from qa
-        createPromoteJob(jobType3, fromEnv, toEnv, ArtifactName2, true, true, true, true);
+        createPromoteJob(jobType3, "qa", "prod", ArtifactName2, true, true, true, true);
         
         // adds deploy job to prod
 		AddNewJobButtonClickUnderThirdStage();
         ui_wait(5);
-        createPromoteJob(jobType3, fromEnv, prodEnv, ArtifactName2, true, true, true, true);
-	
-        /*Select dropdown21 = new Select(selectJobType);
-		dropdown21.selectByVisibleText(jobType2);
-		Select dropdown22 = new Select(selectFromEnv);
-		dropdown22.selectByVisibleText(prodEnv);
-		ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent, Pause.MEDIUM));
-		ui_click(serviceComponent, "selects service component under the env");
-		Select dropdown19 = new Select(selectArtifact);
-		dropdown19.selectByVisibleText(ArtifactName2);
-		ui_click(addStageBtn, "clicks add stage btn");*/
-		
-		
+        createDeployJob(jobType2, "prod", ArtifactName, true, true, true, true, true);
+			
 		ui_wait(3);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(saveWorkFlowBtn, Pause.MEDIUM));
         ui_click(saveWorkFlowBtn, "clicks save workflow btn");
-        ui_wait(10);
+        ui_wait(6);
 		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
         ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
-		ui_clearAndSetValue(searchPipeLine, pipelineName);
+		ui_clearAndSetValue(searchPipeLine, schedulepipelineName);
 		searchPipeLine.sendKeys(Keys.ENTER);
-		ui_wait(10);
+		ui_wait(6);
 		String validateStatusActual = pipelineStatus.getText().trim();
         Assert.assertEquals(validateStatusActual, "IN USE");
         Assert.assertEquals(servicesToRunList.getText().trim(), "automation-682046mu117xjpt");
-        ui_click(pipelineHyperLink, "clicks on pipeline hyperlink");
+        ui_click(schedulepipelineHyperLink, "clicks on pipeline hyperlink");
         ui_click(editPipelineInfo, "clicks on edit pipeline info");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(basicInfoText, Pause.MEDIUM));
         Assert.assertEquals(basicInfoText.getText().trim(), "Basic Info");
         ui_click(closeEditTile, "clicks on close pipeline info");
-		ui_wait(5);
+        ui_wait(6);
+		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+        ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+		ui_clearAndSetValue(searchPipeLine, schedulepipelineName);
+		searchPipeLine.sendKeys(Keys.ENTER);
+		ui_wait(6);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(executePipeLineButton, Pause.MEDIUM));
 		ui_click(executePipeLineButton, "pipeline execution Start");
 		ui_wait(2);
-//		ui_click(executePipeLineButton, "pipeline execution Start");
-//		ui_wait(2);
-//		ui_click(executePipeLineButton, "pipeline execution Start");
-		ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineHyperLink, Pause.MEDIUM));
-		ui_click(pipelineHyperLink, "clicks pipeline hyperlink");
+		ui_IsElementDisplay(ui_waitForElementToDisplay(schedulepipelineHyperLink, Pause.MEDIUM));
+		ui_click(schedulepipelineHyperLink, "clicks pipeline hyperlink");
+		ui_wait(2);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(viewLogsLink, Pause.MEDIUM));
 		ui_click(viewLogsLink, "Poc_QA click on View Logs");
 		ui_switchToNewWindow();
@@ -1029,7 +1222,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
     		//.click();        	}
     }
     ui_wait(2);
-    ui_setvalue(frequencySCMPipeline,"Frequency Pattern","30");
+    ui_setvalue(frequencySCMPipeline,"Frequency Pattern","3");
     ui_click(savePipeline, "clicks on save pipeline button");
     //Search Created Pipeline
     ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
@@ -1048,10 +1241,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 	
 	// adds build job to dev
 	AddNewJobButtonClick();
-	createAPIJob(jobType, "GET","http://122.160.30.218:56911/api/v1/project/6/pipeline/recent/activity/","","30", false, true, true, true, true, true);
-	ui_wait(4);
-	AddNewJobButtonClick();
-	createRollbackJob(jobType2, "-1",true, true, true, true);
+	createAPIJob(jobType, "POST","http://122.160.30.218:17901//api/v1/user/login/","{\"email\":\"opstree@opstree.com\",\"password\":\"Opstree@12345\"}","30", false, true, true, true, true, true);
 	ui_wait(4);
   // adds Jira job to dev
 	AddNewJobButtonClick();
@@ -1063,66 +1253,17 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
     // adds second stage
     AddNewStage(StageName2);
     AddNewJobButtonClickUnderSecondStage();
-    // adds promote job from dev
-	createPromoteJob(jobType3, fromEnv, toEnv, ArtifactName2, true, true, true, true);
-	
-    // adds deploy job to qa
-    
-    ui_IsElementDisplay(ui_waitForElementToDisplay(selectJobType, Pause.MEDIUM));
-    ui_wait(5);
-	Select dropdown12 = new Select(selectJobType);
-	dropdown12.selectByVisibleText(jobType2);
-	Select dropdown13 = new Select(selectFromEnv);
-	dropdown13.selectByVisibleText(toEnv);
-	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent1, Pause.MEDIUM));
-	ui_click(serviceComponent1, "selects service component under the env");
-	Select dropdown14 = new Select(selectArtifact);
-	dropdown14.selectByVisibleText(ArtifactName2);
-	ui_click(addStageBtn, "clicks add stage btn");
-	ui_IsElementDisplay(ui_waitForElementToDisplay(addNewStageToPipeline, Pause.MEDIUM));
-    ui_click(addNewStageToPipeline, "adds third stage"); 
-    
-    // adds third stage
-    
-    ui_setvalue(stageName, "sets first stage name", StageName3);
-    ui_wait(5);
-    ui_click(addStageBtn, "adds button for third stage");
-	ui_IsElementDisplay(ui_waitForElementToDisplay(addNewJobBtnUnderThirdStage, Pause.MEDIUM));
-    ui_click(addNewJobBtnUnderThirdStage, "clicks on new job");
-    
-    // adds promote job from qa
-    
-    ui_wait(5);
-	Select dropdown15 = new Select(selectJobType);
-	dropdown15.selectByVisibleText(jobType3);
-	Select dropdown16 = new Select(selectFromEnv);
-	dropdown16.selectByVisibleText(toEnv);
-//	ui_IsElementDisplay(ui_waitForElementToDisplay(targetEnv, Pause.MEDIUM));
-	ui_wait(5);
-	Select dropdown17 = new Select(targetEnv);
-	dropdown17.selectByVisibleText(prodEnv);
-	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent1, Pause.MEDIUM));
-	ui_click(serviceComponent1, "selects service component under the env");
-	Select dropdown18 = new Select(selectArtifact);
-	dropdown18.selectByVisibleText(ArtifactName2);
-	ui_click(addStageBtn, "clicks add stage btn");
+    createRollbackJob("Rollback", "dev1","-1", true, true, true, true);
+    AddNewJobButtonClickUnderSecondStage();
+   createInegratedTestingJob("Integration Testing", fromEnv, true, true, true, true);
+   
+   AddNewStage(StageName3);
+   AddNewJobButtonClickUnderThirdStage();
+   createtriggerPipelineJob("Trigger Pipeline", true, true, true, true, true);
 
-	ui_IsElementDisplay(ui_waitForElementToDisplay(addNewJobBtnUnderThirdStage, Pause.MEDIUM));
-    ui_click(addNewJobBtnUnderThirdStage, "clicks on new job");
-    
-    // adds deploy job to prod
-    
-    ui_wait(5);
-	Select dropdown21 = new Select(selectJobType);
-	dropdown21.selectByVisibleText(jobType2);
-	Select dropdown22 = new Select(selectFromEnv);
-	dropdown22.selectByVisibleText(prodEnv);
-	ui_IsElementDisplay(ui_waitForElementToDisplay(serviceComponent, Pause.MEDIUM));
-	ui_click(serviceComponent, "selects service component under the env");
-	Select dropdown19 = new Select(selectArtifact);
-	dropdown19.selectByVisibleText(ArtifactName2);
-	ui_click(addStageBtn, "clicks add stage btn");
-	ui_wait(3);
+	
+	
+	
 	ui_IsElementDisplay(ui_waitForElementToDisplay(saveWorkFlowBtn, Pause.MEDIUM));
     ui_click(saveWorkFlowBtn, "clicks save workflow btn");
     ui_wait(10);
@@ -1140,16 +1281,18 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
     Assert.assertEquals(basicInfoText.getText().trim(), "Basic Info");
     ui_click(closeEditTile, "clicks on close pipeline info");
 	ui_wait(5);
-	ui_IsElementDisplay(ui_waitForElementToDisplay(executePipeLineButton, Pause.MEDIUM));
-	ui_click(executePipeLineButton, "pipeline execution Start");
-	ui_wait(2);
+	ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+    ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+	ui_clearAndSetValue(searchPipeLine, pipelineName);
+	searchPipeLine.sendKeys(Keys.ENTER);
+	ui_wait(5);
+//	ui_IsElementDisplay(ui_waitForElementToDisplay(executePipeLineButton, Pause.MEDIUM));
 //	ui_click(executePipeLineButton, "pipeline execution Start");
 //	ui_wait(2);
-//	ui_click(executePipeLineButton, "pipeline execution Start");
-	ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineHyperLink, Pause.MEDIUM));
-	ui_click(pipelineHyperLink, "clicks pipeline hyperlink");
-	ui_IsElementDisplay(ui_waitForElementToDisplay(viewLogsLink, Pause.MEDIUM));
-	ui_click(viewLogsLink, "Poc_QA click on View Logs");
+//	ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineHyperLink, Pause.MEDIUM));
+//	ui_click(pipelineHyperLink, "clicks pipeline hyperlink");
+	//ui_IsElementDisplay(ui_waitForElementToDisplay(viewLogsLink, Pause.MEDIUM));
+	//ui_click(viewLogsLink, "Poc_QA click on View Logs");
 	ui_switchToNewWindow();
 
 	}
@@ -1177,6 +1320,8 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 
 	@FindBy(xpath = "//a[contains(text(),'BasicPipeline')]")
 	WebElement pipelineHyperLink;
+	@FindBy(xpath = "//a[contains(text(),'SchedulePipeline')]")
+	WebElement schedulepipelineHyperLink;
 	
 	public BuildPipeLinePage executeBasicPipeline(String appName,String pipelineNameArg) {
 		ui_IsElementDisplay(ui_waitForElementToDisplay(userMenuAppBar, Pause.MEDIUM));
@@ -1259,8 +1404,8 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
         }
 //		if (triggerTypeRadioBtn.getAttribute("value").equals("Manual"))
 //			ui_click(triggerTypeRadioBtn, "Poc_QA triggerTypeRadioBtn");
-        ui_wait(2);
-        ui_MoveToElement(muiTypographyBody, "moving to muiTypographyBodyn");
+       // ui_wait(2);
+        //ui_MoveToElement(muiTypographyBody, "moving to muiTypographyBodyn");
        
         ui_wait(2);
         for (int i = 0; i < pipelineAssignUserRoleCheckbox.size(); i++) {
@@ -1319,8 +1464,8 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
         	}
         }
 
-        ui_wait(2);
-        ui_MoveToElement(muiTypographyBody, "moving to muiTypographyBodyn");
+       // ui_wait(2);
+        //ui_MoveToElement(muiTypographyBody, "moving to muiTypographyBodyn");
        
         ui_wait(2);
         for (int i = 0; i < pipelineAssignUserRoleCheckbox.size(); i++) {
@@ -1372,8 +1517,8 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
         	}
         }
 
-        ui_wait(2);
-        ui_MoveToElement(muiTypographyBody, "moving to muiTypographyBodyn");
+        //ui_wait(2);
+        //ui_MoveToElement(muiTypographyBody, "moving to muiTypographyBodyn");
        
         ui_wait(2);
         for (int i = 0; i < pipelineAssignUserRoleCheckbox.size(); i++) {
@@ -1389,7 +1534,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
         return this;
 	}
 	
-	@FindBy(xpath = "//button[contains(@class,'btn btn-danger')]//span[text()=' Manage Failures']")
+	@FindBy(xpath = "//button[contains(@class,'btn btn-danger')]//span[contains(text(),'Manage Failures')]")
 	WebElement manageFailurePopUp;
 	
 	public BuildPipeLinePage managePopupTest(String appName, String existingPipelineName) {
@@ -1424,5 +1569,158 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 		}
 		return this;
 	}
+	
+	public void fetchlogs(String baseurl,String Pipelinename) {
+		  
+		// String baseurl="http://122.160.30.218:17901";
+		   //String Pipelinename="test_api_logs";
+		   
+		   //----------------------------------Login API----------------------
+			RequestSpecification requestSpec=RestAssured.given();
+			requestSpec.baseUri(baseurl);
+			requestSpec.basePath("/api/v1/user/login/");
+			JSONObject logincredential=new JSONObject();
+			logincredential.put("email", "opstree@opstree.com");
+			logincredential.put("password", "Opstree@12345");
+			requestSpec.contentType(ContentType.JSON);
+			requestSpec.body(logincredential.toJSONString());
+			io.restassured.response.Response res=requestSpec.post();
+			String body=res.getBody().asString();
+			JsonPath jsonpath=new JsonPath(body);
+			String access=jsonpath.get("access");
+			Assert.assertEquals(res.getStatusCode(), 200);
+			//System.out.println(res.getBody().asString());
+			//System.out.println(res.getStatusCode());
+			//System.out.println(access);
+			
+			
+			//-----------------------------------Activity API----------------
+			
+			RequestSpecification requestSpec2=RestAssured.given();
+			requestSpec2.baseUri(baseurl);
+			requestSpec2.basePath("/api/v1/project/1/pipeline/recent/activity/").param("name", Pipelinename);
+			requestSpec2
+			       .header("Authorization","Bearer "+access)
+			       .contentType(ContentType.JSON);
+			
+			io.restassured.response.Response res2=requestSpec2.get();
+			String body2=res2.getBody().asString();
+			
+			JsonPath jsonpath2=new JsonPath(body2);
+			ArrayList<String> id = new ArrayList<String>();
+			ArrayList<String> lasttrigger = new ArrayList<String>();
+			id=jsonpath2.get("results.id");
+			lasttrigger=jsonpath2.get("results.last_trigger.id");
+			
+			String StageinstanceidArray[]=id.toString().replace("[", "").replace("]", "").split(",");
+			String lasttriggerArray[]=lasttrigger.toString().replace("[", "").replace("]", "").split(",");
+			
+			String triggerid=StageinstanceidArray[0];
+			String stageid=lasttriggerArray[0];
+			Assert.assertEquals(res2.getStatusCode(), 200);
+			//System.out.println(res2.getStatusCode());
+			//System.out.println(res2.getBody().asString());	
+			//System.out.println("triggerid:"+triggerid);
+			//System.out.println("stageid:"+stageid);
+			
+			
+			//-----------------------------------Stage API-----------------------------------------
+				RequestSpecification requestSpec3=RestAssured.given();
+				requestSpec3.baseUri(baseurl);
+				requestSpec3.basePath("/api/v1/pipeline/"+triggerid+"/trigger/"+stageid+"/stage/");
+				requestSpec3
+				       .header("Authorization","Bearer "+access)
+				       .contentType(ContentType.JSON);
+				
+				io.restassured.response.Response res3=requestSpec3.get();
+				String body3=res3.getBody().asString();
+				
+				JsonPath jsonpath3=new JsonPath(body3);
+				ArrayList<String> stage_instanceid = new ArrayList<String>();
+				ArrayList<String> task_instanceid = new ArrayList<String>();
+				stage_instanceid=jsonpath3.get("stage_instance.id");
+				task_instanceid=jsonpath3.get("stage_instance.task_instance.id");
+				
+				
+				String taskidArray[]=stage_instanceid.toString().replace("[", "").replace("]", "").split(",");
+				String task_instanceidArray[]=task_instanceid.toString().replace("[", "").replace("]", "").split(",");
+				
+				String taskid=taskidArray[0];
+				String taskinstanceid=task_instanceidArray[0];
+				Assert.assertEquals(res3.getStatusCode(), 200);
+				//System.out.println(res3.getStatusCode());
+				//System.out.println(res3.getBody().asString());	
+				//System.out.println("taskid:"+taskid);
+				//System.out.println("taskinstanceid:"+taskinstanceid);
+				
+			
+			//--------------------------------------Task API--------------------------------------
+			RequestSpecification requestSpec4=RestAssured.given();
+			requestSpec4.baseUri(baseurl);
+			requestSpec4.basePath("/api/v1/pipeline/"+triggerid+"/trigger/"+stageid+"/stage/"+taskid+"/task/"+taskinstanceid+"/");
+			requestSpec4
+			       .header("Authorization","Bearer "+access)
+			       .contentType(ContentType.JSON);
+			
+			io.restassured.response.Response res4=requestSpec4.get();
+			String body4=res4.getBody().asString();
+			
+			JsonPath jsonpath4=new JsonPath(body4);
+			ArrayList<String> global_task_id = new ArrayList<String>();
+			global_task_id=jsonpath4.get("component_task_instance.information.global_task_id");
+			String global_task_idArray[]=global_task_id.toString().replace("[", "").replace("]", "").split(",");
+			
+			String task_id=global_task_idArray[0];
+			Assert.assertEquals(res4.getStatusCode(), 200);
+			//System.out.println(res4.getStatusCode());
+			//System.out.println(res4.getBody().asString());			
+			//System.out.println("task_id:"+task_id);
+
+			//-----------------------------------Logs API-----------------------------------------
+				RequestSpecification requestSpec5=RestAssured.given();
+				requestSpec5.baseUri(baseurl);
+				requestSpec5.basePath("/api/v1/default/celery/task/status/").param("task_id", task_id);
+				requestSpec5
+				       .header("Authorization","Bearer "+access)
+				       .contentType(ContentType.JSON);
+				
+				io.restassured.response.Response res5=requestSpec5.get();
+				String body5=res5.getBody().asString();
+				
+				JsonPath jsonpath5=new JsonPath(body5);
+				ArrayList<String> subtask = new ArrayList<String>();
+				ArrayList<String> discription = new ArrayList<String>();
+				subtask=jsonpath5.get("sub_task_status.activity_sub_task");
+				discription=jsonpath5.get("sub_task_status.description");
+				String subtaskArray[]=subtask.toString().replace("[", "").replace("]", "").split(",");
+				String discriptionArray[]=discription.toString().replace("[", "").replace("]", "").split(",");
+				Map<String, String> map	= new HashMap<String, String>();
+				Assert.assertEquals(res5.getStatusCode(), 200);
+				//System.out.println(res5.getStatusCode());
+				for(int i=0;i<subtaskArray.length-1;i++) {
+					String logs=subtaskArray[i];
+					String logs_discription=discriptionArray[i];
+					map.put(logs, logs_discription);
+				}
+				System.out.println(map);
+				
+				for (Map.Entry<String, String> entry : map.entrySet()) {
+				   
+				    if(entry.getKey().equals("Build Docker Image")) {
+				    	Assert.assertEquals(entry.getValue(), "Successfully 6786786 cmd");
+				    }
+				    if(entry.getKey().equals("Pre Hooks Executing")) {
+				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
+				    }
+				    if(entry.getKey().equals("Push docker image")) {
+				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
+				    }
+				    if(entry.getKey().equals("Cloning Repository")) {
+				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
+				    }
+				}
+
+		
+			}
 
 }
