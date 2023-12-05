@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Rahul\AppData\Local\Temp\testng-eclipse--1108668758\testng-customsuite.xml</span>
+                    <span>C:\Users\Rahul\AppData\Local\Temp\testng-eclipse-394577535\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.buildpiper.testcases.ServiceCreationTestcases" class="method navigator-link" hash-for-method="createServ">createServ</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.buildpiper.testcases.LenskartScan" class="method navigator-link" hash-for-method="PagginationofAllModules">PagginationofAllModules</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,67 +117,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.buildpiper.testcases.ServiceCreationTestcases</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.buildpiper.testcases.LenskartScan</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createServ">
-                  </a> <!-- createServ -->
-                  <span class="method-name">createServ</span>
-                  <div class="stack-trace">java.lang.AssertionError: Element USER_NAME Not present on screen, Exception: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-PTF1H2O&apos;, ip: &apos;10.8.0.88&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\Rahul\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65183}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3d3d5c463c596f66db0caed74cbf2847
-*** Element info: {Using=name, value=email}
-	at org.testng.Assert.fail(Assert.java:97)
-	at com.buildpiper.capabilities.UICapability.ui_setvalue(UICapability.java:111)
-	at com.buildpiper.base.Capability.ui_setvalue(Capability.java:137)
-	at com.buildpiper.pages.LoginPage.login(LoginPage.java:55)
-	at com.buildpiper.testcases.ServiceCreationTestcases.createServ(ServiceCreationTestcases.java:84)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-	at org.testng.TestNG.runSuites(TestNG.java:1039)
-	at org.testng.TestNG.run(TestNG.java:1007)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
+                  <a name="PagginationofAllModules">
+                  </a> <!-- PagginationofAllModules -->
+                  <span class="method-name">PagginationofAllModules</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Rahul\AppData\Local\Temp\testng-eclipse--1108668758\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Rahul\AppData\Local\Temp\testng-eclipse-394577535\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,11 +144,11 @@ Session ID: 3d3d5c463c596f66db0caed74cbf2847
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.buildpiper.testcases.ServiceCreationTestcases&quot;&gt;
+      &lt;class name=&quot;com.buildpiper.testcases.LenskartScan&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;createServ&quot;/&gt;
+          &lt;include name=&quot;PagginationofAllModules&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.buildpiper.testcases.ServiceCreationTestcases --&gt;
+      &lt;/class&gt; &lt;!-- com.buildpiper.testcases.LenskartScan --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -218,7 +176,7 @@ Session ID: 3d3d5c463c596f66db0caed74cbf2847
               <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">createServ</span>
+                <span class="method-in-group-name">PagginationofAllModules</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -240,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createServ')
-data.setCell(0, 2, 'com.buildpiper.testcases.ServiceCreationTestcases')
-data.setCell(0, 3, 121840);
+data.setCell(0, 1, 'PagginationofAllModules')
+data.setCell(0, 2, 'com.buildpiper.testcases.LenskartScan')
+data.setCell(0, 3, 49036);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 49 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -259,37 +217,83 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">createServ</span>
+              <span class="reporter-method-name">PagginationofAllModules</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">checking if driver exist</span>
-                <span class="reporter-method-output">Open URL:https://buildpiper-blue.lenskart.com/login</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\21Nov_183158\createServ_chrome\createServ_chrome_325_Nov_183203.jpg alt='Lamp' width='500' height='400'></span>
-                <span class="reporter-method-output">Executing; ui_launch</span>
-                <span class="reporter-method-output">Exception while waiting for page load</span>
-                <span class="reporter-method-output">Element USER_NAME Not present on screen</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200452.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">checking if driver exist</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200456.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200456.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200457.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element Service Overview</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200457.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element is present  xpath: //div//input[@name='page_number'][@value]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200500.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element pagination Right Button1 Click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200501.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element pagination Right Button2 Click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200505.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element pagination Right Button3 Click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200509.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element Pipeline Overview</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200517.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element is present  xpath: //div//input[@name='page_number'][@value]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200520.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element pagination Right Button1 Click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200521.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element Environment Overview</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200528.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element is present  xpath: //div//input[@name='page_number'][@value]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200531.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element Job Templates</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200535.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element is present  xpath: //div//input[@name='page_number'][@value]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200538.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties </span>
-                <span class="reporter-method-output">####### End of Test Case: createServ #######</span>
+                <span class="reporter-method-output">####### End of Test Case: PagginationofAllModules #######</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.buildpiper.testcases.ServiceCreationTestcases</span>
+              <span class="ignored-class-name">com.buildpiper.testcases.LenskartScan</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">CreateSesrviceNegativeTest1</span>
+                <span class="ignored-method-name">UserportalGeneral</span>
                 <br/>
-                <span class="ignored-method-name">createHelmService</span>
+                <span class="ignored-method-name">BannerTest</span>
                 <br/>
-                <span class="ignored-method-name">ServiceOverviewSearch</span>
+                <span class="ignored-method-name">HistoryPipeline</span>
                 <br/>
-                <span class="ignored-method-name">BuildDeployAlternate</span>
+                <span class="ignored-method-name">LoginViaCreds</span>
                 <br/>
-                <span class="ignored-method-name">CreateBuildXService</span>
+                <span class="ignored-method-name">EditService</span>
+                <br/>
+                <span class="ignored-method-name">LoginViaGitLab</span>
+                <br/>
+                <span class="ignored-method-name">RunwithParameterPipeline</span>
+                <br/>
+                <span class="ignored-method-name">HealthCheck</span>
+                <br/>
+                <span class="ignored-method-name">EditEnvironment</span>
+                <br/>
+                <span class="ignored-method-name">EditPipeline</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -301,32 +305,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.buildpiper.testcases.ServiceCreationTestcases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.buildpiper.testcases.LenskartScan</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setUp(org.testng.TestRunner@7c11d32)</span>
+                <span class="method-name">setUp(org.testng.TestRunner@70716259)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">Reportsetup</span>
-                <span class="method-start">23 ms</span>
+                <span class="method-start">20 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">testName(org.testng.TestRunner@7c11d32, public void com.buildpiper.testcases.ServiceCreationTestcases.createS...)</span>
-                <span class="method-start">58 ms</span>
+                <span class="method-name">testName(org.testng.TestRunner@70716259, public void com.buildpiper.testcases.LenskartScan.PagginationofAllMo...)</span>
+                <span class="method-start">52 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">StartDriver</span>
+                <span class="method-start">602 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">createServ</span>
-                <span class="method-start">537 ms</span>
+                <span class="method-name">PagginationofAllModules</span>
+                <span class="method-start">16672 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createServ status=FAILURE method=ServiceCreationTestcases.createServ()[pri:0, insta...)</span>
-                <span class="method-start">122387 ms</span>
+                <span class="method-name">StopDriver</span>
+                <span class="method-start">65731 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=PagginationofAllModules status=SUCCESS method=LenskartScan.PagginationofAllModules(...)</span>
+                <span class="method-start">66166 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">122509 ms</span>
+                <span class="method-start">66445 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

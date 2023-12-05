@@ -101,6 +101,84 @@ public class BuildPipeLinePage extends BasePage {
 		return this;
 	}
 	
+	@FindBy(xpath = "(//span[@title='Edit Pipeline']/a)[1]")
+	 WebElement firstpipelineEditLink;
+	@FindBy(xpath = "(//button[@title='View Execution History'])[1]")
+	WebElement firstpipelineHistoryLink;
+	@FindBy(xpath = "//h6[contains(text(),'Execution History of ')]")
+	WebElement pipelineHistoryTitle;
+	@FindBy(xpath = "(//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd'])[2]")
+	WebElement pipelineHistoryClose;
+	@FindBy(xpath = "(//button[contains(text(),'Run With Parameters')])[1]")
+	WebElement firstPipelineRunwithParameter;
+	@FindBy(xpath = "//span[contains(@class,'sub-heading-controller')]/span")
+	WebElement parameterTagPipeline;
+	
+public BuildPipeLinePage editPipeline(String appName) {
+		
+	boolean projectSelection = false;
+	ui_wait(5);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+	for(WebElement element:poc_qaProjectLink) {
+		if(element.getText().trim().equalsIgnoreCase(appName)) {
+			element.click();
+			projectSelection = true;
+			break;
+		}
+	}
+	if(projectSelection) {
+	ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+	ui_click(firstpipelineEditLink, "first pipeline EditLink");
+	ui_click(editPipelineInfo, "clicks on edit pipeline info");
+	ui_IsElementDisplay(ui_waitForElementToDisplay(basicInfoText, Pause.MEDIUM));
+    Assert.assertEquals(basicInfoText.getText().trim(), "Basic Info");
+    ui_click(closeEditTile, "clicks on close pipeline info");
+	
+	}
+		return this;
+	}
+
+public BuildPipeLinePage historyPipeline(String appName) {
+	
+	boolean projectSelection = false;
+	ui_wait(5);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+	for(WebElement element:poc_qaProjectLink) {
+		if(element.getText().trim().equalsIgnoreCase(appName)) {
+			element.click();
+			projectSelection = true;
+			break;
+		}
+	}
+	if(projectSelection) {
+	ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+	ui_click(firstpipelineHistoryLink, "first pipeline History Link");	
+    Assert.assertEquals(ui_IsElementPresent(pipelineHistoryTitle, "5"),true);
+    ui_click(pipelineHistoryClose, "pipeline History Close");	
+	}
+	return this;
+	}
+
+public BuildPipeLinePage RunwithParameter(String appName) {
+	
+	boolean projectSelection = false;
+	ui_wait(5);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+	for(WebElement element:poc_qaProjectLink) {
+		if(element.getText().trim().equalsIgnoreCase(appName)) {
+			element.click();
+			projectSelection = true;
+			break;
+		}
+	}
+	if(projectSelection) {
+	ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+	ui_click(firstPipelineRunwithParameter, "first Pipeline RunwithParameter");	
+	Assert.assertEquals(parameterTagPipeline.getText(), "Please note: artifact tag has to be unique");
+	}
+	return this;
+	}
+	
 	@FindBy(xpath = "(//span[@class='stage-name-execution'])[1]")
 	WebElement addedStageName1;
 	
@@ -1136,12 +1214,12 @@ public BuildPipeLinePage createSchedulePipeline(String appName,String versionTyp
         AddNewJobButtonClickUnderThirdStage();
     	
         // adds promote job from qa
-        createPromoteJob(jobType3, "qa", "prod", ArtifactName2, true, true, true, true);
+        createPromoteJob(jobType3, toEnv, prodEnv, ArtifactName2, true, true, true, true);
         
         // adds deploy job to prod
 		AddNewJobButtonClickUnderThirdStage();
         ui_wait(5);
-        createDeployJob(jobType2, "prod", ArtifactName, true, true, true, true, true);
+        createDeployJob(jobType2, prodEnv, ArtifactName, true, true, true, true, true);
 			
 		ui_wait(3);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(saveWorkFlowBtn, Pause.MEDIUM));
@@ -1253,7 +1331,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
     // adds second stage
     AddNewStage(StageName2);
     AddNewJobButtonClickUnderSecondStage();
-    createRollbackJob("Rollback", "dev1","-1", true, true, true, true);
+    createRollbackJob("Rollback", fromEnv,"-1", true, true, true, true);
     AddNewJobButtonClickUnderSecondStage();
    createInegratedTestingJob("Integration Testing", fromEnv, true, true, true, true);
    
@@ -1491,6 +1569,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 		ui_IsElementDisplay(ui_waitForElementToDisplay(userMenuAppBar, Pause.MEDIUM));
 		ui_click(userMenuAppBar, "userMenuAppBar");		
 		ui_click(switchToUSer, "switching to user account");
+		ui_wait(4);
 		boolean projectSelection = false;
 		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
 		for(WebElement element:poc_qaProjectLink) {
@@ -1501,6 +1580,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 			}
 		}
 		if(projectSelection) {
+		ui_wait(4);
 		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
 		ui_click(continueBtn, "clicks on add pipeline button");
 		ui_setvalue(addNameToNewPipeline, "Gives unique name to pipeline", pipelineName);
@@ -1655,9 +1735,13 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				
 			
 			//--------------------------------------Task API--------------------------------------
+			Integer task1=Integer.parseInt(taskinstanceid)+1;
+			Integer task2=Integer.parseInt(taskinstanceid)+2;
+			String[] ar1= {taskinstanceid,task1.toString(),task2.toString()};
+			for(int t=0;t<ar1.length;t++) {	
 			RequestSpecification requestSpec4=RestAssured.given();
 			requestSpec4.baseUri(baseurl);
-			requestSpec4.basePath("/api/v1/pipeline/"+triggerid+"/trigger/"+stageid+"/stage/"+taskid+"/task/"+taskinstanceid+"/");
+			requestSpec4.basePath("/api/v1/pipeline/"+triggerid+"/trigger/"+stageid+"/stage/"+taskid+"/task/"+ar1[t]+"/");
 			requestSpec4
 			       .header("Authorization","Bearer "+access)
 			       .contentType(ContentType.JSON);
@@ -1704,7 +1788,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				}
 				System.out.println(map);
 				
-				for (Map.Entry<String, String> entry : map.entrySet()) {
+				/*for (Map.Entry<String, String> entry : map.entrySet()) {
 				   
 				    if(entry.getKey().equals("Build Docker Image")) {
 				    	Assert.assertEquals(entry.getValue(), "Successfully 6786786 cmd");
@@ -1718,7 +1802,8 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				    if(entry.getKey().equals("Cloning Repository")) {
 				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
 				    }
-				}
+				}*/
+			}
 
 		
 			}

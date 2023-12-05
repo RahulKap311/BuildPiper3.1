@@ -20,17 +20,31 @@ public class LoginPage extends BasePage {
 	FrameworkConfig config = ConfigFactory.create(FrameworkConfig.class);
 
 
-	@FindBy(name = "email")
-	WebElement username_txt;
+	@FindBy(name = "user[login]")
+	WebElement username_txt_gitLab;
 
 	@FindBy(name = "password")
 	WebElement password_txt;
+	
+	@FindBy(name = "user[password]")
+	WebElement password_txt_gitLab;
 
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement SignIn_btn;
+	
+	@FindBy(xpath = "//div//input[@type='submit']")
+	WebElement SignIn_btn_gitLab;
 
 	@FindBy(xpath = "//main//div[contains(text(),'Apps Summary')]")
 	WebElement HomePageAppSummary;
+	
+	@FindBy(xpath = "//div//p[text()='GitLab']")
+	WebElement ClickGitlab;
+	
+	@FindBy(name = "email")
+	WebElement username_txt;
+	
+	
 
 	/**
 	 * 
@@ -80,6 +94,25 @@ public class LoginPage extends BasePage {
 		//ui_IsElementDisplay(ui_waitForElementToDisplay(HomePageAppSummary, Pause.MEDIUM));
 		Log.info("Successful navigation is validated for " + this.getClass().getSimpleName());
 		return this;
+	}
+	
+	/**
+	 * This method will login into application via GitLab
+	 * 
+	 * @param username_val_gitLab
+	 * @param password_val_gitLab
+	 * @return
+	 */
+	public HomePage loginPageViaGitLab(String username_val_gitLab, String password_val_gitLab) {
+
+		ui_click(ClickGitlab, "clciks on gitlab icon to access git lab login page");
+		ui_waitForPageLoad();
+		ui_setvalue(username_txt_gitLab, "USER_NAME", username_val_gitLab);
+		ui_setvalue(password_txt_gitLab, "PASSWORD", password_val_gitLab);
+		ui_click(SignIn_btn_gitLab, "LOGIN_BTN");
+		validatePageLoad();
+		return PageFactory.initElements(ui_getUIDriver(), HomePage.class);
+
 	}
 
 }

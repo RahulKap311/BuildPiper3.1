@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.buildpiper.base.BasePage;
+import com.buildpiper.utils.Configuration;
 import com.buildpiper.utils.Pause;
 import com.buildpiper.utils.RandomStrings;
 
@@ -32,7 +33,7 @@ public class ServiceCreationPage extends BasePage {
 //	@FindBy(xpath = "//span[@title='perfeasy-testing']//..//..//span[text()='Service Overview']")
 //	WebElement serviceOverViewTab;
 
-	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']")
+	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span")
 	WebElement serviceOverViewTab;
 
 	@FindBy(xpath = "//li//button[contains(@class,'main-nav-1')]//span[1][@title]")
@@ -40,6 +41,7 @@ public class ServiceCreationPage extends BasePage {
 
 	@FindBy(xpath = "//a[@class='btn btn-submit']")
 	WebElement addServiceBtn;
+	
 
 	@FindBy(xpath = "//h1[@class='main-heading']")
 	WebElement main_Heading;
@@ -272,7 +274,10 @@ public class ServiceCreationPage extends BasePage {
 	WebElement deploymentstatuscheck;
 	
 	
-	
+	@FindBy(xpath = "(//button[@class='MuiButtonBase-root MuiIconButton-root'])[1]")
+	WebElement buildwindow_closeButton;
+	@FindBy(xpath = "(//button[@class='MuiButtonBase-root MuiIconButton-root'])[1]")
+	WebElement deploywindow_closeButton;
 	@FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']")
 	WebElement historywindow_closeButton;
 	@FindBy(xpath = "(//div[@class='history-body']/div/a)[1]")
@@ -298,7 +303,7 @@ public class ServiceCreationPage extends BasePage {
 	}
 
 	public ServiceCreationPage accountPreRequisites() {
-
+		if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox")) {
 		ui_click(userMenuAppBar, "userMenuAppBar");
 		boolean switchTypeCheck = ui_IsElementPresent(switchToUSer, "5");
 		if (switchTypeCheck == true) {
@@ -308,8 +313,10 @@ public class ServiceCreationPage extends BasePage {
 			// Assert.assertEquals(connectionStatusText.getText().trim(), "CONNECTED",
 			// "connection status validated");
 			ui_wait(5);
+			
 			ui_click(userMenuAppBar, "userMenuAppBar");
 			ui_click(switchToUSer, "switching to user account");
+			}
 		}
 		return this;
 
@@ -373,6 +380,36 @@ public class ServiceCreationPage extends BasePage {
 			}
 			ui_click(saveAndContinue_Create_Page, "Poc_QA SubmitCreatePage");
 
+		}
+		return this;
+
+	}
+	@FindBy(xpath = "(//div[@class='service-name']/a)[1]")
+	WebElement firstServiceLink;
+	@FindBy(xpath = "(//button[@class='btn btn-with-icon btn-round'])[1]")
+	WebElement editServicebutton;
+	public ServiceCreationPage editService(String appName) {
+
+		boolean projectSelection = false;
+		ui_wait(5);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
+			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(firstServiceLink, Pause.MEDIUM));
+			ui_click(firstServiceLink, "first Service Link");
+			ui_wait(2);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(editServicebutton, Pause.MEDIUM));
+			ui_click(editServicebutton, "edit Service button");
+			ui_wait(2);
+			Assert.assertEquals(createaServiceHeading.getText(), "Edit Service");
 		}
 		return this;
 
@@ -742,7 +779,7 @@ public class ServiceCreationPage extends BasePage {
 	@FindBy(xpath = "//*[text()='linux/arm64']")
 	WebElement selectarm64;
 
-	@FindBy(xpath = "//button[text()='Continue']")
+	@FindBy(xpath = "//button[text()='Continue' or text()='Submit']")
 	WebElement clickContinueBtn;
 
 	@FindBy(xpath = "//h4[@class='mainHeading']")
@@ -978,10 +1015,10 @@ public class ServiceCreationPage extends BasePage {
 			ui_clearAndSetValue(fillFilePath, FilePath);
 			ui_clearAndSetValue(fillDockerFilePath, DockerFilePath);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(sourceDetailsTitle2, Pause.MEDIUM));
-
+			ui_wait(5);
 			ui_click(clickContinueBtn, "Poc_QA clickContinueBtn");
 			ui_wait(5);
-
+/*
 			/////////// CI Details Fill ////////////////////////////
 
 			ui_IsElementDisplay(ui_waitForElementToDisplay(ciDetailsHeading, Pause.MEDIUM));
@@ -993,33 +1030,42 @@ public class ServiceCreationPage extends BasePage {
 					selectLanguage.get(i).click();
 				}
 			}
-
+            ui_wait(4);
 			ui_click(clickContinueBtn, "Poc_QA clickContinueBtn");
-
+*/
 			/////////// ENV Details Fill ////////////////////////////
 
 			ui_IsElementDisplay(ui_waitForElementToDisplay(envHeading, Pause.MEDIUM));
 			ui_IsElementDisplay(ui_waitForElementToDisplay(envSubHeading, Pause.MEDIUM));
 			ui_click(envDetailsSwitch, "Poc_QA envDetailsSwitch");
-			ui_setvalue(envName, "Poc_QA envName", EnvName);
+			ui_setvalue(envName, "Poc_QA envName", "QA");
 			ui_setvalue(envValue, "Poc_QA envValue", "UAT-QA");
+			ui_wait(5);
 			ui_click(clickContinueBtn, "Poc_QA clickContinueBtn");
 
 			/////////// HOOKS Details Fill ////////////////////////////
-
+			
+			//ui_IsElementDisplay(ui_waitForElementToDisplay(hooksHeading, Pause.MEDIUM));
+			//Assert.assertEquals(hooksHeading, "Hooks Details");
+			//ui_IsElementDisplay(ui_waitForElementToDisplay(hooksSubHeading, Pause.MEDIUM));
+			//Assert.assertEquals(hooksSubHeading, "Hooks Details");
+			//ui_IsElementDisplay(ui_waitForElementToDisplay(hooksSubHeading2, Pause.MEDIUM));
 			ui_click(preHooksSwitch, "Poc_QA preHooksSwitch");
 			ui_setvalue(preHooksPasswordBox, "Poc_QA preHooksPasswordBox1", preHookPass);
-
+			
 			ui_click(addNewPreHook, "clicks on add New Hook");
 			ui_setvalue(preHooksPasswordBox, "Poc_QA preHooksPasswordBox2", preHookPass);
-
+			
 			ui_click(postHooksSwitch, "Poc_QA postHooksSwitch");
+			//ui_IsElementDisplay(ui_waitForElementToDisplay(postHooksPasswordBox, Pause.MEDIUM));
 			ui_setvalue(postHooksPasswordBox, "Poc_QA postHooksPasswordBox1", preHookPass);
 
 			ui_click(addNewPostHook, "clicks on add New Post Hook");
 			ui_setvalue(postHooksPasswordBox, "Poc_QA postHooksPasswordBox2", preHookPass);
-
+			
 			ui_click(submitHooks, "Poc_QA submitHooks");
+			
+			
 			ui_IsElementDisplay(ui_waitForElementToDisplay(validateDeployDetails, Pause.MEDIUM));
 			ui_click(validateDeployDetails, "Poc_QA validateDeployDetails");
 			ui_IsElementDisplay(ui_waitForElementToDisplay(buildPiperCustomManifest, Pause.MEDIUM));
@@ -1201,6 +1247,8 @@ public class ServiceCreationPage extends BasePage {
 //				"Users in the selected roles will have access to the Environment & Microservices above. To learn more about user access roles and groups read the",
 //				"Unable to validate 'Users in the selected roles will have access to the Environment & Microservices above. To learn more about user access roles and groups read the'");
 //		ui_selectValueFromDropDownByXPath(jobTemplateDropdown, "jobTemplateDropdown");
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(jobTemplateDropdown, Pause.LOW));
 		Select jobdropdown = new Select(jobTemplateDropdown);
 		jobdropdown.selectByVisibleText(JobTemplateValue);
 
@@ -1219,26 +1267,36 @@ public class ServiceCreationPage extends BasePage {
 		ui_getUIDriver().navigate().refresh();
 		ui_IsElementDisplay(ui_waitForElementToDisplay(clickConfigBuild, Pause.MEDIUM));
 		ui_click(clickConfigBuild, "Poc_QA clickConfigBuild");
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(cloneFromEnvValidateTxt, Pause.MEDIUM));
 		Assert.assertEquals(cloneFromEnvValidateTxt.getText().trim(), cloneText, "cloning text validated");
 		ui_selectValueFromDropDownByXPath(selectEnvDrop, "selectEnvDrop");
 		Select envDrop = new Select(selectEnvDrop);
 		envDrop.selectByVisibleText(envCloneValue);
+		ui_wait(4);
 		ui_click(nextBtn, "user clicks next button");
+		ui_wait(4);
+		//ui_getUIDriver().navigate().refresh();
+		//ui_wait(4);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(loadBranchesBtn, Pause.MEDIUM));
 		ui_click(loadBranchesBtn, "Poc_QA loadBranchesBtn");
 		ui_wait(5);
 		ui_selectValueFromDropDownByXPath(selectBranchName, "Selects Branch Name");
 		Select dropdown2 = new Select(selectBranchName);
 		dropdown2.selectByVisibleText(BranchName);
+		ui_wait(4);
 		ui_click(clickContinueBtn, "Poc_QA clickContinueBtn");
 		ui_wait(5);
 		ui_click(clickContinueBtn, "Poc_QA clickContinueBtn");
+		ui_wait(3);
 		ui_click(clickContinueBtn, "Poc_QA clickContinueBtn");
-		ui_click(submitHooks, "Poc_QA submitHooks");
+		//ui_click(submitHooks, "Poc_QA submitHooks");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(validateDeployDetails, Pause.MEDIUM));
 		ui_click(validateDeployDetails, "Poc_QA validateDeployDetails");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(buildPiperUIDeployConfigBtn, Pause.MEDIUM));
 		ui_click(buildPiperUIDeployConfigBtn, "clicks on buildPiperUI button");
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(selectEnvDrop, Pause.MEDIUM));
 		ui_selectValueFromDropDownByXPath(selectEnvDrop, "selectEnvDrop");
 		Select envDrop1 = new Select(selectEnvDrop);
 		envDrop1.selectByVisibleText(envCloneValue);
@@ -1583,7 +1641,7 @@ public class ServiceCreationPage extends BasePage {
 		}
 	
 	//RK
-	@FindBy(xpath = "//div[@class='round-chip bg-round-blue status-font']")
+	@FindBy(xpath = "//div[@class='round-chip status-chip-info status-font']")
 	WebElement buildStatus;	
 	@FindBy(xpath = "//span[text()='Build #']")
 	WebElement buildRecent;	
@@ -1615,6 +1673,8 @@ public class ServiceCreationPage extends BasePage {
 	
 	@FindBy(xpath = "//button[contains(text(),'Trigger Deploy ')]")
 	WebElement triggerDeploy;
+	@FindBy(xpath = "//button[contains(text(),'Trigger Promote')]")
+	WebElement triggerPromote;
 	
 	@FindBy(xpath = "//button[@title='Deploy']")
 	WebElement deployButton;
@@ -1627,5 +1687,47 @@ public class ServiceCreationPage extends BasePage {
 
 		return this;
 	}
+	
+	public ServiceCreationPage promoteService() {
+		
+		ui_click(promote, "clicks Promote Button");
+		ui_wait(5);
+		ui_click(triggerDeploy, "clicks triggerDeploy");
+		
+		return this;
+	}
+	
+	public ServiceCreationPage closeBuildWindow() {
+
+		ui_click(buildwindow_closeButton, "clicks buildwindow_closeButton");
+
+		return this;
+	}
+	
+	public ServiceCreationPage closeDeployWindow() {
+
+		ui_click(deploywindow_closeButton, "clicks deploywindow_closeButton");
+
+		return this;
+	}
+	public ServiceCreationPage historyButton() {
+		
+		ui_click(history, "click on history Button");
+		
+		return this;
+	}
+	public ServiceCreationPage verify_BuildHistory() {
+		
+		Assert.assertEquals(history_buildType.getText(),"Build #1");
+		Assert.assertEquals(history_buildStatus.getText(),"SUCCESS");
+		Assert.assertEquals("1-20231127T1", history_buildArtifact.getText());
+		Assert.assertEquals("Super Admin", history_buildby.getText());
+		Assert.assertEquals("-", history_CommitID.getText());
+		Assert.assertEquals("-", history_CommitMessage.getText());
+		
+		return this;
+	}
+	
+	
 
 }

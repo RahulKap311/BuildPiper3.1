@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.buildpiper.base.BasePage;
+import com.buildpiper.utils.Configuration;
 import com.buildpiper.utils.Pause;
 import com.buildpiper.utils.RandomStrings;
 
@@ -32,6 +33,9 @@ public class PreRequisitesPage extends BasePage {
 
 	@FindBy(xpath = "//div[contains(@class,'connected text connected')]")
 	WebElement connectionStatusText;
+	
+	@FindBy(xpath = "//span[text()='Job Execution History']")
+	WebElement jobexecutionActivity;
 
 	public PreRequisitesPage() {
 
@@ -62,9 +66,11 @@ public class PreRequisitesPage extends BasePage {
 	}
 
 	public PreRequisitesPage switchUser() {
-
-		ui_click(userMenuAppBar, "userMenuAppBar");
-		ui_click(switchToUSer, "switching to user account");
+		if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox") ) {
+			ui_click(userMenuAppBar, "userMenuAppBar");
+			ui_click(switchToUSer, "switching to user account");
+			}
+		
 
 		return this;
 	}
@@ -102,6 +108,14 @@ public class PreRequisitesPage extends BasePage {
 		Assert.assertTrue(queueStatus, "Unable to  validate the Worker queue container Table");
 		
         Assert.assertEquals(workerRowContainer.size(), 9, "Queue table size is incorrect");
+
+		return this;
+	}
+	
+	public PreRequisitesPage SelectJobExecutionActivityMenu() {
+
+		ui_click(userMenuAppBar, "userMenuAppBar");
+		ui_click(jobexecutionActivity, "select Job Execution Activity Menu");
 
 		return this;
 	}

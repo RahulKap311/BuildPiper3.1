@@ -7,7 +7,73 @@
 	
 	<test thread-count="1" name="RegressionSuite">
 	 <classes>
-		 <class name="com.buildpiper.testcases.ServiceCreationTestcases"/>
+		 <class name="com.buildpiper.testcases.ServiceCreationTestcases">
+		 <methods>
+         <include name="createServ" />
+         <include name="BuildDeployAlternate" />
+        </methods>
+		 </class>
+		 
+		  <class name="com.buildpiper.testcases.ServiceCreationComprehensiveTestCases">
+		 <methods>
+         <include name="serviceOverview_TriggerBuild_NoCache" />
+         <include name="serviceOverview_TriggerBuild_Cache" />
+         <include name="serviceOverview_Deploy" />
+        </methods>
+		 </class>
+		 
+		  <class name="com.buildpiper.testcases.EnvironmentTestcasesExecution">
+		 <methods>
+         <include name="CreateEnvironment" />
+         <include name="EnvironmentLevelSearch" />
+        </methods>
+		 </class>
+		 
+		  <class name="com.buildpiper.testcases.BuildPiperTestcasesExecutionComprehensiveTests">
+		 <methods>
+         <include name="CreateBasicPipeLine" />
+         <include name="CreateJiraPipeLine" />
+        </methods>
+		 </class>
+		 
+		  <class name="com.buildpiper.testcases.BuildPiperTestcasesExecution">
+		 <methods>
+         <include name="BuildPipeLine" />
+         <include name="managePopupTest" />
+        </methods>
+		 </class>
+		 
+		  <class name="com.buildpiper.testcases.RepoIntegrationTestCases">
+		 <methods>
+         <include name="AddRepo" />
+         <include name="AddSecretsOnAddRepoPage" />
+        </methods>
+		 </class>
+		 
+		 <class name="com.buildpiper.testcases.JobExecutionActivityTestcases">
+		 <methods>
+         <include name="PaginationCheck" />
+         <include name="ActivityFilterby_Status" />
+         <include name="ActivityFilterby_Users" />
+        </methods>
+		 </class>
+		 
+		 <class name="com.buildpiper.testcases.LenskartScan">
+		 <methods>
+         <include name="LoginViaCreds" />
+         <include name="LoginViaGitLab" />
+         <include name="HealthCheck" />
+         <include name="BannerTest" />
+         <include name="UserportalGeneral" />
+         <include name="PagginationofAllModules" />
+         <include name="EditService" />
+         <include name="EditPipeline" />
+         <include name="HistoryPipeline" />
+         <include name="RunwithParameterPipeline" />
+         <include name="EditEnvironment" />
+        </methods>
+		 </class>
+	
 		 
 	 </classes>
 	</test>

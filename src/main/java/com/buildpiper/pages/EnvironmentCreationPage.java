@@ -676,6 +676,30 @@ public class EnvironmentCreationPage extends BasePage {
 	return this;
 		
 }
+	@FindBy(xpath = "(//div[@class='d-flex space-between']/a)[1]")
+	WebElement firstEnvironmentEditLink;	
+	@FindBy(xpath = "//div[(@class='heading-section-service')]/div[1]")
+	WebElement editEnvironmentHeading;	
+	public EnvironmentCreationPage editEnvironment(String appName) throws Exception {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_IsElementDisplay(ui_waitForElementToDisplay(environmentOverview, Pause.MEDIUM));
+			ui_click(environmentOverview, "clicks on environment overview tab under applicartion name");
+			ui_wait(3);
+			ui_click(firstEnvironmentEditLink, "first Environment Edit Link");
+			ui_wait(3);
+			Assert.assertEquals(editEnvironmentHeading.getText(), "Edit Environment");
+		}
+		return this;
+	}
 
 
 

@@ -2,22 +2,99 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [testsuite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="com.supplycopia.report.ExtentReportListener"/>
+    <listener class-name="com.buildpiper.report.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="testname(failed)">
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
+  <test thread-count="5" name="RegressionSuite(failed)">
     <classes>
-      <class name="com.opstree.demo.OpstreeBuildPipeLine">
+      <class name="com.buildpiper.testcases.LenskartScan">
         <methods>
-          <include name="BuildPipeLine"/>
-          <include name="getResult"/>
+          <include name="PagginationofAllModules"/>
+          <include name="setUp"/>
           <include name="testName"/>
+          <include name="tearDown"/>
+          <include name="StartDriver"/>
+          <include name="Reportsetup"/>
+          <include name="HealthCheck"/>
+          <include name="StopDriver"/>
+          <include name="getResult"/>
         </methods>
-      </class> <!-- com.opstree.demo.OpstreeBuildPipeLine -->
+      </class> <!-- com.buildpiper.testcases.LenskartScan -->
+      <class name="com.buildpiper.testcases.BuildPiperTestcasesExecution">
+        <methods>
+          <include name="managePopupTest"/>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="StopDriver"/>
+          <include name="tearDown"/>
+          <include name="BuildPipeLine"/>
+          <include name="Reportsetup"/>
+          <include name="getResult"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.BuildPiperTestcasesExecution -->
+      <class name="com.buildpiper.testcases.EnvironmentTestcasesExecution">
+        <methods>
+          <include name="StopDriver"/>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="CreateEnvironment"/>
+          <include name="tearDown"/>
+          <include name="StartDriver"/>
+          <include name="Reportsetup"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.EnvironmentTestcasesExecution -->
+      <class name="com.buildpiper.testcases.JobExecutionActivityTestcases">
+        <methods>
+          <include name="StopDriver"/>
+          <include name="ActivityFilterby_Status"/>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="tearDown"/>
+          <include name="ActivityFilterby_Users"/>
+          <include name="Reportsetup"/>
+          <include name="StartDriver"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.JobExecutionActivityTestcases -->
+      <class name="com.buildpiper.testcases.BuildPiperTestcasesExecutionComprehensiveTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="tearDown"/>
+          <include name="StopDriver"/>
+          <include name="Reportsetup"/>
+          <include name="CreateBasicPipeLine"/>
+          <include name="getResult"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.BuildPiperTestcasesExecutionComprehensiveTests -->
+      <class name="com.buildpiper.testcases.ServiceCreationComprehensiveTestCases">
+        <methods>
+          <include name="serviceOverview_TriggerBuild_NoCache"/>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="StopDriver"/>
+          <include name="tearDown"/>
+          <include name="serviceOverview_Deploy"/>
+          <include name="Reportsetup"/>
+          <include name="serviceOverview_TriggerBuild_Cache"/>
+          <include name="getResult"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.ServiceCreationComprehensiveTestCases -->
+      <class name="com.buildpiper.testcases.ServiceCreationTestcases">
+        <methods>
+          <include name="setUp"/>
+          <include name="BuildDeployAlternate"/>
+          <include name="testName"/>
+          <include name="StartDriver"/>
+          <include name="tearDown"/>
+          <include name="Reportsetup"/>
+          <include name="getResult"/>
+          <include name="StopDriver"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.ServiceCreationTestcases -->
     </classes>
-  </test> <!-- testname(failed) -->
+  </test> <!-- RegressionSuite(failed) -->
 </suite> <!-- Failed suite [testsuite] -->

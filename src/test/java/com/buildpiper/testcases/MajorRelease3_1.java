@@ -180,7 +180,7 @@ public class MajorRelease3_1 extends BaseTest {
 		serviceButton.add("Monitoring");
 
 		new LoginPage().login(config.username(), config.password());
-		new HomePage().HealthQueue();
+		new HomePage().HealthQueue(config.tag());
 		new PreRequisitesPage().defaultQueueTest(reader.getCellData("userPreReqData", "adminDeployWorker", 2),
 				reader.getCellData("userPreReqData", "adminPublicApiWorker", 2),
 				reader.getCellData("userPreReqData", "bpBuildWorker", 2),

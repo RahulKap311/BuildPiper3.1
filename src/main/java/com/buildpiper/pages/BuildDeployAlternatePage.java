@@ -44,7 +44,7 @@ public class BuildDeployAlternatePage extends BasePage {
 	@FindBy(xpath = "//input[@name='deploy_tag' and @placeholder='Enter value']")
 	WebElement tagName;
 	
-	@FindBy(xpath = "//div[@class='msg-div']//span[@class='color-success']")
+	@FindBy(xpath = "//div[@class='msg-div']/../../div[2]")
 	List<WebElement> SuccessMsgBuild;
 	
 	@FindBy(xpath = "//button[@class='btn btn-primary' and text()='Continue']")
@@ -85,22 +85,23 @@ public class BuildDeployAlternatePage extends BasePage {
 
 			ui_clearAndSetValue(inputBranchName, branchName);
 			ui_click(buildBtn, "clicks build button");
-			ui_wait(60);
+			ui_wait(120);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(continueBtn, Pause.V_HIGH));
+			ui_click(continueBtn, "Click continueBtn");
 	        for (int i = 0; i < SuccessMsgBuild.size(); i++) {
 
-	        	Assert.assertEquals(SuccessMsgBuild.get(i).getText().trim(), "Success", "Build run successfully");
+	        	Assert.assertEquals(SuccessMsgBuild.get(i).getText().trim(), "Congrats ,Build created successfully!");
 
 	        }
 			
 			//////////////////////////// Deploy Details /////////////////////////////
-			
 			ui_click(buildDeploy, "Poc_QA buildDeploy");
 			ui_wait(5);
 			Select dropdown3 = new Select(selectEnv);
 			dropdown3.selectByVisibleText(env);
 			Select dropdown4 = new Select(selectService);
 			dropdown4.selectByVisibleText(service);
+			ui_wait(3);
 			if (buildDeployRadioBtn.getAttribute("value").equals("Deploy"))
 				ui_click(buildDeployRadioBtn, "Poc_QA buildRadioBtn");
 			ui_wait(5);

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -36,6 +38,16 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 	FrameworkConfig config = ConfigFactory.create(FrameworkConfig.class);
 
 	ExcelUtility reader = new ExcelUtility();
+	
+	 @BeforeMethod
+	    public void StartDriver() {
+	    	new LoginPage().login(config.username(), config.password());
+	    	ui_wait(5);
+	    }
+	  @AfterMethod
+	    public void StopDriver() {
+	    	ui_getUIDriver().quit();
+	  }
 
 	@Test(groups = { "Regression" }, priority = 0)
 	public void serviceOverview_TriggerBuild_NoCache() {
@@ -58,8 +70,9 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		serviceButton.add("History");
 		serviceButton.add("Monitoring");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(3);
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
 				reader.getCellData("MicroServiceData", "buildRadioButtonName", 2), list,
@@ -77,7 +90,6 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
 				reader.getCellData("MicroServiceData", "configName", 2));
 		new ServiceCreationPage().buildTrigger();
-		ui_getUIDriver().close();
 	}
 //RK
 	@Test(groups = { "Regression" }, priority = 0)
@@ -101,7 +113,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		serviceButton.add("History");
 		serviceButton.add("Monitoring");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
@@ -126,7 +138,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		new ServiceCreationPage().CacheCheckbox_Click();
 		ui_wait(3);
 		new ServiceCreationPage().triggerBuild_Click();
-		ui_wait(3);
+		ui_wait(5);
 		new ServiceCreationPage().Verify_buildStatus("RUNNING");
 		ui_wait(3);
 		new ServiceCreationPage().buildRecentButtonClick();
@@ -156,7 +168,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		serviceButton.add("History");
 		serviceButton.add("Monitoring");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
@@ -200,7 +212,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		serviceButton.add("History");
 		serviceButton.add("Monitoring");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
@@ -218,7 +230,60 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 				reader.getCellData("MicroServiceData", "portNumber", 2),
 				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
 				reader.getCellData("MicroServiceData", "configName", 2));
-		ui_getUIDriver().close();
+		new ServiceCreationPage().addNewEnvironmentToService(reader.getCellData("MicroServiceData", "toEnv", 2), list,
+				reader.getCellData("MicroServiceData", "JobTemplateValue", 2),
+				reader.getCellData("MicroServiceData", "cloneText", 2),
+				reader.getCellData("MicroServiceData", "envCloneValue", 2),
+				reader.getCellData("MicroServiceData", "BranchName", 2),
+				reader.getCellData("MicroServiceData", "AccessType", 2),
+				reader.getCellData("MicroServiceData", "AccessName", 2),
+				reader.getCellData("MicroServiceData", "portNumber", 2),
+				reader.getCellData("MicroServiceData", "TargetPort", 2));
+		
+		new ServiceCreationPage().switchEnvironmentTab("DEV");
+		ui_wait(3);
+		new ServiceCreationPage().buildButton_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("DEV",reader.getCellData("MicroServiceData", "envName", 2));
+		ui_wait(3);
+		new ServiceCreationPage().CacheCheckbox_Click();
+		ui_wait(3);
+		new ServiceCreationPage().triggerBuild_Click();
+		ui_wait(5);
+		//new ServiceCreationPage().Verify_buildStatus("RUNNING");
+		ui_wait(3);
+		new ServiceCreationPage().closeBuildWindow();
+		ui_wait(3);
+		new ServiceCreationPage().deployService();
+		ui_wait(3);
+		new ServiceCreationPage().closeDeployWindow();
+		ui_wait(3);
+		new ServiceCreationPage().promoteService();
+		ui_wait(3);
+		new ServiceCreationPage().verify_BuildHistory();
+		
+		new ServiceCreationPage().historyButton();
+		
+		new ServiceCreationPage().switchEnvironmentTab("QA");
+		ui_wait(3);
+		new ServiceCreationPage().buildButton_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("QA",reader.getCellData("MicroServiceData", "toEnv", 2));
+		ui_wait(3);
+		new ServiceCreationPage().CacheCheckbox_Click();
+		ui_wait(3);
+		new ServiceCreationPage().triggerBuild_Click();
+		ui_wait(5);
+		//new ServiceCreationPage().Verify_buildStatus("RUNNING");
+		ui_wait(3);
+		new ServiceCreationPage().closeBuildWindow();
+		ui_wait(3);
+		new ServiceCreationPage().deployService();
+		ui_wait(3);
+		new ServiceCreationPage().closeDeployWindow();
+		ui_wait(3);
+		new ServiceCreationPage().promoteService();
+		
 	}
 
 
@@ -243,8 +308,9 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		serviceButton.add("History");
 		serviceButton.add("Monitoring");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(3);
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
 				reader.getCellData("MicroServiceData", "buildRadioButtonName", 2), list,
@@ -265,7 +331,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 	}
 
 	@Test(groups = { "Regression" }, priority = 4)
-	public void serviceOverview_Monitoring() {
+	public void deploymentRestart() {
 
 		ArrayList<String> chipList = new ArrayList<String>();
 		chipList.add("linux/arm64");

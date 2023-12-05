@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -15,6 +17,7 @@ import com.buildpiper.pages.LoginPage;
 import com.buildpiper.pages.PreRequisitesPage;
 import com.buildpiper.pages.ServiceCreationPage;
 import com.buildpiper.utils.Configuration;
+import com.buildpiper.utils.ExcelUtility;
 import com.buildpiper.utils.FrameworkConfig;
 import com.buildpiper.utils.XlsReadData;
 
@@ -30,9 +33,20 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 
 	FrameworkConfig config = ConfigFactory.create(FrameworkConfig.class);
 
-	XlsReadData reader = new XlsReadData(
-			System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\BuildPiperTestData.xlsx");
+	//XlsReadData reader = new XlsReadData(
+		//	System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\Sandbox1TestData.xlsx");
+	ExcelUtility reader = new ExcelUtility();
 
+	 @BeforeMethod
+	    public void StartDriver() {
+	    	new LoginPage().login(config.username(), config.password());
+	    	ui_wait(5);
+	    }
+	   @AfterMethod
+	    public void StopDriver() {
+	    ui_getUIDriver().quit();
+	    }
+	
 	@Test(groups = { "Regression" }, priority = 0)
 //	@RetryCountIfFailed(2)
 	public void CreateEnvironment() {
@@ -49,16 +63,19 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 		configTypelist.add("Guided Form");
 		// configTypelist.add("Use Editor");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 //		new ServiceCreationPage().accountPreRequisites();
 		new PreRequisitesPage().switchUser();
+		ui_wait(5);
 		new EnvironmentCreationPage().CreateAndValidateEnvironment(
 				reader.getCellData("Environment", "applicationName", 2), list,
 				reader.getCellData("Environment", "selectCluster", 2),
 				reader.getCellData("Environment", "selectNamespace", 2),
 				reader.getCellData("Environment", "selectRegistry", 2));
+		ui_getUIDriver().quit();
 		new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(4);
 		new EnvironmentCreationPage().EnvironmentConfigurationAndAssociateServices(
 				reader.getCellData("Environment", "applicationName", 2), configTypelist,
 				reader.getCellData("Environment", "associateConfigurationType", 2),
@@ -233,8 +250,9 @@ public class EnvironmentTestcasesExecution extends BaseTest {
     String Environment="dev-";
     String EnvName="QA";
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(5);
 		new EnvironmentCreationPage().SeacrhEnvironment(
 				reader.getCellData("Environment", "applicationName", 2),Environment);
 		//new EnvironmentCreationPage().SeacrhEnvironmentOverviewbyEnvironment(EnvName);
@@ -256,14 +274,16 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 	// configTypelist.add("Use Editor");
 		new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(5);
 		new EnvironmentCreationPage().DeleteEmptyEnvironment(
 				reader.getCellData("Environment", "applicationName", 2), list,
 				reader.getCellData("Environment", "selectCluster", 2),
 				reader.getCellData("Environment", "selectNamespace", 2),
 				reader.getCellData("Environment", "selectRegistry", 2));
 		ui_wait(5);
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
+		ui_wait(5);
 		new EnvironmentCreationPage().DeleteNonEmptyEnvironment(
 				reader.getCellData("Environment", "applicationName", 2), list,
 				reader.getCellData("Environment", "selectCluster", 2),
@@ -283,7 +303,7 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 	list.add("DEV");
 	list.add("QA");
 	list.add("UAT");
-	list.add("STAGING");
+	//list.add("STAGING");
     //list.add("PROD");
 
 		new LoginPage().login(config.username(), config.password());

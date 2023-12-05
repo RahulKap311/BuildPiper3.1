@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -18,6 +20,7 @@ import com.buildpiper.pages.HomePage;
 import com.buildpiper.pages.LoginPage;
 import com.buildpiper.pages.PreRequisitesPage;
 import com.buildpiper.pages.ServiceCreationPage;
+import com.buildpiper.utils.Configuration;
 import com.buildpiper.utils.ExcelUtility;
 import com.buildpiper.utils.FrameworkConfig;
 import com.buildpiper.utils.XlsReadData;
@@ -43,11 +46,22 @@ public class ServiceCreationTestcases extends BaseTest {
 //	}
 
 	ExcelUtility reader = new ExcelUtility();
-
+	
 //	ArrayList<String> languageList = new ArrayList<String>();
 //	ArrayList<String> chipList = new ArrayList<String>();
 //	ArrayList<String> list = new ArrayList<String>();
 
+	 @BeforeMethod
+	    public void StartDriver() {
+	    	new LoginPage().login(config.username(), config.password());
+	    	ui_wait(5);
+	    }
+	   @AfterMethod
+	    public void StopDriver() {
+	    	ui_getUIDriver().quit();
+	    }
+	
+	
 	@Test(groups = { "Regression" }, priority = 0)
 	public void createServ() {
 
@@ -81,7 +95,7 @@ public class ServiceCreationTestcases extends BaseTest {
 		serviceButton.add("History");
 		serviceButton.add("Monitoring");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 //		new HomePage().HealthQueue();
 //		new PreRequisitesPage().defaultQueueTest(reader.getCellData("userPreReqData", "adminDeployWorker", 2),
 //				reader.getCellData("userPreReqData", "adminPublicApiWorker", 2),
@@ -92,34 +106,35 @@ public class ServiceCreationTestcases extends BaseTest {
 //				reader.getCellData("userPreReqData", "schedulerWorker", 2),
 //				reader.getCellData("userPreReqData", "versioningWorker", 2));
 //		new PreRequisitesPage().accountPreRequisites();
-		//new PreRequisitesPage().switchUser();
-		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
-				reader.getCellData("MicroServiceData", "envName", 2),
-				reader.getCellData("MicroServiceData", "buildRadioButtonName", 2), list,
-				reader.getCellData("MicroServiceData", "JobTemplateValue", 2));
-		new BuildConfigurationPage().CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", 2),
-				reader.getCellData("MicroServiceData", "BranchName", 2),
-				reader.getCellData("MicroServiceData", "FilePath", 2),
-				reader.getCellData("MicroServiceData", "DockerFilePath", 2), chipList, languageList,
-				reader.getCellData("MicroServiceData", "preHookPass", 2),
-				reader.getCellData("MicroServiceData", "envName", 2));
+	    new PreRequisitesPage().switchUser();
+		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "createServ");
+		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),
+				reader.getCellData("MicroServiceData", "envName", RowNumber),
+				reader.getCellData("MicroServiceData", "buildRadioButtonName", RowNumber), list,
+				reader.getCellData("MicroServiceData", "JobTemplateValue", RowNumber));
+		new BuildConfigurationPage().CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", RowNumber),
+				reader.getCellData("MicroServiceData", "BranchName", RowNumber),
+				reader.getCellData("MicroServiceData", "FilePath", RowNumber),
+				reader.getCellData("MicroServiceData", "DockerFilePath", RowNumber), chipList, languageList,
+				reader.getCellData("MicroServiceData", "preHookPass", RowNumber),
+				reader.getCellData("MicroServiceData", "envName", RowNumber));
 //		new BuildConfigurationPage().approveConfiguartions();
 		new DeployConfigurationPage().CreateAndValidateDeployConfig(
-				reader.getCellData("MicroServiceData", "AccessType", 2),
-				reader.getCellData("MicroServiceData", "AccessName", 2),
-				reader.getCellData("MicroServiceData", "portNumber", 2),
-				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
-				reader.getCellData("MicroServiceData", "configName", 2));
+				reader.getCellData("MicroServiceData", "AccessType", RowNumber),
+				reader.getCellData("MicroServiceData", "AccessName", RowNumber),
+				reader.getCellData("MicroServiceData", "portNumber", RowNumber),
+				reader.getCellData("MicroServiceData", "TargetPort", RowNumber), serviceButton,
+				reader.getCellData("MicroServiceData", "configName", RowNumber));
 //		new BuildConfigurationPage().approveConfiguartionsDeploy();
-		new ServiceCreationPage().addNewEnvironmentToService(reader.getCellData("MicroServiceData", "toEnv", 2), list,
-				reader.getCellData("MicroServiceData", "JobTemplateValue", 2),
-				reader.getCellData("MicroServiceData", "cloneText", 2),
-				reader.getCellData("MicroServiceData", "envCloneValue", 2),
-				reader.getCellData("MicroServiceData", "BranchName", 2),
-				reader.getCellData("MicroServiceData", "AccessType", 2),
-				reader.getCellData("MicroServiceData", "AccessName", 2),
-				reader.getCellData("MicroServiceData", "portNumber", 2),
-				reader.getCellData("MicroServiceData", "TargetPort", 2));
+		new ServiceCreationPage().addNewEnvironmentToService(reader.getCellData("MicroServiceData", "toEnv", RowNumber), list,
+				reader.getCellData("MicroServiceData", "JobTemplateValue", RowNumber),
+				reader.getCellData("MicroServiceData", "cloneText", RowNumber),
+				reader.getCellData("MicroServiceData", "envCloneValue", RowNumber),
+				reader.getCellData("MicroServiceData", "BranchName", RowNumber),
+				reader.getCellData("MicroServiceData", "AccessType", RowNumber),
+				reader.getCellData("MicroServiceData", "AccessName", RowNumber),
+				reader.getCellData("MicroServiceData", "portNumber", RowNumber),
+				reader.getCellData("MicroServiceData", "TargetPort", RowNumber));
 //		new BuildConfigurationPage().approveConfiguartions();
 //		new DeployConfigurationPage().CreateAndValidateDeployConfig(
 //				reader.getCellData("MicroServiceData", "AccessType", 2),
@@ -133,9 +148,8 @@ public class ServiceCreationTestcases extends BaseTest {
 	@Test(groups = { "Regression" }, priority = 0)
 //	@RetryCountIfFailed(2)
 	public void ServiceOverviewSearch() throws Exception {
-	XlsReadData reader = new XlsReadData(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\BuildPiperTestData.xlsx");
 	int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "ServiceOverviewSearch");
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		ui_wait(5);
 		new ServiceCreationPage().SearchService(
@@ -145,21 +159,23 @@ public class ServiceCreationTestcases extends BaseTest {
 	
 	@Test(groups = { "Regression" }, priority = 1)
 	public void BuildDeployAlternate() {
-
-		new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "BuildDeployAlternate");
+		ui_wait(5);
+		//new LoginPage().login(config.username(), config.password());
 		new ServiceCreationPage().accountPreRequisites();
+		ui_wait(2);
 		new BuildDeployAlternatePage().TriggerAlternateMethod(
-				reader.getCellData("MicroServiceData", "applicationName", 2),
-				reader.getCellData("MicroServiceData", "envName", 2),
-				reader.getCellData("MicroServiceData", "serviceName", 2),
-				reader.getCellData("MicroServiceData", "BranchName", 2));
+				reader.getCellData("MicroServiceData", "applicationName", RowNumber),
+				reader.getCellData("MicroServiceData", "envName", RowNumber),
+				reader.getCellData("MicroServiceData", "serviceName", RowNumber),
+				reader.getCellData("MicroServiceData", "BranchName", RowNumber));
 
 	}
 
 	@Test(groups = { "Regression" }, priority = 2)
 	public void CreateSesrviceNegativeTest1() {
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new ServiceCreationPage().CreateSesrviceNegativeTest3(
 				reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
@@ -184,7 +200,9 @@ public class ServiceCreationTestcases extends BaseTest {
 //		languageList.add("NODEJS");
 //		languageList.add("OTHER");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
+		new PreRequisitesPage().switchUser();
+		ui_wait(3);
 		new ServiceCreationPage().CreateHelmNewService(reader.getCellData("MicroServiceData", "applicationName", 3),
 				reader.getCellData("MicroServiceData", "envName", 3),
 				reader.getCellData("MicroServiceData", "buildRadioButtonName", 3), list,

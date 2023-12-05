@@ -161,9 +161,10 @@ public class loginTestcases extends BaseTest {
 		
 	
 	//--------------------------------------Task API--------------------------------------
-		
-	for(int t=0;t<2;t++) {
-		String[] ar1= {"716","717","718"};	
+		Integer task1=Integer.parseInt(taskinstanceid)+1;
+		Integer task2=Integer.parseInt(taskinstanceid)+2;
+	String[] ar1= {taskinstanceid,task1.toString(),task2.toString()};
+	for(int t=0;t<ar1.length;t++) {		   	
 	RequestSpecification requestSpec4=RestAssured.given();
 	requestSpec4.baseUri(baseurl);
 	requestSpec4.basePath("/api/v1/pipeline/"+triggerid+"/trigger/"+stageid+"/stage/"+taskid+"/task/"+ar1[t]+"/");
@@ -207,12 +208,15 @@ public class loginTestcases extends BaseTest {
 		Map<String, String> map	= new HashMap<String, String>();
 		
 		System.out.println(res5.getStatusCode());
+		System.out.println(res5.getBody().asString());
 		for(int i=0;i<subtaskArray.length-1;i++) {
 			String logs=subtaskArray[i];
 			String logs_discription=discriptionArray[i];
 			map.put(logs, logs_discription);
 		}
 		System.out.println(map);
+		ui_wait(3);
+		
 		}
-	}
+		}
 }

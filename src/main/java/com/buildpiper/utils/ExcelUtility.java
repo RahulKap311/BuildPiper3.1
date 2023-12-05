@@ -51,11 +51,28 @@ public class ExcelUtility {
 	 */
 	public ExcelUtility() {
 		try {
-			String filePath= System.getProperty("user.dir")+Configuration.get("testDataLocation");
-			FileInputStream excelFile=new FileInputStream(new File(filePath));
-			workbook = new XSSFWorkbook(excelFile);
-			this.sheet = workbook.getSheetAt(0);
-			load();
+			if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox")) {
+				String filePath= System.getProperty("user.dir")+Configuration.get("testDataLocation");
+				FileInputStream excelFile=new FileInputStream(new File(filePath));
+				workbook = new XSSFWorkbook(excelFile);
+				this.sheet = workbook.getSheetAt(0);
+				load();	
+			}
+			if(Configuration.get("environment").equals("lenskart")) {
+				String filePath= System.getProperty("user.dir")+Configuration.get("testDataLocation1");
+				FileInputStream excelFile=new FileInputStream(new File(filePath));
+				workbook = new XSSFWorkbook(excelFile);
+				this.sheet = workbook.getSheetAt(0);
+				load();	
+			}
+			if(Configuration.get("environment").equals("sandbox1")) {
+				String filePath= System.getProperty("user.dir")+Configuration.get("testDataLocation2");
+				FileInputStream excelFile=new FileInputStream(new File(filePath));
+				workbook = new XSSFWorkbook(excelFile);
+				this.sheet = workbook.getSheetAt(0);
+				load();	
+			}
+			
 		} catch (IOException e) {
 			Log.info("");
 			throw new RuntimeException("Exception while reading workbook", e);
@@ -189,6 +206,29 @@ public class ExcelUtility {
 			sheet = workbook.getSheetAt(index);
 			int number = sheet.getLastRowNum() + 1;
 			return number;
+		}
+
+	}
+	
+	public int getRowByTestCaseName(String sheetName,String Testcasename) {
+		int Rownumber=0;
+		int index = workbook.getSheetIndex(sheetName);
+		if (index == -1)
+			return 0;
+		else {
+			sheet = workbook.getSheetAt(index);
+			//int number = sheet.getLastRowNum() + 1;
+			for(int i=1;i<sheet.getLastRowNum()+1;i++) {
+				System.out.println("-"+sheet.getRow(i).getCell(1).getStringCellValue().trim());
+				System.out.println("--"+sheet.getRow(i).getCell(2).getStringCellValue().trim());
+				if(sheet.getRow(i).getCell(1).getStringCellValue().trim().equals(Testcasename)) {
+					Rownumber=i+1;	
+					System.out.println(Rownumber);
+					break;
+				}
+				
+			}
+			return Rownumber;
 		}
 
 	}
