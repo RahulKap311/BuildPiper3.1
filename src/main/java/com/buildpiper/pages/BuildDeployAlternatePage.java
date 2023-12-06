@@ -28,6 +28,8 @@ public class BuildDeployAlternatePage extends BasePage {
 	
 	@FindBy(xpath = "//div[@class='input-component']//input[@name='build_deploy' and @type='radio']")
 	WebElement buildDeployRadioBtn;
+	@FindBy(xpath = "(//div[@class='input-component']//input[@name='build_deploy' and @type='radio'])[2]/..")
+	WebElement DeployRadioBtn;
 
 	@FindBy(xpath = "//input[@id='branch' and @name='branch']")
 	WebElement inputBranchName;
@@ -102,8 +104,8 @@ public class BuildDeployAlternatePage extends BasePage {
 			Select dropdown4 = new Select(selectService);
 			dropdown4.selectByVisibleText(service);
 			ui_wait(3);
-			if (buildDeployRadioBtn.getAttribute("value").equals("Deploy"))
-				ui_click(buildDeployRadioBtn, "Poc_QA buildRadioBtn");
+			//if (buildDeployRadioBtn.getAttribute("value").equals("Deploy"))
+		    ui_click(DeployRadioBtn, "Poc_QA DeployRadioBtn");
 			ui_wait(5);
 			ui_clearAndSetValue(tagName, "testTag");
 			ui_click(deployBtn, "clicks deploy button");

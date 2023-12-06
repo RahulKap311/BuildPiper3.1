@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="10" total="11" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Test Execution ID : 05Dec_200434]]>
+      <![CDATA[Test Execution ID : 06Dec_210150]]>
     </line>
     <line>
-      <![CDATA[####### Starting  Test Case: PagginationofAllModules #######]]>
+      <![CDATA[####### Starting  Test Case: BuildDeployAlternate #######]]>
     </line>
     <line>
-      <![CDATA[Getting test data for PagginationofAllModules]]>
+      <![CDATA[Getting test data for BuildDeployAlternate]]>
     </line>
     <line>
-      <![CDATA[No testdata found for Test Case: PagginationofAllModules]]>
+      <![CDATA[No testdata found for Test Case: BuildDeployAlternate]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
@@ -20,7 +20,7 @@
       <![CDATA[Open URL:https://buildpiper-blue.lenskart.com/login]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200439.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210156.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Executing; ui_launch]]>
@@ -32,7 +32,7 @@
       <![CDATA[Setting value on element USER_NAME]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200445.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210205.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : name: password]is displayed on screen]]>
@@ -41,7 +41,7 @@
       <![CDATA[Setting value on element PASSWORD]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200446.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //button[@type='submit']]is displayed on screen]]>
@@ -50,7 +50,7 @@
       <![CDATA[Clicking on element LOGIN_BTN]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200446.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Successful navigation is validated for LoginPage]]>
@@ -59,19 +59,19 @@
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200447.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210207.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200452.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210217.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200456.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]is displayed on screen]]>
@@ -80,169 +80,166 @@
       <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200456.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]]]>
+      <![CDATA[Clicking on element Poc_QA buildDeploy]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200457.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210221.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='build_deploy' and @type='radio']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Service Overview]]>
+      <![CDATA[Clicking on element Poc_QA buildRadioBtn]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200457.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210228.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
+      <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200500.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element Poc_QA inputBranchName]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210230.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element pagination Right Button1 Click]]>
+      <![CDATA[Element : xpath: //button[@title='Clear']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200501.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element ClicksclearField]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element pagination Right Button2 Click]]>
+      <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200505.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Build']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+      <![CDATA[Clicking on element clicks build button]]>
     </line>
     <line>
-      <![CDATA[Clicking on element pagination Right Button3 Click]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200509.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //button[@class='btn btn-primary' and text()='Continue']]]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Pipeline Overview]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200517.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
+      <![CDATA[Clicking on element Click continueBtn]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200520.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element pagination Right Button1 Click]]>
+      <![CDATA[ Element Proxy element for: DefaultElementLocator 'By.xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']' is not clickable using selenium click]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200521.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA buildDeploy]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Environment Overview]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200528.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: (//div[@class='input-component']//input[@name='build_deploy' and @type='radio'])[2]/..]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
+      <![CDATA[Clicking on element Poc_QA DeployRadioBtn]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200531.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210448.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+      <![CDATA[Element : xpath: //input[@name='deploy_tag' and @placeholder='Enter value']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Job Templates]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Deploy']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200535.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks deploy button]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200538.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210454.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties ]]>
     </line>
     <line>
-      <![CDATA[####### End of Test Case: PagginationofAllModules #######]]>
+      <![CDATA[####### End of Test Case: BuildDeployAlternate #######]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-12-05T20:04:35 IST" name="Default suite" finished-at="2023-12-05T20:05:42 IST" duration-ms="66428">
+  <suite started-at="2023-12-06T21:01:52 IST" name="Default suite" finished-at="2023-12-06T21:04:55 IST" duration-ms="182365">
     <groups>
       <group name="Regression">
-        <method signature="LenskartScan.PagginationofAllModules()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" name="PagginationofAllModules" class="com.buildpiper.testcases.LenskartScan"/>
+        <method signature="ServiceCreationTestcases.BuildDeployAlternate()[pri:1, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" name="BuildDeployAlternate" class="com.buildpiper.testcases.ServiceCreationTestcases"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2023-12-05T20:04:35 IST" name="Default test" finished-at="2023-12-05T20:05:42 IST" duration-ms="66428">
-      <class name="com.buildpiper.testcases.LenskartScan">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:04:35 IST" name="setUp" finished-at="2023-12-05T20:04:35 IST" duration-ms="17" status="PASS">
+    <test started-at="2023-12-06T21:01:52 IST" name="Default test" finished-at="2023-12-06T21:04:55 IST" duration-ms="182365">
+      <class name="com.buildpiper.testcases.ServiceCreationTestcases">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:52 IST" name="setUp" finished-at="2023-12-06T21:01:52 IST" duration-ms="39" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@70716259]]>
+                <![CDATA[org.testng.TestRunner@7da1e005]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="Reportsetup()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:04:35 IST" name="Reportsetup" finished-at="2023-12-05T20:04:35 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="Reportsetup()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:52 IST" name="Reportsetup" finished-at="2023-12-06T21:01:52 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reportsetup -->
-        <test-method is-config="true" signature="testName(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:04:35 IST" name="testName" finished-at="2023-12-05T20:04:36 IST" duration-ms="549" status="PASS">
+        <test-method is-config="true" signature="testName(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:52 IST" name="testName" finished-at="2023-12-06T21:01:53 IST" duration-ms="737" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@70716259]]>
+                <![CDATA[org.testng.TestRunner@7da1e005]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.buildpiper.testcases.LenskartScan.PagginationofAllModules()]]>
+                <![CDATA[public void com.buildpiper.testcases.ServiceCreationTestcases.BuildDeployAlternate()]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[####### Starting  Test Case: PagginationofAllModules #######]]>
+              <![CDATA[####### Starting  Test Case: BuildDeployAlternate #######]]>
             </line>
             <line>
-              <![CDATA[Getting test data for PagginationofAllModules]]>
+              <![CDATA[Getting test data for BuildDeployAlternate]]>
             </line>
             <line>
-              <![CDATA[No testdata found for Test Case: PagginationofAllModules]]>
+              <![CDATA[No testdata found for Test Case: BuildDeployAlternate]]>
             </line>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method is-config="true" signature="StartDriver()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:04:36 IST" name="StartDriver" finished-at="2023-12-05T20:04:52 IST" duration-ms="16070" status="PASS">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:53 IST" name="StartDriver" finished-at="2023-12-06T21:02:12 IST" duration-ms="19366" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[checking if driver exist]]>
@@ -251,7 +248,7 @@
               <![CDATA[Open URL:https://buildpiper-blue.lenskart.com/login]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200439.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210156.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Executing; ui_launch]]>
@@ -263,7 +260,7 @@
               <![CDATA[Setting value on element USER_NAME]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200445.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210205.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : name: password]is displayed on screen]]>
@@ -272,7 +269,7 @@
               <![CDATA[Setting value on element PASSWORD]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200446.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //button[@type='submit']]is displayed on screen]]>
@@ -281,7 +278,7 @@
               <![CDATA[Clicking on element LOGIN_BTN]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200446.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Successful navigation is validated for LoginPage]]>
@@ -290,23 +287,23 @@
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200447.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210207.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="PagginationofAllModules()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:04:52 IST" name="PagginationofAllModules" finished-at="2023-12-05T20:05:41 IST" duration-ms="49036" status="PASS">
+        <test-method signature="BuildDeployAlternate()[pri:1, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:02:12 IST" name="BuildDeployAlternate" finished-at="2023-12-06T21:04:54 IST" duration-ms="161661" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200452.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210217.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200456.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]is displayed on screen]]>
@@ -315,141 +312,138 @@
               <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200456.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]]]>
+              <![CDATA[Clicking on element Poc_QA buildDeploy]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200457.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210221.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='build_deploy' and @type='radio']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Service Overview]]>
+              <![CDATA[Clicking on element Poc_QA buildRadioBtn]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200457.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210228.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
+              <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200500.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element Poc_QA inputBranchName]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210230.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element pagination Right Button1 Click]]>
+              <![CDATA[Element : xpath: //button[@title='Clear']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200501.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element ClicksclearField]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element pagination Right Button2 Click]]>
+              <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200505.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Build']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+              <![CDATA[Clicking on element clicks build button]]>
             </line>
             <line>
-              <![CDATA[Clicking on element pagination Right Button3 Click]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200509.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //button[@class='btn btn-primary' and text()='Continue']]]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Pipeline Overview]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200517.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
+              <![CDATA[Clicking on element Click continueBtn]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200520.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-with-icon btn-round pagination-btn box_shadow']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element pagination Right Button1 Click]]>
+              <![CDATA[ Element Proxy element for: DefaultElementLocator 'By.xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']' is not clickable using selenium click]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200521.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA buildDeploy]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Environment Overview]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200528.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: (//div[@class='input-component']//input[@name='build_deploy' and @type='radio'])[2]/..]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
+              <![CDATA[Clicking on element Poc_QA DeployRadioBtn]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200531.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210448.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a//span[1]/span]is displayed on screen]]>
+              <![CDATA[Element : xpath: //input[@name='deploy_tag' and @placeholder='Enter value']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Job Templates]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Deploy']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200535.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks deploy button]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div//input[@name='page_number'][@value]]]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\05Dec_200434\PagginationofAllModules_chrome\PagginationofAllModules_chrome_339_Dec_200538.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210454.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties ]]>
             </line>
             <line>
-              <![CDATA[####### End of Test Case: PagginationofAllModules #######]]>
+              <![CDATA[####### End of Test Case: BuildDeployAlternate #######]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PagginationofAllModules -->
-        <test-method is-config="true" signature="StopDriver()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:05:41 IST" name="StopDriver" finished-at="2023-12-05T20:05:42 IST" duration-ms="435" status="PASS">
+        </test-method> <!-- BuildDeployAlternate -->
+        <test-method is-config="true" signature="StopDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:04:54 IST" name="StopDriver" finished-at="2023-12-06T21:04:54 IST" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopDriver -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:05:42 IST" name="getResult" finished-at="2023-12-05T20:05:42 IST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:04:54 IST" name="getResult" finished-at="2023-12-06T21:04:55 IST" duration-ms="295" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PagginationofAllModules status=SUCCESS method=LenskartScan.PagginationofAllModules()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911] output=checking if driver exist]]]>
+                <![CDATA[[TestResult name=BuildDeployAlternate status=SUCCESS method=ServiceCreationTestcases.BuildDeployAlternate()[pri:1, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c] output=checking if driver exist]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.buildpiper.testcases.LenskartScan@4a951911]" started-at="2023-12-05T20:05:42 IST" name="tearDown" finished-at="2023-12-05T20:05:42 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:04:55 IST" name="tearDown" finished-at="2023-12-06T21:04:55 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.buildpiper.testcases.LenskartScan -->
+      </class> <!-- com.buildpiper.testcases.ServiceCreationTestcases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

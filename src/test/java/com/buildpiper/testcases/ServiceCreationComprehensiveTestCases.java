@@ -186,7 +186,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 				reader.getCellData("MicroServiceData", "portNumber", 2),
 				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
 				reader.getCellData("MicroServiceData", "configName", 2));
-		new ServiceCreationPage().deployService();
+		new ServiceCreationPage().deployService("");
 		ui_getUIDriver().close();
 	}
 
@@ -254,7 +254,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_wait(3);
 		new ServiceCreationPage().closeBuildWindow();
 		ui_wait(3);
-		new ServiceCreationPage().deployService();
+		new ServiceCreationPage().deployService("");
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
@@ -278,7 +278,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_wait(3);
 		new ServiceCreationPage().closeBuildWindow();
 		ui_wait(3);
-		new ServiceCreationPage().deployService();
+		new ServiceCreationPage().deployService("");
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);

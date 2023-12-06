@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.buildpiper.testcases.EnvironmentTestcasesExecution">
+      <class name="com.buildpiper.testcases.ServiceCreationTestcases">
         <methods>
-          <include name="StopDriver"/>
           <include name="setUp"/>
+          <include name="BuildDeployAlternate"/>
           <include name="testName"/>
-          <include name="CreateEnvironment"/>
-          <include name="tearDown"/>
           <include name="StartDriver"/>
+          <include name="tearDown"/>
           <include name="Reportsetup"/>
           <include name="getResult"/>
+          <include name="StopDriver"/>
         </methods>
-      </class> <!-- com.buildpiper.testcases.EnvironmentTestcasesExecution -->
+      </class> <!-- com.buildpiper.testcases.ServiceCreationTestcases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

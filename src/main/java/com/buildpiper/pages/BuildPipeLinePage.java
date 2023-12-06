@@ -92,11 +92,13 @@ public class BuildPipeLinePage extends BasePage {
 
 	}
 	
-	public BuildPipeLinePage searchPipeline() {
+	public BuildPipeLinePage searchPipeline(String pipeline) {
 		
 		ui_wait(5);
 		
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+		ui_clearAndSetValue(searchPipeLine, pipeline);
+		searchPipeLine.sendKeys(Keys.ENTER);
 		
 		return this;
 	}
@@ -113,6 +115,10 @@ public class BuildPipeLinePage extends BasePage {
 	WebElement firstPipelineRunwithParameter;
 	@FindBy(xpath = "//span[contains(@class,'sub-heading-controller')]/span")
 	WebElement parameterTagPipeline;
+	@FindBy(xpath = "(//input[@name='components'])[2]")
+	WebElement firstServiceCheckbox;
+	@FindBy(xpath = "//*[text()='Change Branch and tag']")
+	WebElement changeBranchandtagLink;
 	
 public BuildPipeLinePage editPipeline(String appName) {
 		
@@ -159,7 +165,7 @@ public BuildPipeLinePage historyPipeline(String appName) {
 	return this;
 	}
 
-public BuildPipeLinePage RunwithParameter(String appName) {
+public BuildPipeLinePage RunwithParameter(String appName,String pipeline) {
 	
 	boolean projectSelection = false;
 	ui_wait(5);
@@ -173,8 +179,13 @@ public BuildPipeLinePage RunwithParameter(String appName) {
 	}
 	if(projectSelection) {
 	ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+	searchPipeline(pipeline);
 	ui_click(firstPipelineRunwithParameter, "first Pipeline RunwithParameter");	
 	Assert.assertEquals(parameterTagPipeline.getText(), "Please note: artifact tag has to be unique");
+	ui_click(firstServiceCheckbox, "first Service Checkbox");
+	ui_wait(3);
+	ui_IsElementDisplay(ui_waitForElementToDisplay(changeBranchandtagLink, Pause.MEDIUM));
+	ui_click(changeBranchandtagLink, "change Branch and tag Link");
 	}
 	return this;
 	}

@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -351,9 +353,35 @@ public class UICapability implements uicapabilities{
 	}
 
 	public void switchToNewWindow() {
-		for (String winHandle : ui_getUIDriver().getWindowHandles()) {
+	/*	for (String winHandle : ui_getUIDriver().getWindowHandles()) {
+			
 			ui_getUIDriver().switchTo().window(winHandle);
+		}*/
+		
+		String parent=ui_getUIDriver().getWindowHandle();
+
+		Set<String>s=ui_getUIDriver().getWindowHandles();
+
+		// Now iterate using Iterator
+		Iterator<String> I1= s.iterator();
+
+		while(I1.hasNext())
+		{
+
+		String child_window=I1.next();
+
+		if(!parent.equals(child_window))
+		{
+		ui_getUIDriver().switchTo().window(child_window);
+
+		System.out.println(ui_getUIDriver().switchTo().window(child_window).getTitle());
+
+		ui_getUIDriver().close();
 		}
+
+		}
+		//switch to the parent window
+		ui_getUIDriver().switchTo().window(parent);
 	}
 
 //	public String ui_takeScreenShot(String folder, String name) {

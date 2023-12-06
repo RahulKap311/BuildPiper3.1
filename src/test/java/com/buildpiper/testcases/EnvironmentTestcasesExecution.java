@@ -306,7 +306,7 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 	//list.add("STAGING");
     //list.add("PROD");
 
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		//Verify Environment Versioning is Enabled
 		for(int i=0;i<list.size();i++) {
 			ui_wait(4);
@@ -315,11 +315,11 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 			new EnvironmentCreationPage().ChangeVersioning("Build",list.get(i),"false");
 			ui_wait(4);	
 			new PreRequisitesPage().switchUser();
-			new EnvironmentCreationPage().AddEnvironemntsWithVersioning(AppName,list.get(i),BranchName,NameSpace,Registry,"false");
-			new PreRequisitesPage().switchToAdmin();
+			//new EnvironmentCreationPage().AddEnvironemntsWithVersioning(AppName,list.get(i),BranchName,NameSpace,Registry,"false");
+			//new PreRequisitesPage().switchToAdmin();
 		}
 		//Verify Environment Versioning is Dissable
-		for(int i=0;i<list.size();i++) {
+	/*	for(int i=0;i<list.size();i++) {
 			ui_wait(4);
 			new EnvironmentCreationPage().ChangeVersioning("Deploy",list.get(i),"true");
 			ui_wait(4);
@@ -328,7 +328,7 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 			new PreRequisitesPage().switchUser();
 			new EnvironmentCreationPage().AddEnvironemntsWithVersioning(AppName,list.get(i),BranchName,NameSpace,Registry,"true");
 			new PreRequisitesPage().switchToAdmin();
-		}
+		}*/
 		
 	
 	

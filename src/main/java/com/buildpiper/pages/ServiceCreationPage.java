@@ -202,8 +202,8 @@ public class ServiceCreationPage extends BasePage {
 	WebElement promotedOn;	
 	@FindBy(xpath = "//div[@class='build-section']//div[contains(@class,'status-chip status-chip')]")
 	WebElement runningBuildStatus;
-	@FindBy(xpath = "//div[text()='Artifact ']/../span")
-	WebElement buildArtifact;	
+	@FindBy(xpath = "(//div/p[text()='Artifact']/following-sibling::span)[1]")
+	public WebElement buildArtifact;	
 	@FindBy(xpath = "//span[text()='Commit ID: ']/../div/span")
 	WebElement commitID;
 	@FindBy(xpath = "//span[text()='Commit Msg: ']/../div/span")
@@ -274,9 +274,9 @@ public class ServiceCreationPage extends BasePage {
 	WebElement deploymentstatuscheck;
 	
 	
-	@FindBy(xpath = "(//button[@class='MuiButtonBase-root MuiIconButton-root'])[1]")
+	@FindBy(xpath = "//div[@class='card']//button[@class='MuiButtonBase-root MuiIconButton-root']")
 	WebElement buildwindow_closeButton;
-	@FindBy(xpath = "(//button[@class='MuiButtonBase-root MuiIconButton-root'])[1]")
+	@FindBy(xpath = "//div[@class='card']//button[@class='MuiButtonBase-root MuiIconButton-root']")
 	WebElement deploywindow_closeButton;
 	@FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']")
 	WebElement historywindow_closeButton;
@@ -1350,6 +1350,8 @@ public class ServiceCreationPage extends BasePage {
 	
 	@FindBy(xpath = "//button[text()='Trigger Build']")
 	WebElement triggerBuild;
+	@FindBy(xpath = "//div[contains(@class,'popup-card mb')]//button[@class='btn-round border-navy bg-clear-btn']")
+	WebElement refreshBuildandDeploybutton;
 	
 	@FindBy(xpath = "//button[contains(text(),'Trigger Build & Deploy')]")
 	WebElement triggerBuildAndDeploy;
@@ -1366,20 +1368,27 @@ public class ServiceCreationPage extends BasePage {
 	//RK
 	public ServiceCreationPage buildButton_Click() {
 
-		ui_click(buildButton, "clicks buildButton");
+		ui_click(buildButton, "buildButton");
 
 		return this;
 	}
 	public ServiceCreationPage triggerBuild_Click() {
 
-		ui_click(triggerBuild, "clicks triggerBuild");
+		ui_click(triggerBuild, "triggerBuild");
 
 		return this;
 	}
     //RK
 	public ServiceCreationPage CacheCheckbox_Click() {
 
-		ui_click(cacheToggle, "clicks on cacheToggle");
+		ui_click(cacheToggle, "cacheToggle");
+
+		return this;
+	}
+	
+	public ServiceCreationPage RefreshBuildandDeploy_Click() {
+
+		ui_click(refreshBuildandDeploybutton, "refresh BuildandDeploy button");
 
 		return this;
 	}
@@ -1420,7 +1429,7 @@ public class ServiceCreationPage extends BasePage {
 		ui_clearAndSetValue(searchServiceTextBox, Servicename);
 		searchServiceTextBox.sendKeys(Keys.ENTER);
 		ui_wait(3);
-		Assert.assertEquals(serviceList.get(0).getText(), "AUTOMATION-682046MU117XJPT");
+		Assert.assertEquals(serviceList.get(0).getText(), Servicename.toUpperCase());
 		}
 		return this;
 	}
@@ -1641,10 +1650,15 @@ public class ServiceCreationPage extends BasePage {
 		}
 	
 	//RK
-	@FindBy(xpath = "//div[@class='round-chip status-chip-info status-font']")
+	@FindBy(xpath = "//div[contains(@class,'popup-card')]//td//div[contains(@class,'round-chip')]")
 	WebElement buildStatus;	
-	@FindBy(xpath = "//span[text()='Build #']")
+	@FindBy(xpath = "//div[contains(@class,'popup-card')]//td//span[contains(@class,'round-chip')]")
+	WebElement deployStatus;	
+	
+	@FindBy(xpath = "//div[contains(@class,'popup-card')]//span[text()='Build #']")
 	WebElement buildRecent;	
+	@FindBy(xpath = "//div[contains(@class,'popup-card')]//span[text()='Deploy#']")
+	WebElement deployRecent;	
 	
 	public ServiceCreationPage Verify_buildStatus(String Status) {
 	ui_IsElementDisplay(ui_waitForElementToDisplay(buildStatus, Pause.MEDIUM));
@@ -1652,10 +1666,23 @@ public class ServiceCreationPage extends BasePage {
     assertEquals(BuildStatus, Status);
 	return this;
 	}
+	
+	public ServiceCreationPage Verify_deployStatus(String Status) {
+		ui_IsElementDisplay(ui_waitForElementToDisplay(deployStatus, Pause.MEDIUM));
+	    String DeployStatus=deployStatus.getText();
+	    assertEquals(DeployStatus, Status);
+		return this;
+		}
+	
 	public ServiceCreationPage buildRecentButtonClick() {
 	ui_click(buildRecent, "buildRecent");
 		return this;
-		}
+	}
+	
+	public ServiceCreationPage deployRecentButtonClick() {
+		ui_click(deployRecent, "deployRecent");
+		return this;
+	}
 		
 	@FindBy(xpath = "//input[@name='no_cache' and @class='switch-input']")
 	WebElement cacheToggle;
@@ -1678,12 +1705,46 @@ public class ServiceCreationPage extends BasePage {
 	
 	@FindBy(xpath = "//button[@title='Deploy']")
 	WebElement deployButton;
+	@FindBy(xpath = "//button[@title='Clear']")
+	WebElement cleardeployDropDown;
+	@FindBy(xpath = "//input[@id='deploy_tag']")
+	WebElement deploytagInput;
+	@FindBy(xpath = "//ul[@id='deploy_tag-popup']//li")
+	List<WebElement> deploytagList;
 	
-	public ServiceCreationPage deployService() {
+	
+	public ServiceCreationPage deployService(String Artifactid) {
 
 		ui_click(deployButton, "clicks deployButton");
 		ui_wait(5);
+		ui_click(deploytagInput, "deploytagInput");
+		ui_click(cleardeployDropDown, "cleardeployDropDown");
+		ui_clearAndSetValue(deploytagInput, Artifactid);
+		ui_wait(2);
+		ui_clickfromList(deploytagList, Artifactid);
+		ui_wait(5);
 		ui_click(triggerDeploy, "clicks triggerDeploy");
+
+		return this;
+	}
+	
+	@FindBy(xpath = "//div[contains(@class,'bg-round')]//span")
+	WebElement monitoringStatus;
+	@FindBy(xpath = "(//ul[@class='headerul']/li[2])[1]")
+	WebElement podsStatusTab;
+	@FindBy(xpath = "//div[@class='card pod-card ']//p[1]/span")
+	WebElement podsStatus;
+	
+	public ServiceCreationPage monitorService() {
+
+		ui_click(monitoring, "monitoring button");
+		ui_wait(10);
+		System.out.println(monitoringStatus.getText());
+		ui_click(podsStatusTab, "podsStatusTab");
+		ui_wait(10);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(podsStatus, Pause.MEDIUM));
+		ui_click(podsStatus, "podsStatus");
+		Assert.assertEquals(podsStatus.getText(), "Insufficient Space, cannot create pods");
 
 		return this;
 	}

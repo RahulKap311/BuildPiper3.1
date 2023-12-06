@@ -16,6 +16,7 @@ import com.buildpiper.pages.PreRequisitesPage;
 import com.buildpiper.pages.ServiceCreationPage;
 import com.buildpiper.utils.ExcelUtility;
 import com.buildpiper.utils.FrameworkConfig;
+import com.buildpiper.utils.Pause;
 
 @Listeners(com.buildpiper.report.ExtentReportListener.class)
 
@@ -119,11 +120,64 @@ public class LenskartScan extends BaseTest {
 	
 	@Test(groups = { "Regression" },priority = 0)
 	public void RunwithParameterPipeline() {
-		
 		//new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("Pipeline", "RunwithParameterPipeline");		
 		new PreRequisitesPage().switchUser();
 		ui_wait(3);
-		new BuildPipeLinePage().RunwithParameter(reader.getCellData("MicroServiceData", "applicationName", 2));
+		new BuildPipeLinePage().RunwithParameter(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
+		
+	}
+	@Test(groups = { "Regression" },priority = 0)
+	public void ManualBuildandDeployHelmService() {
+		//new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "ManualBuildandDeployHelmService");		
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		new ServiceCreationPage().SearchServiceViaRandomStringValue(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(new ServiceCreationPage().buildArtifact, Pause.MEDIUM));
+		String ArtifactID=new ServiceCreationPage().buildArtifact.getText().replace("please select", "");
+		
+		//build Service
+		new ServiceCreationPage().buildButton_Click();
+		ui_wait(1);
+		new ServiceCreationPage().buildButton_Click();
+		ui_wait(5);
+		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("DEV","dev-helm");
+		ui_wait(3);
+		new ServiceCreationPage().triggerBuild_Click();
+		ui_wait(8);
+		new ServiceCreationPage().Verify_buildStatus("RUNNING");
+		ui_wait(30);
+		new ServiceCreationPage().buildRecentButtonClick();
+		ui_switchToNewWindow();
+		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_buildStatus("SUCCESS");
+		ui_wait(3);
+		new ServiceCreationPage().closeBuildWindow();
+		ui_wait(3);		
+		
+		//Deploy Service
+		new ServiceCreationPage().deployService(ArtifactID);
+		ui_wait(3);
+		new ServiceCreationPage().Verify_deployStatus("RUNNING");	
+		ui_wait(40);
+		new ServiceCreationPage().deployRecentButtonClick();
+		ui_switchToNewWindow();
+		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_deployStatus("SUCCESS");
+		ui_wait(3);
+		new ServiceCreationPage().closeDeployWindow();
+		ui_wait(3);
+		
+		//monitoring Service
+		new ServiceCreationPage().monitorService();
+		ui_wait(3);
+		
 		
 	}
 	
