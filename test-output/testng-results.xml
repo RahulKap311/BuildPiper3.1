@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="12" total="13" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Test Execution ID : 06Dec_210150]]>
+      <![CDATA[Test Execution ID : 07Dec_195940]]>
     </line>
     <line>
-      <![CDATA[####### Starting  Test Case: BuildDeployAlternate #######]]>
+      <![CDATA[####### Starting  Test Case: JobStatusInsidePipleineforMultipleService #######]]>
     </line>
     <line>
-      <![CDATA[Getting test data for BuildDeployAlternate]]>
+      <![CDATA[Getting test data for JobStatusInsidePipleineforMultipleService]]>
     </line>
     <line>
-      <![CDATA[No testdata found for Test Case: BuildDeployAlternate]]>
+      <![CDATA[No testdata found for Test Case: JobStatusInsidePipleineforMultipleService]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
@@ -20,7 +20,7 @@
       <![CDATA[Open URL:https://buildpiper-blue.lenskart.com/login]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210156.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195947.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Executing; ui_launch]]>
@@ -32,7 +32,7 @@
       <![CDATA[Setting value on element USER_NAME]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210205.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195953.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : name: password]is displayed on screen]]>
@@ -41,7 +41,7 @@
       <![CDATA[Setting value on element PASSWORD]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195954.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //button[@type='submit']]is displayed on screen]]>
@@ -50,7 +50,7 @@
       <![CDATA[Clicking on element LOGIN_BTN]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195954.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Successful navigation is validated for LoginPage]]>
@@ -59,19 +59,19 @@
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210207.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195955.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210217.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200000.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200006.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]is displayed on screen]]>
@@ -80,166 +80,184 @@
       <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200006.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//li//span[contains(.,'Pipeline Overview')]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Poc_QA buildDeploy]]>
+      <![CDATA[Clicking on element Poc_QA pipelineOverviewLink]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210221.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200006.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='build_deploy' and @type='radio']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='name' and @placeholder='Name']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Poc_QA buildRadioBtn]]>
+      <![CDATA[Element is present  xpath: //div[@class='input-component']//input[@name='name' and @placeholder='Name']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210228.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200012.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='name' and @placeholder='Name']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Poc_QA inputBranchName]]>
+      <![CDATA[Element : xpath: //div[@class='service-name']/a]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210230.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element search Pipeline hyperlink]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@title='Clear']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200014.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element ClicksclearField]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element Expend Job]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200019.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Build']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element clicks build button]]>
+      <![CDATA[Clicking on element Expend Job]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200022.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button[@class='btn btn-primary' and text()='Continue']]]]>
+      <![CDATA[Clicking on element Expend Job]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200024.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Click continueBtn]]>
+      <![CDATA[Clicking on element Expend Job]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200026.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[ Element Proxy element for: DefaultElementLocator 'By.xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']' is not clickable using selenium click]]>
+      <![CDATA[Clicking on element Expend Job]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200029.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Poc_QA buildDeploy]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element ]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//div[@class='input-component']//input[@name='build_deploy' and @type='radio'])[2]/..]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200032.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Poc_QA DeployRadioBtn]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210448.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element ]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='deploy_tag' and @placeholder='Enter value']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200036.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Deploy']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element clicks deploy button]]>
+      <![CDATA[Clicking on element ]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210454.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200039.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element ]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200042.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element ]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200046.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties ]]>
     </line>
     <line>
-      <![CDATA[####### End of Test Case: BuildDeployAlternate #######]]>
+      <![CDATA[####### End of Test Case: JobStatusInsidePipleineforMultipleService #######]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-12-06T21:01:52 IST" name="Default suite" finished-at="2023-12-06T21:04:55 IST" duration-ms="182365">
+  <suite started-at="2023-12-07T19:59:42 IST" name="Default suite" finished-at="2023-12-07T20:00:51 IST" duration-ms="69538">
     <groups>
       <group name="Regression">
-        <method signature="ServiceCreationTestcases.BuildDeployAlternate()[pri:1, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" name="BuildDeployAlternate" class="com.buildpiper.testcases.ServiceCreationTestcases"/>
+        <method signature="LenskartScan.JobStatusInsidePipleineforMultipleService()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" name="JobStatusInsidePipleineforMultipleService" class="com.buildpiper.testcases.LenskartScan"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2023-12-06T21:01:52 IST" name="Default test" finished-at="2023-12-06T21:04:55 IST" duration-ms="182365">
-      <class name="com.buildpiper.testcases.ServiceCreationTestcases">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:52 IST" name="setUp" finished-at="2023-12-06T21:01:52 IST" duration-ms="39" status="PASS">
+    <test started-at="2023-12-07T19:59:42 IST" name="Default test" finished-at="2023-12-07T20:00:51 IST" duration-ms="69538">
+      <class name="com.buildpiper.testcases.LenskartScan">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T19:59:42 IST" name="setUp" finished-at="2023-12-07T19:59:42 IST" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7da1e005]]>
+                <![CDATA[org.testng.TestRunner@79252c83]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="Reportsetup()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:52 IST" name="Reportsetup" finished-at="2023-12-06T21:01:52 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="Reportsetup()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T19:59:42 IST" name="Reportsetup" finished-at="2023-12-07T19:59:42 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reportsetup -->
-        <test-method is-config="true" signature="testName(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:52 IST" name="testName" finished-at="2023-12-06T21:01:53 IST" duration-ms="737" status="PASS">
+        <test-method is-config="true" signature="testName(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T19:59:42 IST" name="testName" finished-at="2023-12-07T19:59:42 IST" duration-ms="574" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7da1e005]]>
+                <![CDATA[org.testng.TestRunner@79252c83]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.buildpiper.testcases.ServiceCreationTestcases.BuildDeployAlternate()]]>
+                <![CDATA[public void com.buildpiper.testcases.LenskartScan.JobStatusInsidePipleineforMultipleService()]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[####### Starting  Test Case: BuildDeployAlternate #######]]>
+              <![CDATA[####### Starting  Test Case: JobStatusInsidePipleineforMultipleService #######]]>
             </line>
             <line>
-              <![CDATA[Getting test data for BuildDeployAlternate]]>
+              <![CDATA[Getting test data for JobStatusInsidePipleineforMultipleService]]>
             </line>
             <line>
-              <![CDATA[No testdata found for Test Case: BuildDeployAlternate]]>
+              <![CDATA[No testdata found for Test Case: JobStatusInsidePipleineforMultipleService]]>
             </line>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method is-config="true" signature="StartDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:01:53 IST" name="StartDriver" finished-at="2023-12-06T21:02:12 IST" duration-ms="19366" status="PASS">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T19:59:42 IST" name="StartDriver" finished-at="2023-12-07T20:00:00 IST" duration-ms="17839" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[checking if driver exist]]>
@@ -248,7 +266,7 @@
               <![CDATA[Open URL:https://buildpiper-blue.lenskart.com/login]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210156.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195947.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Executing; ui_launch]]>
@@ -260,7 +278,7 @@
               <![CDATA[Setting value on element USER_NAME]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210205.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195953.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : name: password]is displayed on screen]]>
@@ -269,7 +287,7 @@
               <![CDATA[Setting value on element PASSWORD]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195954.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //button[@type='submit']]is displayed on screen]]>
@@ -278,7 +296,7 @@
               <![CDATA[Clicking on element LOGIN_BTN]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210206.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195954.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Successful navigation is validated for LoginPage]]>
@@ -287,23 +305,23 @@
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210207.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_195955.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="BuildDeployAlternate()[pri:1, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:02:12 IST" name="BuildDeployAlternate" finished-at="2023-12-06T21:04:54 IST" duration-ms="161661" status="PASS">
+        <test-method signature="JobStatusInsidePipleineforMultipleService()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T20:00:00 IST" name="JobStatusInsidePipleineforMultipleService" finished-at="2023-12-07T20:00:51 IST" duration-ms="50936" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210217.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200000.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200006.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]is displayed on screen]]>
@@ -312,138 +330,156 @@
               <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[@title]]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210220.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200006.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//li//span[contains(.,'Pipeline Overview')]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Poc_QA buildDeploy]]>
+              <![CDATA[Clicking on element Poc_QA pipelineOverviewLink]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210221.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200006.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='build_deploy' and @type='radio']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='name' and @placeholder='Name']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Poc_QA buildRadioBtn]]>
+              <![CDATA[Element is present  xpath: //div[@class='input-component']//input[@name='name' and @placeholder='Name']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210228.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200012.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='input-component']//input[@name='name' and @placeholder='Name']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Poc_QA inputBranchName]]>
+              <![CDATA[Element : xpath: //div[@class='service-name']/a]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210230.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element search Pipeline hyperlink]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@title='Clear']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200014.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element ClicksclearField]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element Expend Job]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@id='branch' and @name='branch']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200019.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Build']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element clicks build button]]>
+              <![CDATA[Clicking on element Expend Job]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210236.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200022.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button[@class='btn btn-primary' and text()='Continue']]]]>
+              <![CDATA[Clicking on element Expend Job]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200024.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-primary' and text()='Continue']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Click continueBtn]]>
+              <![CDATA[Clicking on element Expend Job]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210437.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200026.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[ Element Proxy element for: DefaultElementLocator 'By.xpath: //div[not(contains(@class,'jss'))]/ul/a[@class='subOptionChild']//span[@title='Build / Deploy']' is not clickable using selenium click]]>
+              <![CDATA[Clicking on element Expend Job]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200029.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Poc_QA buildDeploy]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210439.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element ]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//div[@class='input-component']//input[@name='build_deploy' and @type='radio'])[2]/..]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200032.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Poc_QA DeployRadioBtn]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210448.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element ]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='deploy_tag' and @placeholder='Enter value']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200036.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='btn btn-submit'][text()='Deploy']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element clicks deploy button]]>
+              <![CDATA[Clicking on element ]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\06Dec_210150\BuildDeployAlternate_chrome\BuildDeployAlternate_chrome_340_Dec_210454.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200039.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element ]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200042.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //div[@class='flaticon-expand-button']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element ]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\07Dec_195940\JobStatusInsidePipleineforMultipleService_chrome\JobStatusInsidePipleineforMultipleService_chrome_341_Dec_200046.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties ]]>
             </line>
             <line>
-              <![CDATA[####### End of Test Case: BuildDeployAlternate #######]]>
+              <![CDATA[####### End of Test Case: JobStatusInsidePipleineforMultipleService #######]]>
             </line>
           </reporter-output>
-        </test-method> <!-- BuildDeployAlternate -->
-        <test-method is-config="true" signature="StopDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:04:54 IST" name="StopDriver" finished-at="2023-12-06T21:04:54 IST" duration-ms="256" status="PASS">
+        </test-method> <!-- JobStatusInsidePipleineforMultipleService -->
+        <test-method is-config="true" signature="StopDriver()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T20:00:51 IST" name="StopDriver" finished-at="2023-12-07T20:00:51 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopDriver -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:04:54 IST" name="getResult" finished-at="2023-12-06T21:04:55 IST" duration-ms="295" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T20:00:51 IST" name="getResult" finished-at="2023-12-07T20:00:51 IST" duration-ms="126" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BuildDeployAlternate status=SUCCESS method=ServiceCreationTestcases.BuildDeployAlternate()[pri:1, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c] output=checking if driver exist]]]>
+                <![CDATA[[TestResult name=JobStatusInsidePipleineforMultipleService status=SUCCESS method=LenskartScan.JobStatusInsidePipleineforMultipleService()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60] output=checking if driver exist]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@757f675c]" started-at="2023-12-06T21:04:55 IST" name="tearDown" finished-at="2023-12-06T21:04:55 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.buildpiper.testcases.LenskartScan@867ba60]" started-at="2023-12-07T20:00:51 IST" name="tearDown" finished-at="2023-12-07T20:00:51 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.buildpiper.testcases.ServiceCreationTestcases -->
+      </class> <!-- com.buildpiper.testcases.LenskartScan -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

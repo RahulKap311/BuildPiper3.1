@@ -2,6 +2,7 @@ package com.buildpiper.testcases;
 
 import org.aeonbits.owner.ConfigFactory;
 import org.mozilla.javascript.tools.shell.Environment;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -33,7 +34,7 @@ public class LenskartScan extends BaseTest {
 	    }
 	 @AfterMethod
 	   public void StopDriver() {
-    	ui_getUIDriver().quit();
+    	//ui_getUIDriver().quit();
 	    }
 	
 	@Test(groups = { "Regression" },priority = 0)
@@ -127,6 +128,16 @@ public class LenskartScan extends BaseTest {
 		new BuildPipeLinePage().RunwithParameter(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
 		
 	}
+	
+	@Test(groups = { "Regression" },priority = 0)
+	public void JobStatusInsidePipleineforMultipleService() {
+		//new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("Pipeline", "JobStatusInsidePipleineforMultipleService");		
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		new BuildPipeLinePage().FindStatusandBranch(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
+		ui_wait(3);
+	}
 	@Test(groups = { "Regression" },priority = 0)
 	public void ManualBuildandDeployHelmService() {
 		//new LoginPage().login(config.username(), config.password());
@@ -136,9 +147,11 @@ public class LenskartScan extends BaseTest {
 		new ServiceCreationPage().SearchServiceViaRandomStringValue(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
 		ui_wait(3);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(new ServiceCreationPage().buildArtifact, Pause.MEDIUM));
-		String ArtifactID=new ServiceCreationPage().buildArtifact.getText().replace("please select", "");
+		String ArtifactID=new ServiceCreationPage().buildArtifact.getText();
+		
 		
 		//build Service
+		ui_wait(2);
 		new ServiceCreationPage().buildButton_Click();
 		ui_wait(1);
 		new ServiceCreationPage().buildButton_Click();
@@ -147,6 +160,8 @@ public class LenskartScan extends BaseTest {
 		ui_wait(3);
 		new ServiceCreationPage().triggerBuild_Click();
 		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
 		new ServiceCreationPage().Verify_buildStatus("RUNNING");
 		ui_wait(30);
 		new ServiceCreationPage().buildRecentButtonClick();
@@ -162,8 +177,10 @@ public class LenskartScan extends BaseTest {
 		//Deploy Service
 		new ServiceCreationPage().deployService(ArtifactID);
 		ui_wait(3);
-		new ServiceCreationPage().Verify_deployStatus("RUNNING");	
-		ui_wait(40);
+		new ServiceCreationPage().Verify_deployStatus("RUNNING");
+		ui_wait(4);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(60);
 		new ServiceCreationPage().deployRecentButtonClick();
 		ui_switchToNewWindow();
 		ui_wait(8);
@@ -174,9 +191,39 @@ public class LenskartScan extends BaseTest {
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
 		
-		//monitoring Service
-		new ServiceCreationPage().monitorService();
+		//Promote Service
+		
+		new ServiceCreationPage().promoteService("test",ArtifactID);
 		ui_wait(3);
+		//new ServiceCreationPage().Verify_promoteStatus("RUNNING");	
+		ui_wait(4);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(40);
+		new ServiceCreationPage().promoteRecentButtonClick();
+		ui_switchToNewWindow();
+		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		ui_wait(10);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_promoteStatus("SUCCESS");
+		ui_wait(3);
+		new ServiceCreationPage().closeDeployWindow();
+		ui_wait(3);
+		
+		
+		new ServiceCreationPage().switchEnvironmentTab("STAGING");
+		ui_wait(20);
+		String ArtifactID1=new ServiceCreationPage().deployandPromoteartifactID1.getText();
+		Assert.assertEquals(ArtifactID, ArtifactID1);
+		new ServiceCreationPage().switchEnvironmentTab("DEV");
+		ui_wait(10);
+		
+		//monitoring Service
+		 new ServiceCreationPage().monitorService();
+		 ui_wait(3);
+		
 		
 		
 	}

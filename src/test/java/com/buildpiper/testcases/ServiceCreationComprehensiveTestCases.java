@@ -258,7 +258,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
-		new ServiceCreationPage().promoteService();
+		new ServiceCreationPage().promoteService("","");
 		ui_wait(3);
 		new ServiceCreationPage().verify_BuildHistory();
 		
@@ -282,7 +282,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
-		new ServiceCreationPage().promoteService();
+		new ServiceCreationPage().promoteService("","");
 		
 	}
 

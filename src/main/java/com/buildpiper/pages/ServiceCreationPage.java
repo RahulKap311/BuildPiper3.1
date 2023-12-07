@@ -203,7 +203,10 @@ public class ServiceCreationPage extends BasePage {
 	@FindBy(xpath = "//div[@class='build-section']//div[contains(@class,'status-chip status-chip')]")
 	WebElement runningBuildStatus;
 	@FindBy(xpath = "(//div/p[text()='Artifact']/following-sibling::span)[1]")
-	public WebElement buildArtifact;	
+	public WebElement buildArtifact;
+	@FindBy(xpath = "(//div/div[text()='Artifact ']/following-sibling::span)[1]")
+	public WebElement deployandPromoteartifactID1;
+	
 	@FindBy(xpath = "//span[text()='Commit ID: ']/../div/span")
 	WebElement commitID;
 	@FindBy(xpath = "//span[text()='Commit Msg: ']/../div/span")
@@ -241,6 +244,9 @@ public class ServiceCreationPage extends BasePage {
 	WebElement deploy;
 	@FindBy(xpath = "//button/span[@class='flaticon-forward-arrow']")
 	WebElement promote;
+	@FindBy(xpath = "//select[@name='promote_env']")
+	WebElement promoteEnvironmentSelect;
+	
 	@FindBy(xpath = "//button[@title='History']")
 	WebElement history;
 	@FindBy(xpath = "//button[@title='Monitoring']")
@@ -1369,6 +1375,10 @@ public class ServiceCreationPage extends BasePage {
 	public ServiceCreationPage buildButton_Click() {
 
 		ui_click(buildButton, "buildButton");
+		ui_wait(1);
+		if(ui_IsElementPresent(buildButton, "2")) {
+			ui_click(buildButton, "buildButton");
+		}
 
 		return this;
 	}
@@ -1402,6 +1412,7 @@ public class ServiceCreationPage extends BasePage {
 	WebElement searchServiceTextBox;
 	
 	public ServiceCreationPage Verify_EnvironmentandSubEnvironment(String Env,String SubEnv) {
+	ui_wait(4);
 	ui_IsElementDisplay(ui_waitForElementToDisplay(environmentCheck, Pause.MEDIUM));
     String Environment=environmentCheck.getText();
     String SubEnvironment=subEnvironmentCheck.getText();
@@ -1654,11 +1665,15 @@ public class ServiceCreationPage extends BasePage {
 	WebElement buildStatus;	
 	@FindBy(xpath = "//div[contains(@class,'popup-card')]//td//span[contains(@class,'round-chip')]")
 	WebElement deployStatus;	
+	@FindBy(xpath = "//div[contains(@class,'popup-card')]//td//p[contains(@class,'round-chip')]")
+	WebElement promoteStatus;	
 	
 	@FindBy(xpath = "//div[contains(@class,'popup-card')]//span[text()='Build #']")
 	WebElement buildRecent;	
 	@FindBy(xpath = "//div[contains(@class,'popup-card')]//span[text()='Deploy#']")
 	WebElement deployRecent;	
+	@FindBy(xpath = "//div[contains(@class,'popup-card')]//a[text()='Promote#']")
+	WebElement promoteRecent;	
 	
 	public ServiceCreationPage Verify_buildStatus(String Status) {
 	ui_IsElementDisplay(ui_waitForElementToDisplay(buildStatus, Pause.MEDIUM));
@@ -1674,6 +1689,13 @@ public class ServiceCreationPage extends BasePage {
 		return this;
 		}
 	
+	public ServiceCreationPage Verify_promoteStatus(String Status) {
+		ui_IsElementDisplay(ui_waitForElementToDisplay(promoteStatus, Pause.MEDIUM));
+	    String DeployStatus=promoteStatus.getText();
+	    assertEquals(DeployStatus, Status);
+		return this;
+		}
+	
 	public ServiceCreationPage buildRecentButtonClick() {
 	ui_click(buildRecent, "buildRecent");
 		return this;
@@ -1683,6 +1705,12 @@ public class ServiceCreationPage extends BasePage {
 		ui_click(deployRecent, "deployRecent");
 		return this;
 	}
+	
+	public ServiceCreationPage promoteRecentButtonClick() {
+		ui_click(promoteRecent, "promoteRecent");
+		return this;
+	}
+		
 		
 	@FindBy(xpath = "//input[@name='no_cache' and @class='switch-input']")
 	WebElement cacheToggle;
@@ -1711,6 +1739,11 @@ public class ServiceCreationPage extends BasePage {
 	WebElement deploytagInput;
 	@FindBy(xpath = "//ul[@id='deploy_tag-popup']//li")
 	List<WebElement> deploytagList;
+	
+	@FindBy(xpath = "//input[@id='promote_tag']")
+	WebElement promotetagInput;
+	@FindBy(xpath = "//ul[@id='promote_tag-popup']//li")
+	List<WebElement> promotetagList;
 	
 	
 	public ServiceCreationPage deployService(String Artifactid) {
@@ -1749,11 +1782,20 @@ public class ServiceCreationPage extends BasePage {
 		return this;
 	}
 	
-	public ServiceCreationPage promoteService() {
+	public ServiceCreationPage promoteService(String env,String Artifactid) {
 		
 		ui_click(promote, "clicks Promote Button");
 		ui_wait(5);
-		ui_click(triggerDeploy, "clicks triggerDeploy");
+		Select dropdown = new Select(promoteEnvironmentSelect);
+		dropdown.selectByVisibleText(env);
+		ui_wait(2);
+		ui_click(promotetagInput, "deploytagInput");
+		ui_click(cleardeployDropDown, "cleardeployDropDown");
+		ui_clearAndSetValue(promotetagInput, Artifactid);
+		ui_wait(2);
+		ui_clickfromList(promotetagList, Artifactid);
+		ui_wait(5);
+		ui_click(triggerPromote, "clicks triggerPromote");
 		
 		return this;
 	}

@@ -1661,6 +1661,160 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 		return this;
 	}
 	
+	@FindBy(xpath = "//div[@class='service-name']/a")
+	WebElement searchPipelinehyperlink;
+	@FindBy(xpath = "//a[@title='view logs']/following-sibling::div[1]")
+	List<WebElement> buildStatus;
+	@FindBy(xpath = "//div[@class='service']")
+	List<WebElement> serviceName;
+	@FindBy(xpath = "//span[@class='tag-image border-bottom']")
+	WebElement buildBranch;
+	
+	public BuildPipeLinePage FindStatusandBranch(String appName,String pipelinename) {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+			searchPipeline(pipelinename);
+			ui_click(searchPipelinehyperlink, "search Pipeline hyperlink");
+			ui_wait(5);
+			for(int i=0;i<jobdrops.size();i++) {
+				ui_click(jobdrops.get(i), "Expend Job");
+				ui_wait(2);
+			}
+//			for(int i=0;i<buildStatus.size();i++) {
+//			 System.out.println(buildStatus.get(i).getText());
+//				ui_wait(2);
+//			}
+			for(int i=0;i<jobdrops.size();i++) {
+				System.out.println("--"+buildStatus.get(i).getText());
+				System.out.println("------"+serviceName.get(i).getText());
+				ui_wait(1);
+				ui_click(jobdrops.get(i), "");
+				ui_wait(2);
+				System.out.println(buildBranch.getText());
+			}
+		}
+		
+		return this;
+	}
+	
+	@FindBy(xpath = "//label[text()='Change Branch and tag']")
+	WebElement changeBranchAndTag;
+
+	@FindBy(xpath = "//select[@name='dev.demo-app.build.branch']")
+	WebElement changeBranchDemoService;
+
+	@FindBy(xpath = "//select[@name='dev.salary.build.branch']")
+	WebElement changeBranchSalaryService;
+
+	@FindBy(xpath = "//button[text()=' Save']")
+	WebElement saveBranch;
+	
+	@FindBy(xpath = "//a[text()='Preprod-pipeline']")
+	WebElement pipelineHyp;
+	
+	@FindBy(xpath = "//div[@class='flaticon-expand-button']")
+	List<WebElement> jobdrops;
+	
+	@FindBy(xpath = "//span[@class='tag-image border-bottom']")
+	List<WebElement> branchOne;
+	
+	@FindBy(xpath = "//div[@class=' flaticon-thumb-up-button']")
+	List<WebElement> thumbsUp;
+	
+	@FindBy(xpath = "//input[@name='comment']")
+	WebElement inputCommentOne;
+	
+	@FindBy(xpath = "//button[text()='Approve']")
+	WebElement buttonApprove;
+	
+	@FindBy(xpath = "//div[contains(@class,'green-text')]")
+	List<WebElement> greenTextStatus;
+
+	public BuildPipeLinePage RunPipelinePreProd(String appName, String PipelineName, String branchOne,
+			String branchTwo) {
+
+		boolean projectSelection = false;
+		ui_wait(5);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+
+			// --------------------------------------Search for pipelinePreProd-------------------
+			ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+			ui_wait(5);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+			ui_clearAndSetValue(searchPipeLine, PipelineName);
+			searchPipeLine.sendKeys(Keys.ENTER);
+			ui_click(runwithparameters, "Click on runwithparameters");
+			ui_wait(2);
+
+			// --------------------------------------Select Service one for change branch----------
+			ui_click(runwithparameter_servicelist.get(2), "Click on runwithparameters ServiceList");
+			ui_wait(5);
+			Select dropdown = new Select(changeBranchDemoService);
+			dropdown.selectByVisibleText(branchOne);
+			ui_click(saveBranch, "Click on runwithparameters ServiceList");
+			ui_wait(5);
+
+			// --------------------------------------Select Service two for change branch-----------
+			ui_click(runwithparameter_servicelist.get(5), "Click on runwithparameters ServiceList");
+			ui_wait(5);
+			Select dropdown2 = new Select(changeBranchSalaryService);
+			dropdown2.selectByVisibleText(branchTwo);
+			ui_click(saveBranch, "Click on runwithparameters ServiceList");
+			ui_wait(5);
+			
+			// ---------------------------------------Manage Pop-up ---------------------------------
+			ui_click(pipelineHyp, "Click on pipeline hyperlink");
+			ui_click(jobdrops.get(1), "Click on jobDropOne");
+			ui_wait(5);
+			ui_click(jobdrops.get(1), "Click on jobDropOne");
+			ui_wait(5);
+			ui_click(jobdrops.get(1), "Click on jobDropOne");
+			ui_wait(5);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(manageFailurePopUp, Pause.MEDIUM));
+			ui_click(manageFailurePopUp, "manage Failure PopUp");
+			//TODO
+			ui_click(jobdrops.get(2), "Click on jobDropOne");
+			ui_wait(5);
+			ui_click(jobdrops.get(2), "Click on jobDropOne");
+			ui_wait(5);
+			
+			// ---------------------------------------Jira Create ---------------------------------
+			ui_click(thumbsUp.get(1), "Click on jobDropOne");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(inputCommentOne, Pause.MEDIUM));
+			ui_clearAndSetValue(inputCommentOne, "Jira Auto Test Ticket is created");
+			ui_click(buttonApprove, "Click on jobDropOne");
+			ui_wait(5);
+			ui_click(jobdrops.get(3), "Click on jobDropOne");
+			ui_wait(5);
+			ui_click(jobdrops.get(3), "Click on jobDropOne");
+			//TODO
+			ui_wait(5);
+			ui_click(greenTextStatus.get(12), "Click on jobDropOne");
+			
+			// ---------------------------------------Jira Approval Question ----------------------
+			ui_click(thumbsUp.get(2), "Click on jobDropOne");
+		}
+		return this;
+	}
+
+	
 	public void fetchlogs(String baseurl,String Pipelinename) {
 		  
 		// String baseurl="http://122.160.30.218:17901";
