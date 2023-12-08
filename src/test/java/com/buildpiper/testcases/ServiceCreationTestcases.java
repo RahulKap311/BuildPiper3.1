@@ -107,6 +107,7 @@ public class ServiceCreationTestcases extends BaseTest {
 //				reader.getCellData("userPreReqData", "versioningWorker", 2));
 //		new PreRequisitesPage().accountPreRequisites();
 	    new PreRequisitesPage().switchUser();
+	    ui_wait(4);
 		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "createServ");
 		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),
 				reader.getCellData("MicroServiceData", "envName", RowNumber),

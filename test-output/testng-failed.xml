@@ -6,9 +6,9 @@
       <class name="com.buildpiper.testcases.LenskartScan">
         <methods>
           <include name="setUp"/>
-          <include name="ManualBuildandDeployHelmService"/>
           <include name="testName"/>
           <include name="tearDown"/>
+          <include name="JobStatusInsidePipleineforMultipleService"/>
           <include name="StartDriver"/>
           <include name="Reportsetup"/>
           <include name="StopDriver"/>

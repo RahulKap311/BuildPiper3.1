@@ -219,11 +219,11 @@ public class ExcelUtility {
 			sheet = workbook.getSheetAt(index);
 			//int number = sheet.getLastRowNum() + 1;
 			for(int i=1;i<sheet.getLastRowNum()+1;i++) {
-				System.out.println("-"+sheet.getRow(i).getCell(1).getStringCellValue().trim());
-				System.out.println("--"+sheet.getRow(i).getCell(2).getStringCellValue().trim());
+				//System.out.println("-"+sheet.getRow(i).getCell(1).getStringCellValue().trim());
+				//System.out.println("--"+sheet.getRow(i).getCell(2).getStringCellValue().trim());
 				if(sheet.getRow(i).getCell(1).getStringCellValue().trim().equals(Testcasename)) {
 					Rownumber=i+1;	
-					System.out.println(Rownumber);
+					//System.out.println(Rownumber);
 					break;
 				}
 				

@@ -174,7 +174,7 @@ public class BuildPiperTestcasesExecution extends BaseTest {
 		String ArtifactName2=reader.getCellData("Pipeline", "ArtifactName2", RowNumber);
 		String ProdEnv=reader.getCellData("Pipeline", "prodEnv", RowNumber);
 		
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		//RK
 		new PreRequisitesPage().switchUser();
 		ui_wait(4);

@@ -23,7 +23,7 @@ import groovyjarjarantlr4.v4.runtime.tree.xpath.XPath;
 public class ServiceCreationPage extends BasePage {
 
 	SoftAssert softAssert = new SoftAssert();
-
+   public String servicename;
 	String ServiceName = "automation-" + RandomStrings.generateRandomString(15);
 	String ServiceHelmName = "automation-helm-" + RandomStrings.generateRandomString(15);
 
@@ -33,7 +33,7 @@ public class ServiceCreationPage extends BasePage {
 //	@FindBy(xpath = "//span[@title='perfeasy-testing']//..//..//span[text()='Service Overview']")
 //	WebElement serviceOverViewTab;
 
-	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span")
+	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']")
 	WebElement serviceOverViewTab;
 
 	@FindBy(xpath = "//li//button[contains(@class,'main-nav-1')]//span[1][@title]")
@@ -435,6 +435,7 @@ public class ServiceCreationPage extends BasePage {
 			}
 		}
 		if (projectSelection) {
+			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
 			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
 			ui_IsElementDisplay(ui_waitForElementToDisplay(addServiceBtn, Pause.MEDIUM));
 			ui_click(addServiceBtn, "Poc_QA addServiceBtn");
@@ -467,8 +468,11 @@ public class ServiceCreationPage extends BasePage {
 			String Text9 = subHeading.getText();
 			Assert.assertEquals(Text9, "Microservice are used to group pipeline and other setting together",
 					"Unable to validate 'Microservice are used to group pipeline and other setting together'");
-
+			servicename=ServiceName;
 			ui_setvalue(service_Name_SearchBox, "sets service name", ServiceName);
+			ui_wait(3);
+			//get service name 
+			//servicename=service_Name_SearchBox.getText();
 			ui_setvalue(external_Name_SearchBox, "sets external name", ExternalName);
 
 			if (buildRadioButtonName.contains("Build once and promote")) {

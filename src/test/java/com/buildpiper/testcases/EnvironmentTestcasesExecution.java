@@ -272,7 +272,7 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 	// configTypelist.add("Upload Custom Manifest file / GitOps");
 	configTypelist.add("Guided Form");
 	// configTypelist.add("Use Editor");
-		new LoginPage().login(config.username(), config.password());
+		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		ui_wait(5);
 		new EnvironmentCreationPage().DeleteEmptyEnvironment(
@@ -281,7 +281,7 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 				reader.getCellData("Environment", "selectNamespace", 2),
 				reader.getCellData("Environment", "selectRegistry", 2));
 		ui_wait(5);
-		//new LoginPage().login(config.username(), config.password());
+		new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		ui_wait(5);
 		new EnvironmentCreationPage().DeleteNonEmptyEnvironment(

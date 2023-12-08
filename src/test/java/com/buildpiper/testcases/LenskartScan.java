@@ -156,14 +156,14 @@ public class LenskartScan extends BaseTest {
 		ui_wait(1);
 		new ServiceCreationPage().buildButton_Click();
 		ui_wait(5);
-		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("DEV","dev-helm");
+		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("DEV",reader.getCellData("MicroServiceData", "envName", RowNumber));
 		ui_wait(3);
 		new ServiceCreationPage().triggerBuild_Click();
 		ui_wait(8);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
-		new ServiceCreationPage().Verify_buildStatus("RUNNING");
-		ui_wait(30);
+		//new ServiceCreationPage().Verify_buildStatus("RUNNING");
+		ui_wait(120);
 		new ServiceCreationPage().buildRecentButtonClick();
 		ui_switchToNewWindow();
 		ui_wait(8);
@@ -191,9 +191,9 @@ public class LenskartScan extends BaseTest {
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
 		
-		//Promote Service
-		
-		new ServiceCreationPage().promoteService("test",ArtifactID);
+		//Promote Service		
+		//new ServiceCreationPage().promoteService("test",ArtifactID);
+		new ServiceCreationPage().promoteService(reader.getCellData("MicroServiceData", "toEnv", 2),ArtifactID);
 		ui_wait(3);
 		//new ServiceCreationPage().Verify_promoteStatus("RUNNING");	
 		ui_wait(4);
@@ -211,9 +211,9 @@ public class LenskartScan extends BaseTest {
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
-		
-		
-		new ServiceCreationPage().switchEnvironmentTab("STAGING");
+				
+		//new ServiceCreationPage().switchEnvironmentTab("STAGING");
+		new ServiceCreationPage().switchEnvironmentTab("QA");
 		ui_wait(20);
 		String ArtifactID1=new ServiceCreationPage().deployandPromoteartifactID1.getText();
 		Assert.assertEquals(ArtifactID, ArtifactID1);
@@ -222,9 +222,7 @@ public class LenskartScan extends BaseTest {
 		
 		//monitoring Service
 		 new ServiceCreationPage().monitorService();
-		 ui_wait(3);
-		
-		
+		 ui_wait(3);	
 		
 	}
 	

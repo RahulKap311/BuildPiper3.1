@@ -1689,17 +1689,13 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				ui_click(jobdrops.get(i), "Expend Job");
 				ui_wait(2);
 			}
-//			for(int i=0;i<buildStatus.size();i++) {
-//			 System.out.println(buildStatus.get(i).getText());
-//				ui_wait(2);
-//			}
 			for(int i=0;i<jobdrops.size();i++) {
-				System.out.println("--"+buildStatus.get(i).getText());
 				System.out.println("------"+serviceName.get(i).getText());
+				Assert.assertEquals(buildStatus.get(i).getText().trim(), "SUCCESS");
 				ui_wait(1);
 				ui_click(jobdrops.get(i), "");
 				ui_wait(2);
-				System.out.println(buildBranch.getText());
+				Assert.assertEquals(buildBranch.getText().replace("Branch Name:  ", ""), "master");
 			}
 		}
 		
@@ -1729,6 +1725,59 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 	
 	@FindBy(xpath = "//div[@class=' flaticon-thumb-up-button']")
 	List<WebElement> thumbsUp;
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[1]")
+	WebElement bussinessImpact;
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[2]")
+	WebElement db_solr_mongo_Changes_done;
+	
+	@FindBy(xpath = "(//select[contains(@class,'select')])[1]")
+	WebElement podDropdownList;
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[3]")
+	WebElement codeReviewer;
+	@FindBy(xpath = "(//span[@class='material-icons material-symbols-outlined'])[1]")
+	WebElement codeReviewerSearchIcon;
+	@FindBy(xpath = "(//select[contains(@class,'select')])[2]")
+	WebElement codeReviewerDropdownList;
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[4]")
+	WebElement software_version_upgrade;
+	@FindBy(xpath = "(//select[contains(@class,'select')])[3]")
+	WebElement consulchangesdone_and_verifiedDropdownlist;
+	@FindBy(xpath = "(//select[contains(@class,'select')])[4]")
+	WebElement Kafka_changesDropdownList;
+	@FindBy(xpath = "(//select[contains(@class,'select')])[5]")
+	WebElement newServicechangesDropdownList;
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[5]")
+	WebElement assignee;
+	@FindBy(xpath = "(//span[@class='material-icons material-symbols-outlined'])[2]")
+	WebElement assigneeSearchIcon;
+	@FindBy(xpath = "(//select[contains(@class,'select')])[6]")
+	WebElement assigneeDropdownList;	
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[6]")
+	WebElement releaseOwner;
+	@FindBy(xpath = "(//span[@class='material-icons material-symbols-outlined'])[3]")
+	WebElement releaseOwnerSearchIcon;
+	@FindBy(xpath = "(//select[contains(@class,'select')])[7]")
+	WebElement releaseOwnerDropdownList;
+	
+	@FindBy(xpath = "(//div[@class='input-component']/input)[7]")
+	WebElement addComment;	
+	@FindBy(xpath = "(//input[@type='checkbox']/..)[2]")
+	WebElement projectCountryCheckbox;	
+	@FindBy(xpath = "(//input[@type='checkbox']/..)[9]")
+	WebElement uatdoneCheckbox;	
+	@FindBy(xpath = "(//input[@type='checkbox']/..)[13]")
+	WebElement regressiondoneCheckbox;	
+	@FindBy(xpath = "(//input[@type='checkbox']/..)[16]")
+	WebElement allreleasetaggesCheckbox;
+	@FindBy(xpath = "(//input[@type='checkbox']/..)[19]")
+	WebElement WarehouseSignoffCheckbox;
+	
 	
 	@FindBy(xpath = "//input[@name='comment']")
 	WebElement inputCommentOne;
@@ -1810,6 +1859,66 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 			
 			// ---------------------------------------Jira Approval Question ----------------------
 			ui_click(thumbsUp.get(2), "Click on jobDropOne");
+			ui_wait(5);
+			ui_setvalue(bussinessImpact, "bussinessImpact", "test");
+			ui_setvalue(db_solr_mongo_Changes_done, "db_solr_mongo_Changes_done", "test");
+			Select pod=new Select(podDropdownList);
+			pod.selectByValue("App Platform");
+			
+			ui_setvalue(codeReviewer, "codeReviewer", "Atul");
+			ui_click(codeReviewerSearchIcon, "codeReviewerSearchIcon");
+			Select codereviewer=new Select(codeReviewerDropdownList);
+			codereviewer.selectByValue("Atul Tripathi");
+			
+			ui_setvalue(software_version_upgrade, "software_version_upgrade", "1");
+			
+			Select consulchanges=new Select(consulchangesdone_and_verifiedDropdownlist);
+			consulchanges.selectByValue("Yes");
+			
+			Select kafkachanges=new Select(Kafka_changesDropdownList);
+			kafkachanges.selectByValue("Yes");
+			Select newServicechanges=new Select(newServicechangesDropdownList);
+			newServicechanges.selectByValue("Yes");
+			
+			ui_setvalue(assignee, "assignee", "Atul");
+            ui_click(assigneeSearchIcon, "assigneeSearchIcon");
+            Select assignee=new Select(assigneeDropdownList);
+            assignee.selectByValue("Atul Tripathi");
+            
+			ui_setvalue(releaseOwner, "releaseOwner", "Atul");
+			ui_click(releaseOwnerSearchIcon, "releaseOwnerSearchIcon");
+			Select releaseOwner=new Select(releaseOwnerDropdownList);
+			releaseOwner.selectByValue("Atul Tripathi");
+			
+			ui_click(projectCountryCheckbox, "projectCountryCheckbox");
+			ui_click(uatdoneCheckbox, "uatdoneCheckbox");
+			ui_click(regressiondoneCheckbox, "regressiondoneCheckbox");
+			ui_click(allreleasetaggesCheckbox, "allreleasetaggesCheckbox");
+			ui_click(WarehouseSignoffCheckbox, "WarehouseSignoffCheckbox");
+			
+			ui_setvalue(addComment, "addComment", "test");
+			ui_click(buttonApprove, "Approve button");
+			ui_wait(120);
+			
+			//---------------------dev lead Signoff-------------------
+			ui_click(thumbsUp.get(3), "Click on jobDropOne");
+			ui_wait(5);
+			ui_setvalue(jiraComment, "Dev Lead Comment", "dev lead signoff");
+			ui_click(buttonApprove, "Approve button");
+			ui_wait(10);
+			
+			//---------------------QA lead Signoff-------------------
+			ui_click(thumbsUp.get(4), "Click on jobDropOne");
+			ui_wait(5);
+			ui_setvalue(jiraComment, "QA Lead Comment", "qa lead signoff");
+			ui_click(buttonApprove, "Approve button");
+			ui_wait(10);
+			//---------------------Release Owner Approval-------------------
+			ui_click(thumbsUp.get(5), "Click on jobDropOne");
+			ui_wait(5);
+			ui_setvalue(jiraComment, "Release Owner Comment", "Release Owner Comment");
+			ui_click(buttonApprove, "Approve button");
+			ui_wait(10);
 		}
 		return this;
 	}

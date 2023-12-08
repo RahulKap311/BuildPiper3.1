@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -22,6 +23,7 @@ import com.buildpiper.pages.PreRequisitesPage;
 import com.buildpiper.pages.ServiceCreationPage;
 import com.buildpiper.utils.ExcelUtility;
 import com.buildpiper.utils.FrameworkConfig;
+import com.buildpiper.utils.Pause;
 import com.buildpiper.utils.testDataUtil;
 
 /**
@@ -193,7 +195,9 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 
 	@Test(groups = { "Regression" }, priority = 2)
 	public void serviceOverview_Promote() {
-
+		ServiceCreationPage servicecreationpage=new ServiceCreationPage();
+		BuildConfigurationPage buildconfig=new BuildConfigurationPage();
+		DeployConfigurationPage deployconfig=new DeployConfigurationPage();
 		ArrayList<String> chipList = new ArrayList<String>();
 		chipList.add("linux/arm64");
 		chipList.add("linux/amd64");
@@ -214,23 +218,24 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 
 		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
-		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
+		ui_wait(5);
+		servicecreationpage.buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
 				reader.getCellData("MicroServiceData", "envName", 2),
 				reader.getCellData("MicroServiceData", "buildRadioButtonName", 2), list,
 				reader.getCellData("MicroServiceData", "JobTemplateValue", 2));
-		new BuildConfigurationPage().CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", 2),
+		buildconfig.CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", 2),
 				reader.getCellData("MicroServiceData", "BranchName", 2),
 				reader.getCellData("MicroServiceData", "FilePath", 2),
 				reader.getCellData("MicroServiceData", "DockerFilePath", 2), chipList, languageList,
 				reader.getCellData("MicroServiceData", "preHookPass", 2),
 				reader.getCellData("MicroServiceData", "envName", 2));
-		new DeployConfigurationPage().CreateAndValidateDeployConfig(
+		deployconfig.CreateAndValidateDeployConfig(
 				reader.getCellData("MicroServiceData", "AccessType", 2),
 				reader.getCellData("MicroServiceData", "AccessName", 2),
 				reader.getCellData("MicroServiceData", "portNumber", 2),
 				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
 				reader.getCellData("MicroServiceData", "configName", 2));
-		new ServiceCreationPage().addNewEnvironmentToService(reader.getCellData("MicroServiceData", "toEnv", 2), list,
+		servicecreationpage.addNewEnvironmentToService(reader.getCellData("MicroServiceData", "toEnv", 2), list,
 				reader.getCellData("MicroServiceData", "JobTemplateValue", 2),
 				reader.getCellData("MicroServiceData", "cloneText", 2),
 				reader.getCellData("MicroServiceData", "envCloneValue", 2),
@@ -239,51 +244,87 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 				reader.getCellData("MicroServiceData", "AccessName", 2),
 				reader.getCellData("MicroServiceData", "portNumber", 2),
 				reader.getCellData("MicroServiceData", "TargetPort", 2));
-		
-		new ServiceCreationPage().switchEnvironmentTab("DEV");
-		ui_wait(3);
+		String servicename=servicecreationpage.servicename;
+				System.out.println(servicename);
+		servicecreationpage.SearchServiceViaRandomStringValue(reader.getCellData("MicroServiceData", "applicationName", 2),servicename);
+				
+		//build Service
+		ui_wait(2);
 		new ServiceCreationPage().buildButton_Click();
-		ui_wait(3);
+		ui_wait(1);
+		new ServiceCreationPage().buildButton_Click();
+		ui_wait(5);
 		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("DEV",reader.getCellData("MicroServiceData", "envName", 2));
 		ui_wait(3);
-		new ServiceCreationPage().CacheCheckbox_Click();
-		ui_wait(3);
 		new ServiceCreationPage().triggerBuild_Click();
-		ui_wait(5);
-		//new ServiceCreationPage().Verify_buildStatus("RUNNING");
+		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_buildStatus("RUNNING");
+		ui_wait(60);
+		new ServiceCreationPage().buildRecentButtonClick();
+		ui_switchToNewWindow();
+		ui_wait(10);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(60);
+		new ServiceCreationPage().Verify_buildStatus("SUCCESS");
 		ui_wait(3);
 		new ServiceCreationPage().closeBuildWindow();
+		ui_wait(5);		
+		ui_IsElementDisplay(ui_waitForElementToDisplay(new ServiceCreationPage().buildArtifact, Pause.MEDIUM));
+		String ArtifactID=new ServiceCreationPage().buildArtifact.getText();
+		
+		//Deploy Service
+		new ServiceCreationPage().deployService(ArtifactID);
 		ui_wait(3);
-		new ServiceCreationPage().deployService("");
+	//	new ServiceCreationPage().Verify_deployStatus("RUNNING");
+		ui_wait(4);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(60);
+		new ServiceCreationPage().deployRecentButtonClick();
+		ui_switchToNewWindow();
+		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_deployStatus("SUCCESS");
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
-		new ServiceCreationPage().promoteService("","");
-		ui_wait(3);
-		new ServiceCreationPage().verify_BuildHistory();
 		
-		new ServiceCreationPage().historyButton();
+		//Promote Service
+		
+		new ServiceCreationPage().promoteService(reader.getCellData("MicroServiceData", "toEnv", 2),ArtifactID);
+		ui_wait(3);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_promoteStatus("RUNNING");	
+		ui_wait(4);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(40);
+		new ServiceCreationPage().promoteRecentButtonClick();
+		ui_switchToNewWindow();
+		ui_wait(8);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		ui_wait(10);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(3);
+		new ServiceCreationPage().Verify_promoteStatus("SUCCESS");
+		ui_wait(3);
+		new ServiceCreationPage().closeDeployWindow();
+		ui_wait(3);
+		
 		
 		new ServiceCreationPage().switchEnvironmentTab("QA");
-		ui_wait(3);
-		new ServiceCreationPage().buildButton_Click();
-		ui_wait(3);
-		new ServiceCreationPage().Verify_EnvironmentandSubEnvironment("QA",reader.getCellData("MicroServiceData", "toEnv", 2));
-		ui_wait(3);
-		new ServiceCreationPage().CacheCheckbox_Click();
-		ui_wait(3);
-		new ServiceCreationPage().triggerBuild_Click();
-		ui_wait(5);
-		//new ServiceCreationPage().Verify_buildStatus("RUNNING");
-		ui_wait(3);
-		new ServiceCreationPage().closeBuildWindow();
-		ui_wait(3);
-		new ServiceCreationPage().deployService("");
-		ui_wait(3);
-		new ServiceCreationPage().closeDeployWindow();
-		ui_wait(3);
-		new ServiceCreationPage().promoteService("","");
+		ui_wait(20);
+		String ArtifactID1=new ServiceCreationPage().deployandPromoteartifactID1.getText();
+		Assert.assertEquals(ArtifactID, ArtifactID1);
+		new ServiceCreationPage().switchEnvironmentTab("DEV");
+		ui_wait(10);
 		
+		//monitoring Service
+		 new ServiceCreationPage().monitorService();
+		 ui_wait(3);
 	}
 
 
