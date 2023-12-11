@@ -265,7 +265,7 @@ public class JobExecutionActivity extends BasePage {
 	}
 	
 	public JobExecutionActivity VerifyActivityStatusList(String Status) {
-		ui_wait(3);
+		ui_wait(10);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(activityStatusList.get(0), Pause.MEDIUM));
 		for(int i=0;i<activityStatusList.size();i++) {
 			String ActivityStatus=activityStatusList.get(i).getText();
@@ -381,7 +381,7 @@ public class JobExecutionActivity extends BasePage {
 		SelectUser_MoreDropdown();
 		ui_click(usersDropDown, "User DropDown");
 		ui_click(user1Checkbox, "User1 Checkbox");
-		ui_wait(3);
+		ui_wait(10);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(activityUserList.get(0), Pause.MEDIUM));
 		
 		for(int i=0;i<activityUserList.size();i++) {

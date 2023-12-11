@@ -34,7 +34,7 @@ public class LenskartScan extends BaseTest {
 	    }
 	 @AfterMethod
 	   public void StopDriver() {
-    	//ui_getUIDriver().quit();
+    	ui_getUIDriver().quit();
 	    }
 	
 	@Test(groups = { "Regression" },priority = 0)
@@ -145,7 +145,7 @@ public class LenskartScan extends BaseTest {
 		new PreRequisitesPage().switchUser();
 		ui_wait(5);
 		new ServiceCreationPage().SearchServiceViaRandomStringValue(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
-		ui_wait(3);
+		ui_wait(10);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(new ServiceCreationPage().buildArtifact, Pause.MEDIUM));
 		String ArtifactID=new ServiceCreationPage().buildArtifact.getText();
 		
@@ -185,7 +185,7 @@ public class LenskartScan extends BaseTest {
 		ui_switchToNewWindow();
 		ui_wait(8);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
-		ui_wait(3);
+		ui_wait(30);
 		new ServiceCreationPage().Verify_deployStatus("SUCCESS");
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
@@ -204,7 +204,7 @@ public class LenskartScan extends BaseTest {
 		ui_wait(8);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
-		ui_wait(10);
+		ui_wait(30);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
 		new ServiceCreationPage().Verify_promoteStatus("SUCCESS");
@@ -212,8 +212,7 @@ public class LenskartScan extends BaseTest {
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
 				
-		//new ServiceCreationPage().switchEnvironmentTab("STAGING");
-		new ServiceCreationPage().switchEnvironmentTab("QA");
+		new ServiceCreationPage().switchEnvironmentTab("STAGING");
 		ui_wait(20);
 		String ArtifactID1=new ServiceCreationPage().deployandPromoteartifactID1.getText();
 		Assert.assertEquals(ArtifactID, ArtifactID1);

@@ -13,6 +13,7 @@
          <include name="LoginViaGitLab" />
          <include name="HealthCheck" />
          <include name="ManualBuildandDeployHelmService" />
+         <include name="JobStatusInsidePipleineforMultipleService" />
         </methods>
 		 </class>	 
 	 

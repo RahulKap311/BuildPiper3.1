@@ -1,5 +1,7 @@
 package com.buildpiper.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,7 +67,7 @@ public class LoginPage extends BasePage {
 	 */
 	public HomePage login(String username_val, String password_val) {
 		
-
+      ui_getUIDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		ui_setvalue(username_txt, "USER_NAME", username_val);
 		ui_setvalue(password_txt, "PASSWORD", password_val);
 		ui_click(SignIn_btn, "LOGIN_BTN");

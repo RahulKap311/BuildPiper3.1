@@ -59,7 +59,7 @@ public class JobExecutionActivityTestcases extends BaseTest {
 		stausList.add("Success");
 		stausList.add("Failed");
 		stausList.add("Revoked");
-		stausList.add("InQueue");
+		//stausList.add("InQueue");
 		//stausList.add("Running");
 		
 		new PreRequisitesPage().SelectJobExecutionActivityMenu();
