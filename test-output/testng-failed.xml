@@ -8,11 +8,11 @@
           <include name="setUp"/>
           <include name="testName"/>
           <include name="tearDown"/>
-          <include name="JobStatusInsidePipleineforMultipleService"/>
           <include name="StartDriver"/>
           <include name="Reportsetup"/>
           <include name="StopDriver"/>
           <include name="getResult"/>
+          <include name="SearchPipelineButtonExistance"/>
         </methods>
       </class> <!-- com.buildpiper.testcases.LenskartScan -->
     </classes>

@@ -60,10 +60,6 @@
 		 
 		 <class name="com.buildpiper.testcases.LenskartScan">
 		 <methods>
-         <include name="LoginViaCreds" />
-         <include name="LoginViaGitLab" />
-         <include name="HealthCheck" />
-         <include name="BannerTest" />
          <include name="UserportalGeneral" />
          <include name="PagginationofAllModules" />
          <include name="EditService" />

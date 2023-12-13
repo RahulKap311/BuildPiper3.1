@@ -205,16 +205,69 @@ public class loginTestcases extends BaseTest {
 		discription=jsonpath5.get("sub_task_status.description");
 		String subtaskArray[]=subtask.toString().replace("[", "").replace("]", "").split(",");
 		String discriptionArray[]=discription.toString().replace("[", "").replace("]", "").split(",");
-		Map<String, String> map	= new HashMap<String, String>();
 		
 		System.out.println(res5.getStatusCode());
-		System.out.println(res5.getBody().asString());
-		for(int i=0;i<subtaskArray.length-1;i++) {
-			String logs=subtaskArray[i];
-			String logs_discription=discriptionArray[i];
-			map.put(logs, logs_discription);
+		//System.out.println(res5.getBody().asString());
+	
+		if(t==0) {
+			System.out.println("Build:"); 
+		for (int j=0;j<subtaskArray.length;j++)
+		{
+			System.out.println(subtaskArray[j]+"---"+discriptionArray[j]);
+			if(subtaskArray[j].contains("Cloning Repository")) {
+				Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+			}
+			if(subtaskArray[j].contains("Pre Hooks Executing")) {
+				Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+			}
+			if(subtaskArray[j].contains("Build Docker Image")) {
+				Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+			}
+			if(subtaskArray[j].contains("Push docker image")) {
+				Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+			}
+			if(subtaskArray[j].contains("Post Hooks Executing")) {
+				Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+			}
+			
 		}
-		System.out.println(map);
+		
+		}
+		if(t==1) {
+			System.out.println("Deploy:");	
+			for (int j=0;j<subtaskArray.length;j++)
+			{
+				System.out.println(subtaskArray[j]+"---"+discriptionArray[j]);
+				
+				if(subtaskArray[j].contains("Pre Hooks Executing")) {
+					Assert.assertEquals(discriptionArray[j].trim(), "Executed Successfully");
+				}
+				if(subtaskArray[j].contains("Load Kube Config")) {
+					Assert.assertEquals(discriptionArray[j].contains("environment variable set properly for kubeconfig"), true);
+				}
+				if(subtaskArray[j].contains("Deployment rollout validation")) {
+					Assert.assertEquals(discriptionArray[j].trim(), "Deployment Rollout successfully");
+				}
+				if(subtaskArray[j].contains("Post Hooks Executing")) {
+					Assert.assertEquals(discriptionArray[j].trim(), "Executed Successfully");
+				}
+				if(subtaskArray[j].contains("Generate Manifest")) {
+					Assert.assertEquals(discriptionArray[j].contains("successfully rendered template 'destination_rule.yaml' to kubernetes formatted manifest"), true);
+				}
+				if(subtaskArray[j].contains("Deploy Stateless app")) {
+					Assert.assertEquals(discriptionArray[j].contains("stateless application was successfully deployed"), true);
+				}
+				
+			}
+			
+		}
+		if(t==2) {
+			System.out.println("promote:");
+			System.out.println(subtask+"---"+discription);
+			Assert.assertEquals(subtask.contains("Tagging Image"), true);
+			Assert.assertEquals(discription.contains("Successfully executed cmd"), true);
+		}
+		//System.out.println(map);
 		ui_wait(3);
 		
 		}

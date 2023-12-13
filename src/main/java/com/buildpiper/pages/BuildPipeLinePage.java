@@ -1,5 +1,7 @@
 package com.buildpiper.pages;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -72,7 +74,7 @@ public class BuildPipeLinePage extends BasePage {
 	
 	@FindBy(xpath = "//button[@title='Replay Pipeline']")
 	WebElement reExecutePipeLineBtn;
-	
+		
 	@FindBy(xpath = "//a[contains(@href,'/application/')][contains(@href,'/pipeline/')][contains(@href,'/execution/')]")
 	WebElement existingPipeLine;
 	
@@ -1702,6 +1704,209 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 		return this;
 	}
 	
+	@FindBy(xpath = "//button[text()='View  Run Parameters']" )
+	WebElement viewRunParameters;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[1])[1]" )
+	WebElement envtypeRow1;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[2])[1]" )
+	WebElement envNameRow1;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[3])[1]" )
+	WebElement serviceNameRow1;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[4])[1]" )
+	WebElement branchNameRow1;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[5])[1]" )
+	WebElement deploymentNameRow1;
+	
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[1])[2]" )
+	WebElement envtypeRow2;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[2])[2]" )
+	WebElement envNameRow2;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[3])[2]" )
+	WebElement serviceNameRow2;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[4])[2]" )
+	WebElement branchNameRow2;
+	@FindBy(xpath = "(//div[@class='sub-env-row']/span[5])[2]" )
+	WebElement deploymentNameRow2;
+	@FindBy(xpath = "//*[@class='MuiSvgIcon-root color-white MuiSvgIcon-fontSizeLarge']" )
+	WebElement closeViewRunParameterWindow;
+	@FindBy(xpath = "//button[text()='Confirm']" )
+	WebElement confirmReplaypipeline;
+	
+	@FindBy(xpath = "(//button[@title='Replay Pipeline'])[1]")
+	WebElement replayPipelinefirstBtn;
+	@FindBy(xpath = "//span[@title='Revoke Pipeline']/button")
+	WebElement revokePipeline;
+	
+	
+	public BuildPipeLinePage VerifyPipelineButtons(String appName,String pipelinename) {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_wait(4);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
+			ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+			searchPipeline(pipelinename);
+			ui_wait(5);
+			Assert.assertEquals(ui_IsElementPresent(executePipeLineButton, "5"), true);
+			Assert.assertEquals(ui_IsElementPresent(editSearchedpipeline, "5"), true);
+			Assert.assertEquals(ui_IsElementPresent(revokePipeline, "5"), true);
+			Assert.assertEquals(ui_IsElementPresent(pipeLineExecutionHistory, "5"), true);
+			Assert.assertEquals(ui_IsElementPresent(firstPipelineRunwithParameter, "5"), true);
+		}
+		
+		
+		return this;
+	}
+	
+	@FindBy(xpath = "//div[@class='owner-name']/span[2]")
+	List<WebElement> pipilineexecutionTime;
+	
+	public BuildPipeLinePage VerifyPipelineOrderonHistory(String appName,String pipelinename) {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_wait(4);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
+			ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+			searchPipeline(pipelinename);
+			ui_wait(5);
+			ui_click(pipeLineExecutionHistory, "pipeLineExecutionHistory");
+			ui_wait(5);
+			ArrayList<String> list=new ArrayList<String>();
+			ArrayList<String> listBeforeSorting=new ArrayList<String>();
+			for(int i=0;i<pipilineexecutionTime.size();i++) {
+				listBeforeSorting.add(pipilineexecutionTime.get(i).getText());
+				list.add(pipilineexecutionTime.get(i).getText());
+			}
+			Collections.sort(list, Collections.reverseOrder());
+			
+			for(int i=0;i<list.size();i++) {
+				Assert.assertEquals(listBeforeSorting.get(i), list.get(i));
+			}
+			
+		}
+		
+		
+		return this;
+	}
+	
+	public BuildPipeLinePage ReplayPipeline(String appName,String pipelinename) {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_wait(4);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
+			ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+			searchPipeline(pipelinename);
+			ui_wait(4);
+			ui_click(searchPipelinehyperlink, "search Pipeline hyperlink");
+			ui_wait(5);			
+			ui_click(viewRunParameters, "View Run Parameters");
+			ui_wait(3);	
+			//-----------------get View Run Parameters all Row Value
+			String EnvTypeRow1=envtypeRow1.getText();
+			String EnvNameRow1=envNameRow1.getText();
+			String ServiceNameRow1=serviceNameRow1.getText();
+			String BranchNameRow1=branchNameRow1.getText();
+			String DeploymentNameRow1=deploymentNameRow1.getText();
+			
+			String EnvTypeRow2=envtypeRow2.getText();
+			String EnvNameRow2=envNameRow2.getText();
+			String ServiceNameRow2=serviceNameRow2.getText();
+			String BranchNameRow2=branchNameRow2.getText();
+			String DeploymentNameRow2=deploymentNameRow2.getText();
+			ui_wait(3);
+			ui_click(closeViewRunParameterWindow, "close ViewRunParameter Window");
+			ui_wait(3);
+			ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+			searchPipeline(pipelinename);
+			ui_click(pipeLineExecutionHistory, "view pipeline excution history");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(replayPipelinefirstBtn, Pause.MEDIUM));
+			ui_click(replayPipelinefirstBtn, "view pipeline replayPipelinefirstBtn");
+			ui_wait(3);
+			//-----------------get Replay all Row Value
+			String History_EnvTypeRow1=envtypeRow1.getText();
+			String History_EnvNameRow1=envNameRow1.getText();
+			String History_ServiceNameRow1=serviceNameRow1.getText();
+			String History_BranchNameRow1=branchNameRow1.getText();
+			String History_DeploymentNameRow1=deploymentNameRow1.getText();
+			
+			String History_EnvTypeRow2=envtypeRow2.getText();
+			String History_EnvNameRow2=envNameRow2.getText();
+			String History_ServiceNameRow2=serviceNameRow2.getText();
+			String History_BranchNameRow2=branchNameRow2.getText();
+			String History_DeploymentNameRow2=deploymentNameRow2.getText();
+			
+			//---------------Validate View Run Parameter Rows with Replay Pop all Rows
+			Assert.assertEquals(EnvTypeRow1, History_EnvTypeRow1);
+			Assert.assertEquals(EnvNameRow1, History_EnvNameRow1);
+			Assert.assertEquals(ServiceNameRow1, History_ServiceNameRow1);
+			Assert.assertEquals(BranchNameRow1, History_BranchNameRow1);
+			Assert.assertEquals(DeploymentNameRow1, History_DeploymentNameRow1);
+			
+			Assert.assertEquals(EnvTypeRow2, History_EnvTypeRow2);
+			Assert.assertEquals(EnvNameRow2, History_EnvNameRow2);
+			Assert.assertEquals(ServiceNameRow2, History_ServiceNameRow2);
+			Assert.assertEquals(BranchNameRow2, History_BranchNameRow2);
+			Assert.assertEquals(DeploymentNameRow2, History_DeploymentNameRow2);
+			ui_wait(2);
+			ui_click(confirmReplaypipeline, "confirm Replaypipeline");
+			ui_wait(5);
+			ui_click(searchPipelinehyperlink, "search Pipeline hyperlink");
+			ui_wait(5);		
+			ui_click(viewRunParameters, "View Run Parameters");
+			ui_wait(3);	
+			//-------------Compare Last Execution Rows with Replay Rows
+			String EnvTypeRow1_1=envtypeRow1.getText();
+			String EnvNameRow1_1=envNameRow1.getText();
+			String ServiceNameRow1_1=serviceNameRow1.getText();
+			String BranchNameRow1_1=branchNameRow1.getText();
+			String DeploymentNameRow1_1=deploymentNameRow1.getText();
+			
+			String EnvTypeRow2_1=envtypeRow2.getText();
+			String EnvNameRow2_1=envNameRow2.getText();
+			String ServiceNameRow2_1=serviceNameRow2.getText();
+			String BranchNameRow2_1=branchNameRow2.getText();
+			String DeploymentNameRow2_1=deploymentNameRow2.getText();
+			ui_wait(3);
+			
+			Assert.assertEquals(EnvTypeRow1, EnvTypeRow1_1);
+			Assert.assertEquals(EnvNameRow1, EnvNameRow1_1);
+			Assert.assertEquals(ServiceNameRow1, ServiceNameRow1_1);
+			Assert.assertEquals(BranchNameRow1, BranchNameRow1_1);
+			Assert.assertEquals(DeploymentNameRow1, DeploymentNameRow1_1);
+			
+			Assert.assertEquals(EnvTypeRow2, EnvTypeRow2_1);
+			Assert.assertEquals(EnvNameRow2, EnvNameRow2_1);
+			Assert.assertEquals(ServiceNameRow2, ServiceNameRow2_1);
+			Assert.assertEquals(BranchNameRow2, BranchNameRow2_1);
+			Assert.assertEquals(DeploymentNameRow2, DeploymentNameRow2_1);
+		}
+		
+		return this;
+	}
+	
 	@FindBy(xpath = "//label[text()='Change Branch and tag']")
 	WebElement changeBranchAndTag;
 
@@ -1924,11 +2129,8 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 	}
 
 	
-	public void fetchlogs(String baseurl,String Pipelinename) {
-		  
-		// String baseurl="http://122.160.30.218:17901";
-		   //String Pipelinename="test_api_logs";
-		   
+	public void fetchlogs(String baseurl,String Pipelinename) {	
+
 		   //----------------------------------Login API----------------------
 			RequestSpecification requestSpec=RestAssured.given();
 			requestSpec.baseUri(baseurl);
@@ -1942,10 +2144,10 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 			String body=res.getBody().asString();
 			JsonPath jsonpath=new JsonPath(body);
 			String access=jsonpath.get("access");
-			Assert.assertEquals(res.getStatusCode(), 200);
-			//System.out.println(res.getBody().asString());
-			//System.out.println(res.getStatusCode());
-			//System.out.println(access);
+			
+			System.out.println(res.getBody().asString());
+			System.out.println(res.getStatusCode());
+			System.out.println(access);
 			
 			
 			//-----------------------------------Activity API----------------
@@ -1971,11 +2173,11 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 			
 			String triggerid=StageinstanceidArray[0];
 			String stageid=lasttriggerArray[0];
-			Assert.assertEquals(res2.getStatusCode(), 200);
-			//System.out.println(res2.getStatusCode());
+			
+			System.out.println(res2.getStatusCode());
 			//System.out.println(res2.getBody().asString());	
-			//System.out.println("triggerid:"+triggerid);
-			//System.out.println("stageid:"+stageid);
+			System.out.println("triggerid:"+triggerid);
+			System.out.println("stageid:"+stageid);
 			
 			
 			//-----------------------------------Stage API-----------------------------------------
@@ -2001,18 +2203,19 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				
 				String taskid=taskidArray[0];
 				String taskinstanceid=task_instanceidArray[0];
-				Assert.assertEquals(res3.getStatusCode(), 200);
-				//System.out.println(res3.getStatusCode());
+				
+				System.out.println(res3.getStatusCode());
 				//System.out.println(res3.getBody().asString());	
-				//System.out.println("taskid:"+taskid);
-				//System.out.println("taskinstanceid:"+taskinstanceid);
+				System.out.println("taskid:"+taskid);
+				System.out.println("taskinstanceid:"+taskinstanceid);
+				System.out.println("taskinstanceids:"+task_instanceid);
 				
 			
 			//--------------------------------------Task API--------------------------------------
-			Integer task1=Integer.parseInt(taskinstanceid)+1;
-			Integer task2=Integer.parseInt(taskinstanceid)+2;
+				Integer task1=Integer.parseInt(taskinstanceid)+1;
+				Integer task2=Integer.parseInt(taskinstanceid)+2;
 			String[] ar1= {taskinstanceid,task1.toString(),task2.toString()};
-			for(int t=0;t<ar1.length;t++) {	
+			for(int t=0;t<ar1.length;t++) {		   	
 			RequestSpecification requestSpec4=RestAssured.given();
 			requestSpec4.baseUri(baseurl);
 			requestSpec4.basePath("/api/v1/pipeline/"+triggerid+"/trigger/"+stageid+"/stage/"+taskid+"/task/"+ar1[t]+"/");
@@ -2029,10 +2232,11 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 			String global_task_idArray[]=global_task_id.toString().replace("[", "").replace("]", "").split(",");
 			
 			String task_id=global_task_idArray[0];
-			Assert.assertEquals(res4.getStatusCode(), 200);
-			//System.out.println(res4.getStatusCode());
-			//System.out.println(res4.getBody().asString());			
-			//System.out.println("task_id:"+task_id);
+			
+			System.out.println(res4.getStatusCode());
+			//System.out.println(res4.getBody().asString());
+			
+			System.out.println("task_id:"+t+":"+task_id);
 
 			//-----------------------------------Logs API-----------------------------------------
 				RequestSpecification requestSpec5=RestAssured.given();
@@ -2052,34 +2256,74 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				discription=jsonpath5.get("sub_task_status.description");
 				String subtaskArray[]=subtask.toString().replace("[", "").replace("]", "").split(",");
 				String discriptionArray[]=discription.toString().replace("[", "").replace("]", "").split(",");
-				Map<String, String> map	= new HashMap<String, String>();
-				Assert.assertEquals(res5.getStatusCode(), 200);
-				//System.out.println(res5.getStatusCode());
-				for(int i=0;i<subtaskArray.length-1;i++) {
-					String logs=subtaskArray[i];
-					String logs_discription=discriptionArray[i];
-					map.put(logs, logs_discription);
-				}
-				System.out.println(map);
 				
-				/*for (Map.Entry<String, String> entry : map.entrySet()) {
-				   
-				    if(entry.getKey().equals("Build Docker Image")) {
-				    	Assert.assertEquals(entry.getValue(), "Successfully 6786786 cmd");
-				    }
-				    if(entry.getKey().equals("Pre Hooks Executing")) {
-				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
-				    }
-				    if(entry.getKey().equals("Push docker image")) {
-				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
-				    }
-				    if(entry.getKey().equals("Cloning Repository")) {
-				    	Assert.assertEquals(entry.getValue(), "Successfully executed cmd");
-				    }
-				}*/
-			}
+				System.out.println(res5.getStatusCode());
+				//System.out.println(res5.getBody().asString());
+			
+				if(t==0) {
+					System.out.println("Build:"); 
+				for (int j=0;j<subtaskArray.length;j++)
+				{
+					System.out.println(subtaskArray[j]+"---"+discriptionArray[j]);
+					if(subtaskArray[j].contains("Cloning Repository")) {
+						Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+					}
+					if(subtaskArray[j].contains("Pre Hooks Executing")) {
+						Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+					}
+					if(subtaskArray[j].contains("Build Docker Image")) {
+						Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+					}
+					if(subtaskArray[j].contains("Push docker image")) {
+						Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+					}
+					if(subtaskArray[j].contains("Post Hooks Executing")) {
+						Assert.assertEquals(discriptionArray[j].trim(), "Successfully executed cmd");
+					}
+					
+				}
+				
+				}
+				if(t==1) {
+					System.out.println("Deploy:");	
+					for (int j=0;j<subtaskArray.length;j++)
+					{
+						System.out.println(subtaskArray[j]+"---"+discriptionArray[j]);
+						
+						if(subtaskArray[j].contains("Pre Hooks Executing")) {
+							Assert.assertEquals(discriptionArray[j].trim(), "Executed Successfully");
+						}
+						if(subtaskArray[j].contains("Load Kube Config")) {
+							Assert.assertEquals(discriptionArray[j].contains("environment variable set properly for kubeconfig"), true);
+						}
+						if(subtaskArray[j].contains("Deployment rollout validation")) {
+							Assert.assertEquals(discriptionArray[j].trim(), "Deployment Rollout successfully");
+						}
+						if(subtaskArray[j].contains("Post Hooks Executing")) {
+							Assert.assertEquals(discriptionArray[j].trim(), "Executed Successfully");
+						}
+						if(subtaskArray[j].contains("Generate Manifest")) {
+							Assert.assertEquals(discriptionArray[j].contains("successfully rendered template 'destination_rule.yaml' to kubernetes formatted manifest"), true);
+						}
+						if(subtaskArray[j].contains("Deploy Stateless app")) {
+							Assert.assertEquals(discriptionArray[j].contains("stateless application was successfully deployed"), true);
+						}
+						
+					}
+					
+				}
+				if(t==2) {
+					System.out.println("promote:");
+					System.out.println(subtask+"---"+discription);
+					Assert.assertEquals(subtask.contains("Tagging Image"), true);
+					Assert.assertEquals(discription.contains("Successfully executed cmd"), true);
+				}
+				//System.out.println(map);
+				ui_wait(3);
+				
+				}
 
 		
-			}
+}
 
 }

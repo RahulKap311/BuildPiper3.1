@@ -85,7 +85,7 @@ public class BuildPiperTestcasesExecution extends BaseTest {
 		new BuildPipeLinePage().createBasicPipeline(reader.getCellData("Pipeline", "applicationName", 2),reader.getCellData("Pipeline", "versionType", 2),reader.getCellData("Pipeline", "retentionCount", 2),reader.getCellData("Pipeline", "triggerType", 2),userRoleList,reader.getCellData("Pipeline", "jobType", 2),reader.getCellData("Pipeline", "fromEnv", 2),reader.getCellData("Pipeline", "jobType2", 2),reader.getCellData("Pipeline", "toEnv", 2),reader.getCellData("Pipeline", "ArtifactName", 2),reader.getCellData("Pipeline", "jobType3", 2),reader.getCellData("Pipeline", "ArtifactName2", 2),reader.getCellData("Pipeline", "prodEnv", 2),pipelineName);
 		//new BuildPipeLinePage().executeBasicPipeline();
 		//ui_wait(180);
-		//new BuildPipeLinePage().fetchlogs(baseurl, pipelineName);
+		new BuildPipeLinePage().fetchlogs(baseurl, pipelineName);
 	}
 	
 	@Test(groups = { "Regression" },priority = 2)

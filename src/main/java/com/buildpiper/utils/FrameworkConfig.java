@@ -28,5 +28,11 @@ public interface FrameworkConfig extends Config {
 	
 	@Key("${environment}.tag")
 	String tag();
+	
+	@Key("${environment}.gitlabPass")
+	String gitlabPass();
+	
+	@Key("${environment}.gitlabUser")
+	String gitlabUser();
 
 }

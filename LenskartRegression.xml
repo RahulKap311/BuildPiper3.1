@@ -14,6 +14,9 @@
          <include name="HealthCheck" />
          <include name="ManualBuildandDeployHelmService" />
          <include name="JobStatusInsidePipleineforMultipleService" />
+         <include name="PipelineOrderonHistory" />
+         <include name="SearchPipelineButtonExistance" />
+         <include name="ReplayPipeline" />
         </methods>
 		 </class>	 
 	 

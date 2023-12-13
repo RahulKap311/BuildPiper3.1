@@ -47,7 +47,7 @@ public class LenskartScan extends BaseTest {
 	@Test(groups = { "Regression" },priority = 0)
 	public void LoginViaGitLab() {
 		ui_getUIDriver().quit();
-		new LoginPage().loginPageViaGitLab(config.username(), config.password());
+		new LoginPage().loginPageViaGitLab(config.gitlabUser(), config.gitlabPass());
 
 	}
 	
@@ -138,6 +138,36 @@ public class LenskartScan extends BaseTest {
 		new BuildPipeLinePage().FindStatusandBranch(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
 		ui_wait(3);
 	}
+	
+	@Test(groups = { "Regression" },priority = 0)
+	public void ReplayPipeline() {
+		//new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("Pipeline", "ReplayPipeline");		
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		new BuildPipeLinePage().ReplayPipeline(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
+		ui_wait(3);
+	}
+	@Test(groups = { "Regression" },priority = 0)
+	public void SearchPipelineButtonExistance() {
+		//new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("Pipeline", "ReplayPipeline");		
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		new BuildPipeLinePage().VerifyPipelineButtons(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
+		ui_wait(3);
+	}
+	
+	@Test(groups = { "Regression" },priority = 0)
+	public void PipelineOrderonHistory() {
+		//new LoginPage().login(config.username(), config.password());
+		int RowNumber=reader.getRowByTestCaseName("Pipeline", "ReplayPipeline");		
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		new BuildPipeLinePage().VerifyPipelineOrderonHistory(reader.getCellData("Pipeline", "applicationName", RowNumber),reader.getCellData("Pipeline", "existingPipeline", RowNumber));
+		ui_wait(3);
+	}
+	
 	@Test(groups = { "Regression" },priority = 0)
 	public void ManualBuildandDeployHelmService() {
 		//new LoginPage().login(config.username(), config.password());
