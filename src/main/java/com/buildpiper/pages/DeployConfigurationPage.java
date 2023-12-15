@@ -217,5 +217,78 @@ public class DeployConfigurationPage extends BasePage {
 
 		return this;
 	}
+	@FindBy(xpath = "//span[text()='Setup Other Deployment']")
+	WebElement setupOtherDeploymentbutton;
+	@FindBy(xpath = "(//label//..//..//..//select)[1]")
+	WebElement selectEnvDrop;
+	@FindBy(xpath = "(//label//..//..//..//select)[2]")
+	WebElement selectDeployment;
+	@FindBy(xpath = "//button[@class='btn btn-primary' and text()=' Next ']")
+	WebElement nextBtn;
+	
+public DeployConfigurationPage SetupOtherDeployment(String env,String AccessType,String AccessName,String portNumber,String TargetPort,ArrayList<String> ServiceButton, String configName) {
+		
+		//String imageNameValidateText = ServiceName+"/"+EnvName+"/"+ProjectName;
+		//System.out.println(imageNameValidateText);
+        ui_click(setupOtherDeploymentbutton, "setupOtherDeploymentbutton");
+		ui_IsElementDisplay(ui_waitForElementToDisplay(validateDeployDetails, Pause.MEDIUM));
+		ui_click(validateDeployDetails, "Poc_QA validateDeployDetails");
+		ui_IsElementDisplay(ui_waitForElementToDisplay(buildPiperUIDeployConfigBtn, Pause.MEDIUM));
+		ui_click(buildPiperUIDeployConfigBtn, "clicks on buildPiperUI button");
+		ui_selectValueFromDropDownByXPath(selectEnvDrop, "selectEnvDrop");
+		Select envDrop = new Select(selectEnvDrop);
+		envDrop.selectByVisibleText(env);
+		ui_wait(4);
+		Select deploymentDrop = new Select(selectDeployment);
+		deploymentDrop.selectByIndex(1);
+		ui_wait(4);
+		ui_click(nextBtn, "user clicks next button");
+		ui_wait(4);
+		ui_click(addAcessLevel, "Add Access Level");
+		ui_wait(2);
+		
+		if(AccessType.contains("PRIVATE"))
+		{
+			ui_click(privateAccess, "Poc_QA privateAccess");
+
+		}else if(AccessType.contains("PUBLIC"))
+		{
+
+			ui_click(publicAccess, "Poc_QA publicAccess");
+
+		}else {
+
+			ui_click(protectedAccess, "Poc_QA protectedAccess");
+
+		}
+		ui_clearAndSetValue(accessName, AccessName);
+		ui_clearAndSetValue(port, portNumber);
+		ui_clearAndSetValue(targetPort, TargetPort);
+		ui_click(addAccessBtn, "clicks add button");
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+//		ui_click(addConfigToDeploy, "switches config maps add to yes");
+//		Select dropdown = new Select(selectDropDownConfigNames);
+//		dropdown.selectByVisibleText(configName);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		ui_click(continueBtn, "clicks continue button");
+		ui_wait(2);
+		//ui_click(validateDeployDetails, "Clicks on Deploy Details tag");
+		return this;
+	}
+
 
 }

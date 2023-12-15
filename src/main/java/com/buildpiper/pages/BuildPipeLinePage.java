@@ -1,7 +1,10 @@
 package com.buildpiper.pages;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -1768,7 +1771,7 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 	@FindBy(xpath = "//div[@class='owner-name']/span[2]")
 	List<WebElement> pipilineexecutionTime;
 	
-	public BuildPipeLinePage VerifyPipelineOrderonHistory(String appName,String pipelinename) {
+	public BuildPipeLinePage VerifyPipelineOrderonHistory(String appName,String pipelinename) throws ParseException {
 		boolean projectSelection = false;
 		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
 		for (WebElement element : poc_qaProjectLink) {
@@ -1785,16 +1788,22 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 			searchPipeline(pipelinename);
 			ui_wait(5);
 			ui_click(pipeLineExecutionHistory, "pipeLineExecutionHistory");
-			ui_wait(5);
-			ArrayList<String> list=new ArrayList<String>();
-			ArrayList<String> listBeforeSorting=new ArrayList<String>();
+			ui_wait(7);
+			ArrayList<Date> list=new ArrayList<Date>();
+			ArrayList<Date> listBeforeSorting=new ArrayList<Date>();
+			  SimpleDateFormat formatter=new SimpleDateFormat("E MMM dd yyyy HH:mm:ss");  
+			  
 			for(int i=0;i<pipilineexecutionTime.size();i++) {
-				listBeforeSorting.add(pipilineexecutionTime.get(i).getText());
-				list.add(pipilineexecutionTime.get(i).getText());
+				String value=pipilineexecutionTime.get(i).getText().trim();
+				Date date=formatter.parse(value);
+				listBeforeSorting.add(date);
+				list.add(date);
 			}
+			
 			Collections.sort(list, Collections.reverseOrder());
 			
 			for(int i=0;i<list.size();i++) {
+				System.out.println(listBeforeSorting.get(i)+"-----------"+list.get(i));
 				Assert.assertEquals(listBeforeSorting.get(i), list.get(i));
 			}
 			

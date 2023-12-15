@@ -153,9 +153,28 @@ public class ServiceCreationTestcases extends BaseTest {
 		//new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		ui_wait(5);
-		new ServiceCreationPage().SearchService(
+		new ServiceCreationPage().SearchServiceandValidate(
 				reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
 		//new EnvironmentCreationPage().SeacrhEnvironmentOverviewbyEnvironment(EnvName);
+	}	
+	
+	@Test(groups = { "Regression" }, priority = 0)
+//	@RetryCountIfFailed(2)
+	public void HPAOtherDeploymentInfo() throws Exception {
+		ServiceCreationPage servicecreate=new ServiceCreationPage();
+	int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "HPAOtherDeploymentInfo");
+	int[] minreplication = {1, 2, 3};
+	int[] maxreplication = {2, 3, 5};
+	int[] cpuThreshold = {20,40,60};
+	int[] memoryThreshold = {30,50,70};
+		//new LoginPage().login(config.username(), config.password());
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		servicecreate
+		.SearchServiceViaServiceName(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber))
+		.VerifyOtherDeployDetailInfo(reader.getCellData("MicroServiceData", "serviceName", RowNumber))
+		.VerifyHPAMonitoring(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
+		
 	}	
 	
 	@Test(groups = { "Regression" }, priority = 1)

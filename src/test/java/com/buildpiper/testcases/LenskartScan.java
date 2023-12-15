@@ -1,5 +1,8 @@
 package com.buildpiper.testcases;
 
+import java.text.ParseException;
+import java.util.ArrayList;
+
 import org.aeonbits.owner.ConfigFactory;
 import org.mozilla.javascript.tools.shell.Environment;
 import org.testng.Assert;
@@ -9,7 +12,9 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.buildpiper.base.BaseTest;
+import com.buildpiper.pages.BuildConfigurationPage;
 import com.buildpiper.pages.BuildPipeLinePage;
+import com.buildpiper.pages.DeployConfigurationPage;
 import com.buildpiper.pages.EnvironmentCreationPage;
 import com.buildpiper.pages.HomePage;
 import com.buildpiper.pages.LoginPage;
@@ -159,7 +164,7 @@ public class LenskartScan extends BaseTest {
 	}
 	
 	@Test(groups = { "Regression" },priority = 0)
-	public void PipelineOrderonHistory() {
+	public void PipelineOrderonHistory() throws ParseException {
 		//new LoginPage().login(config.username(), config.password());
 		int RowNumber=reader.getRowByTestCaseName("Pipeline", "ReplayPipeline");		
 		new PreRequisitesPage().switchUser();
@@ -253,6 +258,53 @@ public class LenskartScan extends BaseTest {
 		 new ServiceCreationPage().monitorService();
 		 ui_wait(3);	
 		
+	}
+	
+	@Test(groups = { "Regression" }, priority = 0)
+	public void MultideployService() {
+
+		ArrayList<String> chipList = new ArrayList<String>();
+		chipList.add("linux/arm64");
+		chipList.add("linux/amd64");
+
+		ArrayList<String> languageList = new ArrayList<String>();
+		languageList.add("JAVA");
+
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("QA");
+		list.add("DEV");
+		list.add("DevOps");
+
+		ArrayList<String> serviceButton = new ArrayList<String>();
+		serviceButton.add("Build");
+		serviceButton.add("Deploy");
+		serviceButton.add("History");
+		serviceButton.add("Monitoring");
+
+		//new LoginPage().login(config.username(), config.password());
+		new PreRequisitesPage().switchUser();
+		new ServiceCreationPage().buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", 2),
+				reader.getCellData("MicroServiceData", "envName", 2),
+				reader.getCellData("MicroServiceData", "buildRadioButtonName", 2), list,
+				reader.getCellData("MicroServiceData", "JobTemplateValue", 2));
+		new BuildConfigurationPage().CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", 2),
+				reader.getCellData("MicroServiceData", "BranchName", 2),
+				reader.getCellData("MicroServiceData", "FilePath", 2),
+				reader.getCellData("MicroServiceData", "DockerFilePath", 2), chipList, languageList,
+				reader.getCellData("MicroServiceData", "preHookPass", 2),
+				reader.getCellData("MicroServiceData", "envName", 2));
+		new DeployConfigurationPage().CreateAndValidateDeployConfig(
+				reader.getCellData("MicroServiceData", "AccessType", 2),
+				reader.getCellData("MicroServiceData", "AccessName", 2),
+				reader.getCellData("MicroServiceData", "portNumber", 2),
+				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
+				reader.getCellData("MicroServiceData", "configName", 2));
+		new DeployConfigurationPage().SetupOtherDeployment(reader.getCellData("MicroServiceData", "envName", 2),
+				reader.getCellData("MicroServiceData", "AccessType", 2),
+				reader.getCellData("MicroServiceData", "AccessName", 2),
+				reader.getCellData("MicroServiceData", "portNumber", 2),
+				reader.getCellData("MicroServiceData", "TargetPort", 2), serviceButton,
+				reader.getCellData("MicroServiceData", "configName", 2));
 	}
 	
 	@Test(groups = { "Regression" },priority = 0)

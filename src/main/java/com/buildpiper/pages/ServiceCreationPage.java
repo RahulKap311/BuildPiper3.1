@@ -1460,8 +1460,7 @@ public class ServiceCreationPage extends BasePage {
 		return this;
 	}
 
-	
-	public ServiceCreationPage SearchService(String appName,String Servicename) {
+	public ServiceCreationPage SearchServiceViaServiceName(String appName,String Servicename) {
 		boolean projectSelection = false;
 		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
 		for (WebElement element : poc_qaProjectLink) {
@@ -1478,7 +1477,115 @@ public class ServiceCreationPage extends BasePage {
 		//Search with RandomString
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
 		ui_click(searchServiceTextBox, "clicks on environment overview tab under applicartion name");
-		ui_clearAndSetValue(searchServiceTextBox, "xjpt-duplicate");
+		ui_clearAndSetValue(searchServiceTextBox, Servicename);
+		searchServiceTextBox.sendKeys(Keys.ENTER);
+		ui_wait(3);
+		}
+		return this;
+	}
+	
+	@FindBy(xpath = "//*[text()='Other Deployment Info']")
+	WebElement otherDeploymentInfo;
+	@FindBy(xpath = "//div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]")
+	WebElement editHPA;
+	@FindBy(xpath = "//*[text()='Add Time Based HPA']")
+	WebElement addTimeBasedHPA;
+	@FindBy(xpath = "//input[@placeholder='HPA Name']")
+	WebElement inputHPAname;
+	@FindBy(xpath = "//input[@name='minimum_replication']")
+	WebElement inputMinimumReplication;
+	@FindBy(xpath = "//input[@name='maximum_replication']")
+	WebElement inputMaximumReplication;
+	@FindBy(xpath = "(//input[@class='range-slider-input'])[1]")
+	WebElement cpuThreshold;
+	@FindBy(xpath = "(//input[@class='range-slider-input'])[2]")
+	WebElement ramThreshold;
+	@FindBy(xpath = "//*[text()='Save']")
+	WebElement saveHPA;
+	
+	
+	@FindBy(xpath = "//div[text()='Min Replication Count ']/following-sibling::div")
+	WebElement minreplicationCount;
+	@FindBy(xpath = "//div[text()='Max Replication Count ']/following-sibling::div")
+	WebElement maxreplicationCount;
+	@FindBy(xpath = "//div[text()='CPU Threshold ']/following-sibling::div")
+	WebElement cpuThresholdCount;
+	@FindBy(xpath = "//div[text()='Memory Threshold ']/following-sibling::div")
+	WebElement memoryThresholdCount;
+	
+	public ServiceCreationPage VerifyOtherDeployDetailInfo(String Servicename) {
+		
+		ui_click(serviceList.get(0), "Service Link");
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(validateDeployDetails, Pause.MEDIUM));
+	    ui_click(validateDeployDetails, "validateDeployDetails");
+	    ui_wait(2);
+	    ui_click(otherDeploymentInfo, "otherDeploymentInfo");
+	    ui_wait(3);
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(editHPA, Pause.MEDIUM));
+	    ui_click(editHPA, "editHPA");
+	    ui_wait(2);
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(inputHPAname, Pause.MEDIUM));
+	    ui_clearAndSetValue(inputHPAname,"test");
+	    ui_wait(1);
+	    ui_clearAndSetValue(inputMinimumReplication, "1");
+	    ui_wait(1);
+	    ui_clearAndSetValue(inputMaximumReplication, "3");
+	    ui_wait(1);
+	    ui_clearAndSetValue(cpuThreshold, "25");
+	    ui_wait(1);
+	    ui_clearAndSetValue(ramThreshold, "35");
+	    ui_wait(1);
+	    ui_click(saveHPA, "saveHPA");
+	    ui_wait(3);
+		//Search with RandomString
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
+		ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+		 ui_wait(1);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
+		ui_click(searchServiceTextBox, "clicks on environment overview tab under applicartion name");
+		ui_clearAndSetValue(searchServiceTextBox, Servicename);
+		searchServiceTextBox.sendKeys(Keys.ENTER);
+		return this;
+	}
+	@FindBy(xpath = "(//*[contains(text(),'Replication Status:')])[2]/following-sibling::p/span[text()='Min: ']/following-sibling::span")
+	WebElement replicationStatusMin;
+	@FindBy(xpath = "(//*[contains(text(),'Replication Status:')])[2]/following-sibling::p/span[text()='Max: ']/following-sibling::span")
+	WebElement replicationStatusMax;
+	
+public ServiceCreationPage VerifyHPAMonitoring(String ReplicationStatusMin,String ReplicationStatusMax) {
+	
+		ui_wait(2);
+		ui_click(monitoring, "monitoring");
+		String min=replicationStatusMin.getText();
+		String max=replicationStatusMax.getText();
+		Assert.assertEquals(min, ReplicationStatusMin);
+		Assert.assertEquals(max, ReplicationStatusMax);
+		return this;
+	}
+	
+	
+	
+	
+	
+	public ServiceCreationPage SearchServiceandValidate(String appName,String Servicename) {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
+			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+			ui_wait(3);
+		//Search with RandomString
+		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
+		ui_click(searchServiceTextBox, "clicks on environment overview tab under applicartion name");
+		ui_clearAndSetValue(searchServiceTextBox, Servicename);
 		searchServiceTextBox.sendKeys(Keys.ENTER);
 		ui_wait(3);
 		Assert.assertEquals(serviceList.get(0).getText(), Servicename.toUpperCase());
