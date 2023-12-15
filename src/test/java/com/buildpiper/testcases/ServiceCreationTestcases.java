@@ -163,18 +163,22 @@ public class ServiceCreationTestcases extends BaseTest {
 	public void HPAOtherDeploymentInfo() throws Exception {
 		ServiceCreationPage servicecreate=new ServiceCreationPage();
 	int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "HPAOtherDeploymentInfo");
-	int[] minreplication = {1, 2, 3};
-	int[] maxreplication = {2, 3, 5};
-	int[] cpuThreshold = {20,40,60};
-	int[] memoryThreshold = {30,50,70};
-		//new LoginPage().login(config.username(), config.password());
-		new PreRequisitesPage().switchUser();
-		ui_wait(5);
-		servicecreate
-		.SearchServiceViaServiceName(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber))
-		.VerifyOtherDeployDetailInfo(reader.getCellData("MicroServiceData", "serviceName", RowNumber))
-		.VerifyHPAMonitoring(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber));
+	String[] minreplication = {"1","2","3"};
+	String[] maxreplication = {"3","4","5"};
+	String[] cpuThreshold = {"20","40","60"};
+	String[] memoryThreshold = {"40","60","80"};
 		
+	ui_wait(5);
+	for(int i=0;i<3;i++)
+	{	
+	new PreRequisitesPage().switchUser();
+		
+	servicecreate
+		.SearchServiceViaServiceName(reader.getCellData("MicroServiceData", "applicationName", RowNumber),reader.getCellData("MicroServiceData", "serviceName", RowNumber))
+		.VerifyOtherDeployDetailInfo(reader.getCellData("MicroServiceData", "serviceName", RowNumber),minreplication[i],maxreplication[i],cpuThreshold[i],memoryThreshold[i])
+		.VerifyHPAMonitoring(minreplication[i],maxreplication[i]);
+	new PreRequisitesPage().switchToAdmin();
+	}
 	}	
 	
 	@Test(groups = { "Regression" }, priority = 1)

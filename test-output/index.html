@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Rahul\AppData\Local\Temp\testng-eclipse-1235654447\testng-customsuite.xml</span>
+                    <span>C:\Users\Rahul\AppData\Local\Temp\testng-eclipse-1199909429\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.buildpiper.testcases.ServiceCreationTestcases" class="method navigator-link" hash-for-method="HPAOtherDeploymentInfo">HPAOtherDeploymentInfo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.buildpiper.testcases.ServiceCreationTestcases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,50 +128,14 @@
                   <a name="HPAOtherDeploymentInfo">
                   </a> <!-- HPAOtherDeploymentInfo -->
                   <span class="method-name">HPAOtherDeploymentInfo</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [perfeasy-testing] but found [1]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at org.testng.Assert.assertEquals(Assert.java:585)
-	at com.buildpiper.pages.ServiceCreationPage.VerifyHPAMonitoring(ServiceCreationPage.java:1562)
-	at com.buildpiper.testcases.ServiceCreationTestcases.HPAOtherDeploymentInfo(ServiceCreationTestcases.java:172)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-	at org.testng.TestNG.runSuites(TestNG.java:1039)
-	at org.testng.TestNG.run(TestNG.java:1007)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Rahul\AppData\Local\Temp\testng-eclipse-1235654447\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Rahul\AppData\Local\Temp\testng-eclipse-1199909429\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -236,12 +200,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'HPAOtherDeploymentInfo')
 data.setCell(0, 2, 'com.buildpiper.testcases.ServiceCreationTestcases')
-data.setCell(0, 3, 45258);
+data.setCell(0, 3, 138684);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -256,54 +220,51 @@ return data;
               <span class="reporter-method-name">HPAOtherDeploymentInfo</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">checking if driver exist</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175208.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190232.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">checking if driver exist</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175209.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190237.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element userMenuAppBar</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175209.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190237.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element switching to user account</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175209.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190238.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175215.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190239.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175215.jpg alt='Lamp' width='500' height='400'></span>
-                <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
-                <span class="reporter-method-output">Clicking on element Poc_QA serviceOverviewLink</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175215.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190242.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='Name']]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175219.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190246.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element clicks on environment overview tab under applicartion name</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175219.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190246.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element Service Link</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175223.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190249.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //*[text()='Env Deploy Details']]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175226.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190253.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element validateDeployDetails</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175226.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190253.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element otherDeploymentInfo</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175228.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190255.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175232.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190258.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen</span>
-                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a238fcc4f433f843befb0d50edebbdba)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175233.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Clicking on element editHPA</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175233.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='HPA Name']]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175235.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Element : xpath: //input[@name='minimum_replication']]is displayed on screen</span>
                 <span class="reporter-method-output">Element : xpath: //input[@name='maximum_replication']]is displayed on screen</span>
@@ -311,27 +272,204 @@ return data;
                 <span class="reporter-method-output">Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen</span>
                 <span class="reporter-method-output">Element : xpath: //*[text()='Save']]is displayed on screen</span>
                 <span class="reporter-method-output">Clicking on element saveHPA</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175241.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190306.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175245.jpg alt='Lamp' width='500' height='400'></span>
-                <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
-                <span class="reporter-method-output">Clicking on element Poc_QA serviceOverviewLink</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175245.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190310.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='Name']]</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175246.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190311.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
-                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a238fcc4f433f843befb0d50edebbdba)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175248.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190313.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Clicking on element clicks on environment overview tab under applicartion name</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175248.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190313.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
                 <span class="reporter-method-output">Element : xpath: //button[@title='Monitoring']]is displayed on screen</span>
-                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a238fcc4f433f843befb0d50edebbdba)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175251.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element is present  xpath: //button[@title='Monitoring']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190316.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@title='Monitoring']]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190318.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Clicking on element monitoring</span>
-                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_175155\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_175252.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190318.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element monitorwindow_closeButton</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190321.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">checking if driver exist</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190321.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element userMenuAppBar</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element switching to user account</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">checking if driver exist</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element userMenuAppBar</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element switching to user account</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190323.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190323.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190327.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='Name']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190330.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element clicks on environment overview tab under applicartion name</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190330.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element Service Link</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190334.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //*[text()='Env Deploy Details']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190337.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element validateDeployDetails</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190337.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element otherDeploymentInfo</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190340.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190343.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190344.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Clicking on element editHPA</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190345.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='HPA Name']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190345.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //input[@name='minimum_replication']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //input[@name='maximum_replication']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Save']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element saveHPA</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190351.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190354.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='Name']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190356.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190357.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Clicking on element clicks on environment overview tab under applicartion name</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190357.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //button[@title='Monitoring']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //button[@title='Monitoring']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190401.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@title='Monitoring']]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190402.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Clicking on element monitoring</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190402.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element monitorwindow_closeButton</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190405.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">checking if driver exist</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190405.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element userMenuAppBar</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element switching to user account</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">checking if driver exist</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element userMenuAppBar</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190407.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element switching to user account</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190407.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190408.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190411.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='Name']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190414.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element clicks on environment overview tab under applicartion name</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190415.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element Service Link</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190418.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //*[text()='Env Deploy Details']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190421.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element validateDeployDetails</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190422.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element otherDeploymentInfo</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190424.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190427.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Clicking on element editHPA</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='HPA Name']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //input[@name='minimum_replication']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //input[@name='maximum_replication']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //*[text()='Save']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element saveHPA</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190435.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190438.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //input[@placeholder='Name']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190440.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190441.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Clicking on element clicks on environment overview tab under applicartion name</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190442.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //input[@placeholder='Name']]is displayed on screen</span>
+                <span class="reporter-method-output">Element : xpath: //button[@title='Monitoring']]is displayed on screen</span>
+                <span class="reporter-method-output">Element is present  xpath: //button[@title='Monitoring']]</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190445.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@title='Monitoring']]is displayed on screen</span>
+                <span class="reporter-method-output"> Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190446.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Clicking on element monitoring</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190447.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element monitorwindow_closeButton</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190449.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">checking if driver exist</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element userMenuAppBar</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'></span>
+                <span class="reporter-method-output">Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen</span>
+                <span class="reporter-method-output">Clicking on element switching to user account</span>
+                <span class="reporter-method-output"><img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'></span>
                 <span class="reporter-method-output">Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties </span>
                 <span class="reporter-method-output">####### End of Test Case: HPAOtherDeploymentInfo #######</span>
               </div> <!-- reporter-method-output-div -->
@@ -370,38 +508,36 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.buildpiper.testcases.ServiceCreationTestcases</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setUp(org.testng.TestRunner@aa752bb)</span>
+                <span class="method-name">setUp(org.testng.TestRunner@73e25780)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">Reportsetup</span>
-                <span class="method-start">15 ms</span>
+                <span class="method-start">17 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">testName(org.testng.TestRunner@aa752bb, public void com.buildpiper.testcases.ServiceCreationTestcases.HPAOthe...)</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-name">testName(org.testng.TestRunner@73e25780, public void com.buildpiper.testcases.ServiceCreationTestcases.HPAOth...)</span>
+                <span class="method-start">47 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">StartDriver</span>
-                <span class="method-start">415 ms</span>
+                <span class="method-start">491 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">HPAOtherDeploymentInfo</span>
-                <span class="method-start">12194 ms</span>
+                <span class="method-start">12209 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">StopDriver</span>
-                <span class="method-start">57461 ms</span>
+                <span class="method-start">150898 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=HPAOtherDeploymentInfo status=FAILURE method=ServiceCreationTestcases.HPAOtherDeplo...)</span>
-                <span class="method-start">57816 ms</span>
+                <span class="method-name">getResult([TestResult name=HPAOtherDeploymentInfo status=SUCCESS method=ServiceCreationTestcases.HPAOtherDeplo...)</span>
+                <span class="method-start">151220 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">57961 ms</span>
+                <span class="method-start">151396 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

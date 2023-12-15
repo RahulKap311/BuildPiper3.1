@@ -1471,8 +1471,9 @@ public class ServiceCreationPage extends BasePage {
 			}
 		}
 		if (projectSelection) {
+			ui_wait(3);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
-			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+			ui_ActionMoveAndClick(serviceOverViewTab, "Poc_QA serviceOverviewLink");
 			ui_wait(3);
 		//Search with RandomString
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
@@ -1486,6 +1487,14 @@ public class ServiceCreationPage extends BasePage {
 	
 	@FindBy(xpath = "//*[text()='Other Deployment Info']")
 	WebElement otherDeploymentInfo;
+	@FindBy(xpath = "//div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][1]")
+	WebElement uploadHPA;
+	@FindBy(xpath = "//button[text()='Confirm']")
+	WebElement confirmHPA;
+	@FindBy(xpath = "//div[@class='card ']//div[1]/div/div/p[1]")
+	WebElement confirmHPAMessage;
+	@FindBy(xpath = "//button[text()='Continue']")
+	WebElement continuebutton;
 	@FindBy(xpath = "//div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]")
 	WebElement editHPA;
 	@FindBy(xpath = "//*[text()='Add Time Based HPA']")
@@ -1512,8 +1521,10 @@ public class ServiceCreationPage extends BasePage {
 	WebElement cpuThresholdCount;
 	@FindBy(xpath = "//div[text()='Memory Threshold ']/following-sibling::div")
 	WebElement memoryThresholdCount;
+	@FindBy(xpath = "//p[text()='Status :']/span")
+	WebElement otherDeploymentInfoStatus;
 	
-	public ServiceCreationPage VerifyOtherDeployDetailInfo(String Servicename) {
+	public ServiceCreationPage VerifyOtherDeployDetailInfo(String Servicename,String min,String max,String cpu,String memory) {
 		
 		ui_click(serviceList.get(0), "Service Link");
 		ui_wait(3);
@@ -1524,23 +1535,39 @@ public class ServiceCreationPage extends BasePage {
 	    ui_wait(3);
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(editHPA, Pause.MEDIUM));
 	    ui_click(editHPA, "editHPA");
+	    //------------------this functionality not working
+	   /* ui_IsElementDisplay(ui_waitForElementToDisplay(uploadHPA, Pause.MEDIUM));
+	    ui_click(uploadHPA, "uploadHPA");
 	    ui_wait(2);
+	    Assert.assertEquals(confirmHPAMessage.getText(), "Are you sure you want to switch new HPA");
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(confirmHPA, Pause.MEDIUM));
+	    ui_click(confirmHPA, "ConfirmHPA");
+	    ui_wait(10);
+	    ui_click(continuebutton, "continuebutton");*/
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(inputHPAname, Pause.MEDIUM));
 	    ui_clearAndSetValue(inputHPAname,"test");
 	    ui_wait(1);
-	    ui_clearAndSetValue(inputMinimumReplication, "1");
+	    ui_clearAndSetValue(inputMinimumReplication,min);
 	    ui_wait(1);
-	    ui_clearAndSetValue(inputMaximumReplication, "3");
+	    ui_clearAndSetValue(inputMaximumReplication, max);
 	    ui_wait(1);
-	    ui_clearAndSetValue(cpuThreshold, "25");
+	    ui_clearAndSetValue(cpuThreshold, cpu);
 	    ui_wait(1);
-	    ui_clearAndSetValue(ramThreshold, "35");
+	    ui_clearAndSetValue(ramThreshold, memory);
 	    ui_wait(1);
 	    ui_click(saveHPA, "saveHPA");
 	    ui_wait(3);
+	    
+	    //--------------------Verify Values
+	    Assert.assertEquals(min, minreplicationCount.getText());
+	    Assert.assertEquals(max, maxreplicationCount.getText());
+	    Assert.assertEquals(cpu, cpuThresholdCount.getText());
+	    Assert.assertEquals(memory, memoryThresholdCount.getText());
+	    Assert.assertEquals(otherDeploymentInfoStatus.getText(),"IN USE");
+	    
 		//Search with RandomString
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
-		ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+		ui_ActionMoveAndClick(serviceOverViewTab, "Poc_QA serviceOverviewLink");
 		 ui_wait(1);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
 		ui_click(searchServiceTextBox, "clicks on environment overview tab under applicartion name");
@@ -1552,15 +1579,20 @@ public class ServiceCreationPage extends BasePage {
 	WebElement replicationStatusMin;
 	@FindBy(xpath = "(//*[contains(text(),'Replication Status:')])[2]/following-sibling::p/span[text()='Max: ']/following-sibling::span")
 	WebElement replicationStatusMax;
-	
+	@FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']")
+	WebElement monitorwindow_closeButton;
 public ServiceCreationPage VerifyHPAMonitoring(String ReplicationStatusMin,String ReplicationStatusMax) {
 	
-		ui_wait(2);
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(monitoring, Pause.MEDIUM));
 		ui_click(monitoring, "monitoring");
+		ui_wait(1);
 		String min=replicationStatusMin.getText();
 		String max=replicationStatusMax.getText();
 		Assert.assertEquals(min, ReplicationStatusMin);
 		Assert.assertEquals(max, ReplicationStatusMax);
+		ui_wait(1);
+		ui_click(monitorwindow_closeButton, "monitorwindow_closeButton");
 		return this;
 	}
 	
