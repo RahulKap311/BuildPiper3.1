@@ -33,7 +33,7 @@ public class ServiceCreationPage extends BasePage {
 //	@FindBy(xpath = "//span[@title='perfeasy-testing']//..//..//span[text()='Service Overview']")
 //	WebElement serviceOverViewTab;
 
-	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']")
+	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span")
 	WebElement serviceOverViewTab;
 
 	@FindBy(xpath = "//li//button[contains(@class,'main-nav-1')]//span[1][@title]")
@@ -394,7 +394,9 @@ public class ServiceCreationPage extends BasePage {
 	WebElement firstServiceLink;
 	@FindBy(xpath = "(//button[@class='btn btn-with-icon btn-round'])[1]")
 	WebElement editServicebutton;
-	public ServiceCreationPage editService(String appName) {
+	@FindBy(xpath = "//div[@class='heading-section-env']/div[2]/div[1]/div")
+	WebElement servicePagetitle;
+	public ServiceCreationPage editService(String appName, String UpdatedService) {
 
 		boolean projectSelection = false;
 		ui_wait(5);
@@ -407,18 +409,108 @@ public class ServiceCreationPage extends BasePage {
 			}
 		}
 		if (projectSelection) {
-			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
-			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
-			ui_IsElementDisplay(ui_waitForElementToDisplay(firstServiceLink, Pause.MEDIUM));
-			ui_click(firstServiceLink, "first Service Link");
+			
 			ui_wait(2);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(editServicebutton, Pause.MEDIUM));
 			ui_click(editServicebutton, "edit Service button");
 			ui_wait(2);
-			Assert.assertEquals(createaServiceHeading.getText(), "Edit Service");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(service_Name_SearchBox, Pause.MEDIUM));
+			ui_clearAndSetValue(service_Name_SearchBox, UpdatedService);
+			ui_wait(2);
+			ui_click(saveAndContinue_Create_Page, "Poc_QA SubmitCreatePage");
+			ui_wait(3);
+			Assert.assertEquals(servicePagetitle.getText(), UpdatedService);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));			
+			for (WebElement element : poc_qaProjectLink) {
+				if (element.getText().trim().equalsIgnoreCase(appName)) {
+					element.click();
+			}
+			}
+			ui_wait(2);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
+			ui_ActionMoveAndClick(serviceOverViewTab, "serviceOverViewTab");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
+			ui_click(searchServiceTextBox, "clicks on Search overview tab under applicartion name");
+			ui_clearAndSetValue(searchServiceTextBox, UpdatedService);
+			searchServiceTextBox.sendKeys(Keys.ENTER);
+			ui_wait(3);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(firstServiceLink, Pause.MEDIUM));
+			Assert.assertEquals(firstServiceLink.getText(), UpdatedService.toUpperCase());
+			ui_wait(2);
+			ui_click(firstServiceLink, "firstServiceLink");
 		}
 		return this;
 
+	}
+	@FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root btn btn-with-icon btn-round']")
+	WebElement deleteServicebutton;
+	@FindBy(xpath = "//input[@placeholder='Please enter the reason to delete']")
+	WebElement deletePopupInputField;
+	@FindBy(xpath = "//button[text()='Delete']")
+	WebElement deleteButton;
+	@FindBy(xpath = "//div[contains(text(),'No Service found with the name : ')]")
+	WebElement serviceNotFoundMessage;
+	public ServiceCreationPage deleteService(String Servicename) {
+		ui_wait(3);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(deleteServicebutton, Pause.MEDIUM));
+			ui_click(deleteServicebutton, "deleteServicebutton");
+			ui_wait(2);
+			ui_setvalue(deletePopupInputField, "deletePopupInputField", "Automation");
+			ui_wait(2);
+			ui_click(deleteButton, "deleteButton");
+			ui_wait(2);
+			//-------------Search String
+			ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
+			ui_click(searchServiceTextBox, "clicks on Search overview tab under applicartion name");
+			ui_clearAndSetValue(searchServiceTextBox, Servicename);
+			searchServiceTextBox.sendKeys(Keys.ENTER);
+			ui_wait(3);
+			Assert.assertEquals(ui_IsElementPresent(serviceNotFoundMessage, "4"), true);
+		return this;
+		
+	}
+	
+	@FindBy(xpath = "//a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']")
+	WebElement editEnvironment;
+	@FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root btn btn-flaticon']")
+	WebElement deleteEnvironment;
+	@FindBy(xpath = "(//input[@name='manual_build'])[2]")
+	WebElement allowManualBuildNo;
+	@FindBy(xpath = "(//input[@name='manual_deploy'])[2]")
+	WebElement allowManualDeployNo;
+	@FindBy(xpath = "//div[text()='No Environment Found']")
+	WebElement noEnvironmentFoundText;
+	
+	public ServiceCreationPage editandDeleteEnvironment(String Servicename) {
+		ui_wait(3);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(editEnvironment, Pause.MEDIUM));
+			ui_click(editEnvironment, "editEnvironment");
+			ui_wait(3);
+			ui_click(allowManualBuildNo, "Poc_QA allowManualBuildNo");
+			ui_click(allowManualDeployNo, "Poc_QA allowManualDeployNo");
+			ui_wait(3);
+			ui_click(saveAndContinue_Create_Page, "Poc_QA SubmitEnvPage");
+			ui_wait(3);
+			Assert.assertEquals(ui_IsElementPresent(buildButton, "5"), false);
+			Assert.assertEquals(ui_IsElementPresent(deployButton, "5"), false);
+			// Again Click on Edit Link and Add Manual build and Deploy
+			ui_click(editEnvironment, "editEnvironment");
+			ui_wait(3);
+			ui_click(saveAndContinue_Create_Page, "Poc_QA SubmitEnvPage");
+			ui_wait(3);
+			Assert.assertEquals(ui_IsElementPresent(buildButton, "5"), true);
+			Assert.assertEquals(ui_IsElementPresent(deployButton, "5"), true);
+			ui_wait(2);
+			ui_click(deleteEnvironment, "deleteEnvironment");
+			ui_wait(2);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(deletePopupInputField, Pause.MEDIUM));
+			ui_setvalue(deletePopupInputField, "deletePopupInputField", "Automation");
+			ui_wait(1);
+			ui_click(deleteButton, "deleteButton");
+			ui_wait(3);
+			Assert.assertEquals(ui_IsElementPresent(noEnvironmentFoundText, "3"), true);
+		return this;
+		
 	}
 
 	public ServiceCreationPage buildAndValidateService(String appName, String ProjectName, String buildRadioButtonName,
@@ -435,8 +527,9 @@ public class ServiceCreationPage extends BasePage {
 			}
 		}
 		if (projectSelection) {
+			ui_wait(3);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
-			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+			ui_ActionMoveAndClick(serviceOverViewTab, "serviceOverViewTab");
 			ui_IsElementDisplay(ui_waitForElementToDisplay(addServiceBtn, Pause.MEDIUM));
 			ui_click(addServiceBtn, "Poc_QA addServiceBtn");
 			ui_IsElementDisplay(ui_waitForElementToDisplay(main_Heading, Pause.MEDIUM));
@@ -1493,10 +1586,18 @@ public class ServiceCreationPage extends BasePage {
 	WebElement confirmHPA;
 	@FindBy(xpath = "//div[@class='card ']//div[1]/div/div/p[1]")
 	WebElement confirmHPAMessage;
+	@FindBy(xpath = "(//*[@class='msg-div']/span[2])[1]")
+	WebElement generateManifestHPA_Status;
+	@FindBy(xpath = "(//*[@class='msg-div']/span[2])[2]")
+	WebElement loadKubeConfigHPA_Status;
+	@FindBy(xpath = "(//*[@class='msg-div']/span[2])[3]")
+	WebElement deployHPA_Status;	
 	@FindBy(xpath = "//button[text()='Continue']")
 	WebElement continuebutton;
 	@FindBy(xpath = "//div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]")
 	WebElement editHPA;
+	@FindBy(xpath = "//div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='MuiButtonBase-root MuiIconButton-root']")
+	WebElement deleteHPA;
 	@FindBy(xpath = "//*[text()='Add Time Based HPA']")
 	WebElement addTimeBasedHPA;
 	@FindBy(xpath = "//input[@placeholder='HPA Name']")
@@ -1523,6 +1624,58 @@ public class ServiceCreationPage extends BasePage {
 	WebElement memoryThresholdCount;
 	@FindBy(xpath = "//p[text()='Status :']/span")
 	WebElement otherDeploymentInfoStatus;
+	@FindBy(xpath = "//button[text()='Add Default HPA']")
+	WebElement addDefaultHPA;
+	@FindBy(xpath = "(//button[@class='btn btn-with-icon btn-round']/span[@class='flaticon-refresh-button-1'])[2]")
+	WebElement refreshHPA;
+	
+public ServiceCreationPage CreateHPA(String Servicename,String min,String max,String cpu,String memory) {
+		
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(validateDeployDetails, Pause.MEDIUM));
+	    ui_click(validateDeployDetails, "validateDeployDetails");
+	    ui_wait(2);
+	    ui_click(otherDeploymentInfo, "otherDeploymentInfo");
+	    ui_wait(3);
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(addDefaultHPA, Pause.MEDIUM));
+	    ui_click(addDefaultHPA, "addDefaultHPA");
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(inputHPAname, Pause.MEDIUM));
+	    ui_clearAndSetValue(inputHPAname,"HPA Test");
+	    ui_wait(1);
+	    ui_clearAndSetValue(inputMinimumReplication,min);
+	    ui_wait(1);
+	    ui_clearAndSetValue(inputMaximumReplication, max);
+	    ui_wait(1);
+	    ui_clearAndSetValue(cpuThreshold, cpu);
+	    ui_wait(1);
+	    ui_clearAndSetValue(ramThreshold, memory);
+	    ui_wait(1);
+	    ui_click(saveHPA, "saveHPA");
+	    ui_wait(5);
+	    ui_click(refreshHPA, "refreshHPA");
+	    //--------------------Verify Values
+	    Assert.assertEquals(min, minreplicationCount.getText());
+	    Assert.assertEquals(max, maxreplicationCount.getText());
+	    Assert.assertEquals(cpu, cpuThresholdCount.getText());
+	    Assert.assertEquals(memory, memoryThresholdCount.getText());
+	    Assert.assertEquals(otherDeploymentInfoStatus.getText(),"IN USE");
+	    
+	    //------------------Deploy HPA
+		 ui_IsElementDisplay(ui_waitForElementToDisplay(uploadHPA, Pause.MEDIUM));
+		 ui_click(uploadHPA, "uploadHPA");
+		 ui_wait(2);
+		 Assert.assertEquals(confirmHPAMessage.getText(), "Are you sure you want to switch new HPA");
+		 ui_IsElementDisplay(ui_waitForElementToDisplay(confirmHPA, Pause.MEDIUM));
+		 ui_click(confirmHPA, "ConfirmHPA");
+		 ui_wait(15);
+		 Assert.assertEquals(generateManifestHPA_Status.getText(), "Success");
+		 Assert.assertEquals(loadKubeConfigHPA_Status.getText(), "Success");
+		 Assert.assertEquals(deployHPA_Status.getText(), "Success");
+		 ui_wait(2);
+		 ui_click(continuebutton, "continuebutton");
+		 ui_wait(3);
+		return this;
+	}
 	
 	public ServiceCreationPage VerifyOtherDeployDetailInfo(String Servicename,String min,String max,String cpu,String memory) {
 		
@@ -1535,15 +1688,6 @@ public class ServiceCreationPage extends BasePage {
 	    ui_wait(3);
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(editHPA, Pause.MEDIUM));
 	    ui_click(editHPA, "editHPA");
-	    //------------------this functionality not working
-	   /* ui_IsElementDisplay(ui_waitForElementToDisplay(uploadHPA, Pause.MEDIUM));
-	    ui_click(uploadHPA, "uploadHPA");
-	    ui_wait(2);
-	    Assert.assertEquals(confirmHPAMessage.getText(), "Are you sure you want to switch new HPA");
-	    ui_IsElementDisplay(ui_waitForElementToDisplay(confirmHPA, Pause.MEDIUM));
-	    ui_click(confirmHPA, "ConfirmHPA");
-	    ui_wait(10);
-	    ui_click(continuebutton, "continuebutton");*/
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(inputHPAname, Pause.MEDIUM));
 	    ui_clearAndSetValue(inputHPAname,"test");
 	    ui_wait(1);
@@ -1556,7 +1700,8 @@ public class ServiceCreationPage extends BasePage {
 	    ui_clearAndSetValue(ramThreshold, memory);
 	    ui_wait(1);
 	    ui_click(saveHPA, "saveHPA");
-	    ui_wait(3);
+	    ui_wait(4);
+	    ui_click(refreshHPA, "refreshHPA");
 	    
 	    //--------------------Verify Values
 	    Assert.assertEquals(min, minreplicationCount.getText());
@@ -1565,7 +1710,21 @@ public class ServiceCreationPage extends BasePage {
 	    Assert.assertEquals(memory, memoryThresholdCount.getText());
 	    Assert.assertEquals(otherDeploymentInfoStatus.getText(),"IN USE");
 	    
-		//Search with RandomString
+	    //------------------Deploy HPA
+		 ui_IsElementDisplay(ui_waitForElementToDisplay(uploadHPA, Pause.MEDIUM));
+		 ui_click(uploadHPA, "uploadHPA");
+		 ui_wait(2);
+		 Assert.assertEquals(confirmHPAMessage.getText(), "Are you sure you want to switch new HPA");
+		 ui_IsElementDisplay(ui_waitForElementToDisplay(confirmHPA, Pause.MEDIUM));
+		 ui_click(confirmHPA, "ConfirmHPA");
+		 ui_wait(20);
+		 Assert.assertEquals(generateManifestHPA_Status.getText(), "Success");
+		 Assert.assertEquals(loadKubeConfigHPA_Status.getText(), "Success");
+		 Assert.assertEquals(deployHPA_Status.getText(), "Success");
+		 ui_wait(2);
+		 ui_click(continuebutton, "continuebutton");
+		 ui_wait(3);
+		//-----------------------Search Service--------
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
 		ui_ActionMoveAndClick(serviceOverViewTab, "Poc_QA serviceOverviewLink");
 		 ui_wait(1);

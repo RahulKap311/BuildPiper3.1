@@ -5,11 +5,11 @@
     <classes>
       <class name="com.buildpiper.testcases.ServiceCreationTestcases">
         <methods>
-          <include name="HPAOtherDeploymentInfo"/>
           <include name="setUp"/>
           <include name="testName"/>
           <include name="StartDriver"/>
           <include name="tearDown"/>
+          <include name="EditandDeleteServiceEnvironment"/>
           <include name="Reportsetup"/>
           <include name="getResult"/>
           <include name="StopDriver"/>

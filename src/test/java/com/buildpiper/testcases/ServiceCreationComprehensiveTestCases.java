@@ -266,7 +266,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_switchToNewWindow();
 		ui_wait(10);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
-		ui_wait(60);
+		ui_wait(40);
 		new ServiceCreationPage().Verify_buildStatus("SUCCESS");
 		ui_wait(3);
 		new ServiceCreationPage().closeBuildWindow();

@@ -159,6 +159,133 @@ public class ServiceCreationTestcases extends BaseTest {
 	}	
 	
 	@Test(groups = { "Regression" }, priority = 0)
+	public void EditandDeleteService() {
+		ServiceCreationPage servicepage=new ServiceCreationPage();
+		String EditService="";
+		ArrayList<String> chipList = new ArrayList<String>();
+//		chipList.add(" All");
+		chipList.add("linux/arm64");
+		chipList.add("linux/amd64");
+
+		ArrayList<String> languageList = new ArrayList<String>();
+		languageList.add("JAVA");
+
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("QA");
+		list.add("DEV");
+		list.add("DevOps");
+
+		ArrayList<String> serviceButton = new ArrayList<String>();
+		serviceButton.add("Build");
+		serviceButton.add("Deploy");
+		serviceButton.add("History");
+		serviceButton.add("Monitoring");
+	    new PreRequisitesPage().switchUser();
+	    ui_wait(4);
+		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "createServ");
+		servicepage.buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),
+		reader.getCellData("MicroServiceData", "envName", RowNumber),
+		reader.getCellData("MicroServiceData", "buildRadioButtonName", RowNumber), list,
+		reader.getCellData("MicroServiceData", "JobTemplateValue", RowNumber));
+		EditService=servicepage.servicename+"Updated";
+		servicepage.editService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),EditService);
+		servicepage.deleteService(EditService);
+	}
+	
+	@Test(groups = { "Regression" }, priority = 0)
+	public void EditandDeleteServiceEnvironment() {
+		ServiceCreationPage servicepage=new ServiceCreationPage();
+		BuildConfigurationPage buildConfig=new BuildConfigurationPage();
+		DeployConfigurationPage deployConfig=new DeployConfigurationPage();
+		ArrayList<String> chipList = new ArrayList<String>();
+//		chipList.add(" All");
+		chipList.add("linux/arm64");
+		chipList.add("linux/amd64");
+
+		ArrayList<String> languageList = new ArrayList<String>();
+		languageList.add("JAVA");
+
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("QA");
+		list.add("DEV");
+		list.add("DevOps");
+
+		ArrayList<String> serviceButton = new ArrayList<String>();
+		serviceButton.add("Build");
+		serviceButton.add("Deploy");
+		serviceButton.add("History");
+		serviceButton.add("Monitoring");
+	    new PreRequisitesPage().switchUser();
+	    ui_wait(4);
+		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "createServ");
+		servicepage.buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),
+		reader.getCellData("MicroServiceData", "envName", RowNumber),
+		reader.getCellData("MicroServiceData", "buildRadioButtonName", RowNumber), list,
+		reader.getCellData("MicroServiceData", "JobTemplateValue", RowNumber));
+		buildConfig.CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", RowNumber),
+				reader.getCellData("MicroServiceData", "BranchName", RowNumber),
+				reader.getCellData("MicroServiceData", "FilePath", RowNumber),
+				reader.getCellData("MicroServiceData", "DockerFilePath", RowNumber), chipList, languageList,
+				reader.getCellData("MicroServiceData", "preHookPass", RowNumber),
+				reader.getCellData("MicroServiceData", "envName", RowNumber));
+		deployConfig.CreateAndValidateDeployConfig(
+				reader.getCellData("MicroServiceData", "AccessType", RowNumber),
+				reader.getCellData("MicroServiceData", "AccessName", RowNumber),
+				reader.getCellData("MicroServiceData", "portNumber", RowNumber),
+				reader.getCellData("MicroServiceData", "TargetPort", RowNumber), serviceButton,
+				reader.getCellData("MicroServiceData", "configName", RowNumber));
+		String servicename=servicepage.servicename;
+		servicepage.editandDeleteEnvironment(servicename);
+		
+	}
+	
+	@Test(groups = { "Regression" }, priority = 0)
+	public void createHPAService() {
+		ServiceCreationPage servicepage=new ServiceCreationPage();
+		BuildConfigurationPage buildConfig=new BuildConfigurationPage();
+		DeployConfigurationPage deployConfig=new DeployConfigurationPage();
+		ArrayList<String> chipList = new ArrayList<String>();
+//		chipList.add(" All");
+		chipList.add("linux/arm64");
+		chipList.add("linux/amd64");
+
+		ArrayList<String> languageList = new ArrayList<String>();
+		languageList.add("JAVA");
+
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("QA");
+		list.add("DEV");
+		list.add("DevOps");
+
+		ArrayList<String> serviceButton = new ArrayList<String>();
+		serviceButton.add("Build");
+		serviceButton.add("Deploy");
+		serviceButton.add("History");
+		serviceButton.add("Monitoring");
+	    new PreRequisitesPage().switchUser();
+	    ui_wait(4);
+		int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "createServ");
+		servicepage.buildAndValidateService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),
+				reader.getCellData("MicroServiceData", "envName", RowNumber),
+				reader.getCellData("MicroServiceData", "buildRadioButtonName", RowNumber), list,
+				reader.getCellData("MicroServiceData", "JobTemplateValue", RowNumber));
+		buildConfig.CreateAndValidateBuildConfig(reader.getCellData("MicroServiceData", "gitURL", RowNumber),
+				reader.getCellData("MicroServiceData", "BranchName", RowNumber),
+				reader.getCellData("MicroServiceData", "FilePath", RowNumber),
+				reader.getCellData("MicroServiceData", "DockerFilePath", RowNumber), chipList, languageList,
+				reader.getCellData("MicroServiceData", "preHookPass", RowNumber),
+				reader.getCellData("MicroServiceData", "envName", RowNumber));
+		deployConfig.CreateAndValidateDeployConfig(
+				reader.getCellData("MicroServiceData", "AccessType", RowNumber),
+				reader.getCellData("MicroServiceData", "AccessName", RowNumber),
+				reader.getCellData("MicroServiceData", "portNumber", RowNumber),
+				reader.getCellData("MicroServiceData", "TargetPort", RowNumber), serviceButton,
+				reader.getCellData("MicroServiceData", "configName", RowNumber));
+		servicepage.CreateHPA(servicepage.servicename, "2", "4", "40", "60");
+	}
+
+	
+	@Test(groups = { "Regression" }, priority = 0)
 //	@RetryCountIfFailed(2)
 	public void HPAOtherDeploymentInfo() throws Exception {
 		ServiceCreationPage servicecreate=new ServiceCreationPage();
@@ -169,7 +296,7 @@ public class ServiceCreationTestcases extends BaseTest {
 	String[] memoryThreshold = {"40","60","80"};
 		
 	ui_wait(5);
-	for(int i=0;i<3;i++)
+	for(int i=0;i<minreplication.length;i++)
 	{	
 	new PreRequisitesPage().switchUser();
 		

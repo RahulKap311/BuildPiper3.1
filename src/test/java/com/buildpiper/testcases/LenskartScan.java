@@ -93,7 +93,7 @@ public class LenskartScan extends BaseTest {
 		new HomePage().VerifyAllModulesAccessible(reader.getCellData("MicroServiceData", "applicationName", 2));
 		
 	}
-	
+	/*
 	@Test(groups = { "Regression" },priority = 0)
    public void EditService() {
 	
@@ -102,7 +102,7 @@ public class LenskartScan extends BaseTest {
 	ui_wait(3);
 	new ServiceCreationPage().editService(reader.getCellData("MicroServiceData", "applicationName", 2));
 	
-}
+}*/
 	
 	@Test(groups = { "Regression" },priority = 0)
 	   public void EditPipeline() {

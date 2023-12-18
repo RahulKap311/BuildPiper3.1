@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Test Execution ID : 15Dec_190218]]>
+      <![CDATA[Test Execution ID : 18Dec_195007]]>
     </line>
     <line>
-      <![CDATA[####### Starting  Test Case: HPAOtherDeploymentInfo #######]]>
+      <![CDATA[####### Starting  Test Case: EditandDeleteServiceEnvironment #######]]>
     </line>
     <line>
-      <![CDATA[Getting test data for HPAOtherDeploymentInfo]]>
+      <![CDATA[Getting test data for EditandDeleteServiceEnvironment]]>
     </line>
     <line>
-      <![CDATA[No testdata found for Test Case: HPAOtherDeploymentInfo]]>
+      <![CDATA[No testdata found for Test Case: EditandDeleteServiceEnvironment]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
@@ -20,7 +20,7 @@
       <![CDATA[Open URL:http://122.160.30.218:16680/]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190222.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195011.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Executing; ui_launch]]>
@@ -32,7 +32,7 @@
       <![CDATA[Setting value on element USER_NAME]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190225.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195024.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : name: password]is displayed on screen]]>
@@ -41,7 +41,7 @@
       <![CDATA[Setting value on element PASSWORD]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190225.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195025.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //button[@type='submit']]is displayed on screen]]>
@@ -50,7 +50,7 @@
       <![CDATA[Clicking on element LOGIN_BTN]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190226.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195025.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Successful navigation is validated for LoginPage]]>
@@ -59,19 +59,31 @@
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190226.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195026.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190232.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[checking if driver exist]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190237.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[checking if driver exist]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[checking if driver exist]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
@@ -80,7 +92,7 @@
       <![CDATA[Clicking on element userMenuAppBar]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190237.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195032.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen]]>
@@ -89,7 +101,7 @@
       <![CDATA[Clicking on element switching to user account]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190238.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195032.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen]]>
@@ -98,46 +110,187 @@
       <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190239.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195041.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190242.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195045.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //a[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+      <![CDATA[Element is present  xpath: //a[@class='btn btn-submit']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190246.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195045.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //a[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+      <![CDATA[Clicking on element Poc_QA addServiceBtn]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190246.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195046.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //h1[@class='main-heading']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //h1[@class='main-heading']]]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Service Link]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195046.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190249.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //p[(@class='hint-text-main-heading')]]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //p[(@class='hint-text-main-heading')]]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195046.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //input[@placeholder='demo-app']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Setting value on element sets service name]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195047.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //input[@placeholder='Sample-Service']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Setting value on element sets external name]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195050.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //span[contains(.,'Build for every environment')]]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA selectEveryRadioBtn]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195050.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA SubmitCreatePage]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195050.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //h1[@class='h1' and contains(.,'Create a Environment')]]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //h1[@class='h1' and contains(.,'Create a Environment')]]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195051.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //div[@class='staticwrap-inner']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //div[@class='staticwrap-inner']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195052.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //select[@name='env_id']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //select[@name='env_id']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195054.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //button[@class='btn btn-submit']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195130.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA SubmitEnvPage]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195130.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //div[@class='font-27 font-family-nunito font-weight-300 lh-12 mr-5']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //div[@class='font-27 font-family-nunito font-weight-300 lh-12 mr-5']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195132.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //span[contains(text(),'Project:')]]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //span[contains(text(),'Project:')]]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //*[text()='Env Build Details']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA validateBuildDetails]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //p[@class='main-text mb-10']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //p[@class='main-text mb-10']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //span[@class='sub-text mb-10']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //span[@class='sub-text mb-10']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
@@ -146,496 +299,340 @@
       <![CDATA[Element is present  xpath: //*[text()='Env Deploy Details']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190253.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element validateDeployDetails]]>
+      <![CDATA[Clicking on element Poc_QA validateDeployDetails]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190253.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //p[@class='main-text mb-10']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element otherDeploymentInfo]]>
+      <![CDATA[Element is present  xpath: //p[@class='main-text mb-10']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190255.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+      <![CDATA[Element : xpath: //span[@class='sub-text mb-10']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]]]>
+      <![CDATA[Element is present  xpath: //span[@class='sub-text mb-10']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190258.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+      <![CDATA[Element : xpath: //*[text()='To have a very smooth configuration we strongly recommend BuildPiper UI.']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click]]>
+      <![CDATA[Element is present  xpath: //*[text()='To have a very smooth configuration we strongly recommend BuildPiper UI.']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element editHPA]]>
+      <![CDATA[Element : xpath: //*[text()='you can also configure the CD by uploading your custom manifest file.']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element is present  xpath: //*[text()='you can also configure the CD by uploading your custom manifest file.']]]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='HPA Name']]]]>
+      <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element is present  xpath: //*[text()='Env Build Details']]]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='minimum_replication']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='maximum_replication']]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA validateBuildDetails]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195136.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen]]>
+      <![CDATA[Element : xpath: //*[text()='Configure Build']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Save']]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //*[text()='Configure Build']]]]>
     </line>
     <line>
-      <![CDATA[Clicking on element saveHPA]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195136.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190306.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //*[text()='Configure Build']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA clickConfigBuild]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195136.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190310.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //div[@class='md-step-circle current']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //div[@class='md-step-circle current']]]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195139.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190311.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //h4[@class='mainHeading']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //h4[@class='mainHeading']]]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190313.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //*[text()='Please Select the Git URL']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+      <![CDATA[Element is present  xpath: //*[text()='Please Select the Git URL']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190313.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd']]]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button[@title='Monitoring']]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190316.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //input[@name='git_url']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA gitUrlInputField]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190318.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[@title='Clear']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element monitoring]]>
+      <![CDATA[Clicking on element ClicksclearField]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190318.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195146.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //input[@name='git_url']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element monitorwindow_closeButton]]>
+      <![CDATA[Element : xpath: //*[text()='Load Branches']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190321.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element is present  xpath: //*[text()='Load Branches']]]]>
     </line>
     <line>
-      <![CDATA[checking if driver exist]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195155.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190321.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //*[text()='Load Branches']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA loadBranchesBtn]]>
     </line>
     <line>
-      <![CDATA[Clicking on element userMenuAppBar]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195155.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //input[@name='file_paths']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //input[@name='file_paths_build_context']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element switching to user account]]>
+      <![CDATA[Element : xpath: //*[text()='Advance Configurations']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element is present  xpath: //*[text()='Advance Configurations']]]]>
     </line>
     <line>
-      <![CDATA[checking if driver exist]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195209.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[text()='Continue']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA clickContinueBtn]]>
     </line>
     <line>
-      <![CDATA[Clicking on element userMenuAppBar]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195209.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //h4[@class='mainHeading']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //h4[@class='mainHeading']]]]>
     </line>
     <line>
-      <![CDATA[Clicking on element switching to user account]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190323.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //*[text()='Build Env Details']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen]]>
+      <![CDATA[Element is present  xpath: //*[text()='Build Env Details']]]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190323.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //span[@class='switch-label'][@data-on]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA envDetailsSwitch]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190327.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //input[@name='key']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Setting value on element Poc_QA envName]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190330.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //input[@name='value']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Setting value on element Poc_QA envValue]]>
     </line>
     <line>
-      <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190330.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[text()='Continue']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA clickContinueBtn]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element Service Link]]>
+      <![CDATA[Element : xpath: //input[@name='pre_hook_enabled']/../span[@class='switch-handle']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190334.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element Poc_QA preHooksSwitch]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //*[text()='Env Deploy Details']]]]>
+      <![CDATA[Element : xpath: //p[contains(.,'Add Pre Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190337.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Setting value on element Poc_QA preHooksPasswordBox1]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element validateDeployDetails]]>
+      <![CDATA[Element : xpath: //button[@class='nowrap']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190337.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks on add New Hook]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195217.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element otherDeploymentInfo]]>
+      <![CDATA[Element : xpath: //p[contains(.,'Add Pre Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190340.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Setting value on element Poc_QA preHooksPasswordBox2]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195217.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]]]>
+      <![CDATA[Element : xpath: //input[@name='post_hook_enabled']/../span[@class='switch-handle']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190343.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element Poc_QA postHooksSwitch]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195217.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click]]>
+      <![CDATA[Element : xpath: //p[contains(.,'Add Post Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190344.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Setting value on element Poc_QA postHooksPasswordBox1]]>
     </line>
     <line>
-      <![CDATA[Clicking on element editHPA]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190345.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: (//button[@class='nowrap'])[2]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+      <![CDATA[Clicking on element clicks on add New Post Hook]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='HPA Name']]]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190345.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //p[contains(.,'Add Post Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+      <![CDATA[Setting value on element Poc_QA postHooksPasswordBox2]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='minimum_replication']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='maximum_replication']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen]]>
+      <![CDATA[Clicking on element Poc_QA submitHooks]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Save']]is displayed on screen]]>
+      <![CDATA[Element : xpath: /html/body/div[1]/div/main/div[1]/div/div[1]/div/div/div[2]/div[2]/span[2]]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element saveHPA]]>
+      <![CDATA[Element is present  xpath: /html/body/div[1]/div/main/div[1]/div/div[1]/div/div/div[2]/div[2]/span[2]]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190351.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195219.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //*[text()='Job Template: ']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+      <![CDATA[Element is present  xpath: //*[text()='Job Template: ']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190354.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190356.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190357.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190357.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element is present  xpath: //button[@title='Monitoring']]]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190401.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190402.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element monitoring]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190402.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element monitorwindow_closeButton]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190405.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[checking if driver exist]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190405.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element userMenuAppBar]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element switching to user account]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[checking if driver exist]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element userMenuAppBar]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190407.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element switching to user account]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190407.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190408.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190411.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190414.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190415.jpg alt='Lamp' width='500' height='400'>]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen]]>
-    </line>
-    <line>
-      <![CDATA[Clicking on element Service Link]]>
-    </line>
-    <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190418.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195221.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
@@ -644,232 +641,307 @@
       <![CDATA[Element is present  xpath: //*[text()='Env Deploy Details']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190421.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195221.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element validateDeployDetails]]>
+      <![CDATA[Clicking on element Poc_QA validateDeployDetails]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190422.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195222.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element otherDeploymentInfo]]>
+      <![CDATA[Element is present  xpath: //button[@class='btn btn-submit']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190424.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195222.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]]]>
+      <![CDATA[Clicking on element clicks on buildPiperUI button]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190427.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195222.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button//span[text()=' Add Access Level']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click]]>
+      <![CDATA[Clicking on element Add Access Level]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195223.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element editHPA]]>
+      <![CDATA[Clicking on element Poc_QA privateAccess]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195256.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //input[@placeholder='name'][@name='name']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='HPA Name']]]]>
+      <![CDATA[Element : xpath: //input[@placeholder='4001'][@name='port']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //input[@placeholder='4001'][@name='target_port']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-v2-primary btn-sm']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='minimum_replication']]is displayed on screen]]>
+      <![CDATA[Clicking on element clicks add button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@name='maximum_replication']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195257.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //*[text()='Save']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195257.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Clicking on element saveHPA]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190435.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195259.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190438.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195301.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190440.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195304.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190441.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195306.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190442.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195308.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element is present  xpath: //button[@title='Monitoring']]]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190445.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195311.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190446.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Clicking on element monitoring]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195313.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190447.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen]]>
+      <![CDATA[Clicking on element clicks continue button]]>
     </line>
     <line>
-      <![CDATA[Clicking on element monitorwindow_closeButton]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195315.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190449.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[checking if driver exist]]>
+      <![CDATA[Clicking on element Clicks on Deploy Details tag]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195317.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
+      <![CDATA[Element : xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element userMenuAppBar]]>
+      <![CDATA[Element is present  xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195321.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
-      <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen]]>
+      <![CDATA[Element : xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]is displayed on screen]]>
     </line>
     <line>
-      <![CDATA[Clicking on element switching to user account]]>
+      <![CDATA[Clicking on element editEnvironment]]>
     </line>
     <line>
-      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'>]]>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195321.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA allowManualBuildNo]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195354.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA allowManualDeployNo]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195425.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA SubmitEnvPage]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195428.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element editEnvironment]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195532.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element Poc_QA SubmitEnvPage]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195535.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root btn btn-flaticon']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element deleteEnvironment]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195540.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //input[@placeholder='Please enter the reason to delete']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Element is present  xpath: //input[@placeholder='Please enter the reason to delete']]]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195543.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //input[@placeholder='Please enter the reason to delete']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Setting value on element deletePopupInputField]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195543.jpg alt='Lamp' width='500' height='400'>]]>
+    </line>
+    <line>
+      <![CDATA[Element : xpath: //button[text()='Delete']]is displayed on screen]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on element deleteButton]]>
+    </line>
+    <line>
+      <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195544.jpg alt='Lamp' width='500' height='400'>]]>
     </line>
     <line>
       <![CDATA[Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties ]]>
     </line>
     <line>
-      <![CDATA[####### End of Test Case: HPAOtherDeploymentInfo #######]]>
+      <![CDATA[####### End of Test Case: EditandDeleteServiceEnvironment #######]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-12-15T19:02:20 IST" name="Default suite" finished-at="2023-12-15T19:04:51 IST" duration-ms="151382">
+  <suite started-at="2023-12-18T19:50:08 IST" name="Default suite" finished-at="2023-12-18T19:55:45 IST" duration-ms="336665">
     <groups>
       <group name="Regression">
-        <method signature="ServiceCreationTestcases.HPAOtherDeploymentInfo()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" name="HPAOtherDeploymentInfo" class="com.buildpiper.testcases.ServiceCreationTestcases"/>
+        <method signature="ServiceCreationTestcases.EditandDeleteServiceEnvironment()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" name="EditandDeleteServiceEnvironment" class="com.buildpiper.testcases.ServiceCreationTestcases"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2023-12-15T19:02:20 IST" name="Default test" finished-at="2023-12-15T19:04:51 IST" duration-ms="151382">
+    <test started-at="2023-12-18T19:50:08 IST" name="Default test" finished-at="2023-12-18T19:55:45 IST" duration-ms="336665">
       <class name="com.buildpiper.testcases.ServiceCreationTestcases">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:02:19 IST" name="setUp" finished-at="2023-12-15T19:02:20 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:50:08 IST" name="setUp" finished-at="2023-12-18T19:50:08 IST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@73e25780]]>
+                <![CDATA[org.testng.TestRunner@ab5dde4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="Reportsetup()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:02:20 IST" name="Reportsetup" finished-at="2023-12-15T19:02:20 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="Reportsetup()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:50:08 IST" name="Reportsetup" finished-at="2023-12-18T19:50:08 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reportsetup -->
-        <test-method is-config="true" signature="testName(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:02:20 IST" name="testName" finished-at="2023-12-15T19:02:20 IST" duration-ms="443" status="PASS">
+        <test-method is-config="true" signature="testName(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:50:08 IST" name="testName" finished-at="2023-12-18T19:50:09 IST" duration-ms="401" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@73e25780]]>
+                <![CDATA[org.testng.TestRunner@ab5dde4]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.buildpiper.testcases.ServiceCreationTestcases.HPAOtherDeploymentInfo() throws java.lang.Exception]]>
+                <![CDATA[public void com.buildpiper.testcases.ServiceCreationTestcases.EditandDeleteServiceEnvironment()]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[####### Starting  Test Case: HPAOtherDeploymentInfo #######]]>
+              <![CDATA[####### Starting  Test Case: EditandDeleteServiceEnvironment #######]]>
             </line>
             <line>
-              <![CDATA[Getting test data for HPAOtherDeploymentInfo]]>
+              <![CDATA[Getting test data for EditandDeleteServiceEnvironment]]>
             </line>
             <line>
-              <![CDATA[No testdata found for Test Case: HPAOtherDeploymentInfo]]>
+              <![CDATA[No testdata found for Test Case: EditandDeleteServiceEnvironment]]>
             </line>
           </reporter-output>
         </test-method> <!-- testName -->
-        <test-method is-config="true" signature="StartDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:02:20 IST" name="StartDriver" finished-at="2023-12-15T19:02:32 IST" duration-ms="11718" status="PASS">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:50:09 IST" name="StartDriver" finished-at="2023-12-18T19:50:31 IST" duration-ms="22447" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[checking if driver exist]]>
@@ -878,7 +950,7 @@
               <![CDATA[Open URL:http://122.160.30.218:16680/]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190222.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195011.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Executing; ui_launch]]>
@@ -890,7 +962,7 @@
               <![CDATA[Setting value on element USER_NAME]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190225.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195024.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : name: password]is displayed on screen]]>
@@ -899,7 +971,7 @@
               <![CDATA[Setting value on element PASSWORD]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190225.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195025.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //button[@type='submit']]is displayed on screen]]>
@@ -908,7 +980,7 @@
               <![CDATA[Clicking on element LOGIN_BTN]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190226.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195025.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Successful navigation is validated for LoginPage]]>
@@ -917,23 +989,35 @@
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190226.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195026.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="HPAOtherDeploymentInfo()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:02:32 IST" name="HPAOtherDeploymentInfo" finished-at="2023-12-15T19:04:50 IST" duration-ms="138684" status="PASS">
+        <test-method signature="EditandDeleteServiceEnvironment()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:50:31 IST" name="EditandDeleteServiceEnvironment" finished-at="2023-12-18T19:55:44 IST" duration-ms="313336" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190232.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[checking if driver exist]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190237.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[checking if driver exist]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[checking if driver exist]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195031.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
@@ -942,7 +1026,7 @@
               <![CDATA[Clicking on element userMenuAppBar]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190237.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195032.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen]]>
@@ -951,7 +1035,7 @@
               <![CDATA[Clicking on element switching to user account]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190238.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195032.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen]]>
@@ -960,46 +1044,187 @@
               <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190239.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195041.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']/span]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190242.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195045.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //a[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+              <![CDATA[Element is present  xpath: //a[@class='btn btn-submit']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190246.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195045.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //a[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+              <![CDATA[Clicking on element Poc_QA addServiceBtn]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190246.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195046.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //h1[@class='main-heading']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //h1[@class='main-heading']]]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Service Link]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195046.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190249.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //p[(@class='hint-text-main-heading')]]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //p[(@class='hint-text-main-heading')]]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195046.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //input[@placeholder='demo-app']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Setting value on element sets service name]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195047.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //input[@placeholder='Sample-Service']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Setting value on element sets external name]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195050.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //span[contains(.,'Build for every environment')]]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA selectEveryRadioBtn]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195050.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA SubmitCreatePage]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195050.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //h1[@class='h1' and contains(.,'Create a Environment')]]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //h1[@class='h1' and contains(.,'Create a Environment')]]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195051.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //div[@class='staticwrap-inner']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //div[@class='staticwrap-inner']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195052.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //select[@name='env_id']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //select[@name='env_id']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195054.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //button[@class='btn btn-submit']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195130.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA SubmitEnvPage]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195130.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //div[@class='font-27 font-family-nunito font-weight-300 lh-12 mr-5']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //div[@class='font-27 font-family-nunito font-weight-300 lh-12 mr-5']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195132.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //span[contains(text(),'Project:')]]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //span[contains(text(),'Project:')]]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //*[text()='Env Build Details']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA validateBuildDetails]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //p[@class='main-text mb-10']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //p[@class='main-text mb-10']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195133.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //span[@class='sub-text mb-10']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //span[@class='sub-text mb-10']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
@@ -1008,496 +1233,340 @@
               <![CDATA[Element is present  xpath: //*[text()='Env Deploy Details']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190253.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element validateDeployDetails]]>
+              <![CDATA[Clicking on element Poc_QA validateDeployDetails]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190253.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //p[@class='main-text mb-10']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element otherDeploymentInfo]]>
+              <![CDATA[Element is present  xpath: //p[@class='main-text mb-10']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190255.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195134.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+              <![CDATA[Element : xpath: //span[@class='sub-text mb-10']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]]]>
+              <![CDATA[Element is present  xpath: //span[@class='sub-text mb-10']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190258.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+              <![CDATA[Element : xpath: //*[text()='To have a very smooth configuration we strongly recommend BuildPiper UI.']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click]]>
+              <![CDATA[Element is present  xpath: //*[text()='To have a very smooth configuration we strongly recommend BuildPiper UI.']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element editHPA]]>
+              <![CDATA[Element : xpath: //*[text()='you can also configure the CD by uploading your custom manifest file.']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element is present  xpath: //*[text()='you can also configure the CD by uploading your custom manifest file.']]]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='HPA Name']]]]>
+              <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190300.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element is present  xpath: //*[text()='Env Build Details']]]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195135.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='minimum_replication']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //*[text()='Env Build Details']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='maximum_replication']]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA validateBuildDetails]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195136.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen]]>
+              <![CDATA[Element : xpath: //*[text()='Configure Build']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Save']]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //*[text()='Configure Build']]]]>
             </line>
             <line>
-              <![CDATA[Clicking on element saveHPA]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195136.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190306.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //*[text()='Configure Build']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA clickConfigBuild]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195136.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190310.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //div[@class='md-step-circle current']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //div[@class='md-step-circle current']]]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195139.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190311.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //h4[@class='mainHeading']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //h4[@class='mainHeading']]]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190313.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //*[text()='Please Select the Git URL']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+              <![CDATA[Element is present  xpath: //*[text()='Please Select the Git URL']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190313.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //div[@class='MuiInputBase-root MuiOutlinedInput-root MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd']]]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button[@title='Monitoring']]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190316.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //input[@name='git_url']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA gitUrlInputField]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195140.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190318.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[@title='Clear']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element monitoring]]>
+              <![CDATA[Clicking on element ClicksclearField]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190318.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195146.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //input[@name='git_url']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element monitorwindow_closeButton]]>
+              <![CDATA[Element : xpath: //*[text()='Load Branches']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190321.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element is present  xpath: //*[text()='Load Branches']]]]>
             </line>
             <line>
-              <![CDATA[checking if driver exist]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195155.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190321.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //*[text()='Load Branches']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA loadBranchesBtn]]>
             </line>
             <line>
-              <![CDATA[Clicking on element userMenuAppBar]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195155.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //input[@name='file_paths']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //input[@name='file_paths_build_context']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element switching to user account]]>
+              <![CDATA[Element : xpath: //*[text()='Advance Configurations']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element is present  xpath: //*[text()='Advance Configurations']]]]>
             </line>
             <line>
-              <![CDATA[checking if driver exist]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195209.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[text()='Continue']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA clickContinueBtn]]>
             </line>
             <line>
-              <![CDATA[Clicking on element userMenuAppBar]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195209.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190322.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //h4[@class='mainHeading']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //h4[@class='mainHeading']]]]>
             </line>
             <line>
-              <![CDATA[Clicking on element switching to user account]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190323.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //*[text()='Build Env Details']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen]]>
+              <![CDATA[Element is present  xpath: //*[text()='Build Env Details']]]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190323.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //span[@class='switch-label'][@data-on]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA envDetailsSwitch]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190327.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //input[@name='key']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Setting value on element Poc_QA envName]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195215.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190330.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //input[@name='value']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Setting value on element Poc_QA envValue]]>
             </line>
             <line>
-              <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190330.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[text()='Continue']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA clickContinueBtn]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element Service Link]]>
+              <![CDATA[Element : xpath: //input[@name='pre_hook_enabled']/../span[@class='switch-handle']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190334.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element Poc_QA preHooksSwitch]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //*[text()='Env Deploy Details']]]]>
+              <![CDATA[Element : xpath: //p[contains(.,'Add Pre Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190337.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Setting value on element Poc_QA preHooksPasswordBox1]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195216.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element validateDeployDetails]]>
+              <![CDATA[Element : xpath: //button[@class='nowrap']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190337.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks on add New Hook]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195217.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element otherDeploymentInfo]]>
+              <![CDATA[Element : xpath: //p[contains(.,'Add Pre Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190340.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Setting value on element Poc_QA preHooksPasswordBox2]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195217.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]]]>
+              <![CDATA[Element : xpath: //input[@name='post_hook_enabled']/../span[@class='switch-handle']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190343.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element Poc_QA postHooksSwitch]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195217.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click]]>
+              <![CDATA[Element : xpath: //p[contains(.,'Add Post Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190344.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Setting value on element Poc_QA postHooksPasswordBox1]]>
             </line>
             <line>
-              <![CDATA[Clicking on element editHPA]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190345.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: (//button[@class='nowrap'])[2]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+              <![CDATA[Clicking on element clicks on add New Post Hook]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='HPA Name']]]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190345.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //p[contains(.,'Add Post Hook')]/../../..//input[@placeholder='Run Command' and string-length(@value)=0]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+              <![CDATA[Setting value on element Poc_QA postHooksPasswordBox2]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='minimum_replication']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='maximum_replication']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen]]>
+              <![CDATA[Clicking on element Poc_QA submitHooks]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195218.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Save']]is displayed on screen]]>
+              <![CDATA[Element : xpath: /html/body/div[1]/div/main/div[1]/div/div[1]/div/div/div[2]/div[2]/span[2]]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element saveHPA]]>
+              <![CDATA[Element is present  xpath: /html/body/div[1]/div/main/div[1]/div/div[1]/div/div/div[2]/div[2]/span[2]]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190351.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195219.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //*[text()='Job Template: ']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+              <![CDATA[Element is present  xpath: //*[text()='Job Template: ']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190354.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190356.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190357.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190357.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element is present  xpath: //button[@title='Monitoring']]]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190401.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190402.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element monitoring]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190402.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element monitorwindow_closeButton]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190405.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[checking if driver exist]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190405.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element userMenuAppBar]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element switching to user account]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[checking if driver exist]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190406.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element userMenuAppBar]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190407.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to User Portal']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element switching to user account]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190407.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element is present  xpath: //li//button[contains(@class,'main-nav-1')]//span[1][@title]]]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190408.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190411.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190414.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190415.jpg alt='Lamp' width='500' height='400'>]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Element : xpath: //div[contains(@class,'service-name')]//a[contains(@href,'service')]]is displayed on screen]]>
-            </line>
-            <line>
-              <![CDATA[Clicking on element Service Link]]>
-            </line>
-            <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190418.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195221.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
@@ -1506,200 +1575,275 @@
               <![CDATA[Element is present  xpath: //*[text()='Env Deploy Details']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190421.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195221.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element validateDeployDetails]]>
+              <![CDATA[Clicking on element Poc_QA validateDeployDetails]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190422.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195222.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Other Deployment Info']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element otherDeploymentInfo]]>
+              <![CDATA[Element is present  xpath: //button[@class='btn btn-submit']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190424.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195222.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]]]>
+              <![CDATA[Clicking on element clicks on buildPiperUI button]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190427.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195222.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button//span[text()=' Add Access Level']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //div[@class='btn-group btn-icon-group ml-auto d-inline-block']/button[@class='btn btn-flaticon'][2]] is not clickable using selenium click]]>
+              <![CDATA[Clicking on element Add Access Level]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195223.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element editHPA]]>
+              <![CDATA[Clicking on element Poc_QA privateAccess]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195256.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //input[@placeholder='name'][@name='name']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='HPA Name']]]]>
+              <![CDATA[Element : xpath: //input[@placeholder='4001'][@name='port']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190429.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //input[@placeholder='4001'][@name='target_port']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='HPA Name']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-v2-primary btn-sm']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='minimum_replication']]is displayed on screen]]>
+              <![CDATA[Clicking on element clicks add button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@name='maximum_replication']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195257.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[1]]is displayed on screen]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: (//input[@class='range-slider-input'])[2]]is displayed on screen]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //*[text()='Save']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195257.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Clicking on element saveHPA]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190435.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195259.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Service Overview']]]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190438.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195301.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //input[@placeholder='Name']]]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190440.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195304.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //input[@placeholder='Name']] is not clickable using selenium click]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190441.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Clicking on element clicks on environment overview tab under applicartion name]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195306.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190442.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //input[@placeholder='Name']]is displayed on screen]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195308.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element is present  xpath: //button[@title='Monitoring']]]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190445.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@title='Monitoring']]is displayed on screen]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195311.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[ Element [[ChromeDriver: chrome on WINDOWS (a6196488756b685f670ad604f9ac21e8)] -> xpath: //button[@title='Monitoring']] is not clickable using selenium click]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190446.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Clicking on element monitoring]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195313.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190447.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeEnd']]is displayed on screen]]>
+              <![CDATA[Clicking on element clicks continue button]]>
             </line>
             <line>
-              <![CDATA[Clicking on element monitorwindow_closeButton]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195315.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190449.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[Element : xpath: //*[text()='Env Deploy Details']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[checking if driver exist]]>
+              <![CDATA[Clicking on element Clicks on Deploy Details tag]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195317.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[@type='button' and @aria-controls='menu-appbar']//div//div]is displayed on screen]]>
+              <![CDATA[Element : xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element userMenuAppBar]]>
+              <![CDATA[Element is present  xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195321.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
-              <![CDATA[Element : xpath: //button[contains(@class,'btn-link-green')][text()=' Switch to Admin Portal']]is displayed on screen]]>
+              <![CDATA[Element : xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]is displayed on screen]]>
             </line>
             <line>
-              <![CDATA[Clicking on element switching to user account]]>
+              <![CDATA[Clicking on element editEnvironment]]>
             </line>
             <line>
-              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\15Dec_190218\HPAOtherDeploymentInfo_chrome\HPAOtherDeploymentInfo_chrome_349_Dec_190450.jpg alt='Lamp' width='500' height='400'>]]>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195321.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA allowManualBuildNo]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195354.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA allowManualDeployNo]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195425.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA SubmitEnvPage]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195428.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //a[@class='text-anchor-blue d-flex align-center text-right btn btn-flaticon']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element editEnvironment]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195532.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[@class='btn btn-submit']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element Poc_QA SubmitEnvPage]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195535.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[@class='MuiButtonBase-root MuiIconButton-root btn btn-flaticon']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element deleteEnvironment]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195540.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //input[@placeholder='Please enter the reason to delete']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Element is present  xpath: //input[@placeholder='Please enter the reason to delete']]]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195543.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //input[@placeholder='Please enter the reason to delete']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Setting value on element deletePopupInputField]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195543.jpg alt='Lamp' width='500' height='400'>]]>
+            </line>
+            <line>
+              <![CDATA[Element : xpath: //button[text()='Delete']]is displayed on screen]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on element deleteButton]]>
+            </line>
+            <line>
+              <![CDATA[<img src=D:\BuildPiper_Rahul\Reports\18Dec_195007\EditandDeleteServiceEnvironment_chrome\EditandDeleteServiceEnvironment_chrome_352_Dec_195544.jpg alt='Lamp' width='500' height='400'>]]>
             </line>
             <line>
               <![CDATA[Result upload to testlink is disabled, Please ensure you have 'UpdateTestLink=Yes' in project.properties ]]>
             </line>
             <line>
-              <![CDATA[####### End of Test Case: HPAOtherDeploymentInfo #######]]>
+              <![CDATA[####### End of Test Case: EditandDeleteServiceEnvironment #######]]>
             </line>
           </reporter-output>
-        </test-method> <!-- HPAOtherDeploymentInfo -->
-        <test-method is-config="true" signature="StopDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:04:50 IST" name="StopDriver" finished-at="2023-12-15T19:04:51 IST" duration-ms="322" status="PASS">
+        </test-method> <!-- EditandDeleteServiceEnvironment -->
+        <test-method is-config="true" signature="StopDriver()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:55:44 IST" name="StopDriver" finished-at="2023-12-18T19:55:45 IST" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StopDriver -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:04:51 IST" name="getResult" finished-at="2023-12-15T19:04:51 IST" duration-ms="174" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:55:45 IST" name="getResult" finished-at="2023-12-18T19:55:45 IST" duration-ms="214" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=HPAOtherDeploymentInfo status=SUCCESS method=ServiceCreationTestcases.HPAOtherDeploymentInfo()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d] output=checking if driver exist]]]>
+                <![CDATA[[TestResult name=EditandDeleteServiceEnvironment status=SUCCESS method=ServiceCreationTestcases.EditandDeleteServiceEnvironment()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629] output=checking if driver exist]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@5d10455d]" started-at="2023-12-15T19:04:51 IST" name="tearDown" finished-at="2023-12-15T19:04:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.buildpiper.testcases.ServiceCreationTestcases@55b62629]" started-at="2023-12-18T19:55:45 IST" name="tearDown" finished-at="2023-12-18T19:55:45 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
