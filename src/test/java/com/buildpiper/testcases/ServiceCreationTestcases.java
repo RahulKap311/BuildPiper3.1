@@ -187,7 +187,7 @@ public class ServiceCreationTestcases extends BaseTest {
 		reader.getCellData("MicroServiceData", "envName", RowNumber),
 		reader.getCellData("MicroServiceData", "buildRadioButtonName", RowNumber), list,
 		reader.getCellData("MicroServiceData", "JobTemplateValue", RowNumber));
-		EditService=servicepage.servicename+"Updated";
+		EditService=servicepage.servicename+"updated";
 		servicepage.editService(reader.getCellData("MicroServiceData", "applicationName", RowNumber),EditService);
 		servicepage.deleteService(EditService);
 	}
@@ -287,7 +287,7 @@ public class ServiceCreationTestcases extends BaseTest {
 	
 	@Test(groups = { "Regression" }, priority = 0)
 //	@RetryCountIfFailed(2)
-	public void HPAOtherDeploymentInfo() throws Exception {
+	public void EditAndDeployHPA() throws Exception {
 		ServiceCreationPage servicecreate=new ServiceCreationPage();
 	int RowNumber=reader.getRowByTestCaseName("MicroServiceData", "HPAOtherDeploymentInfo");
 	String[] minreplication = {"1","2","3"};

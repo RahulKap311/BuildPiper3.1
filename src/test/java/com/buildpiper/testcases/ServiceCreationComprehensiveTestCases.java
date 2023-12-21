@@ -261,16 +261,20 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
 		new ServiceCreationPage().Verify_buildStatus("RUNNING");
-		ui_wait(60);
+		ui_wait(90);
 		new ServiceCreationPage().buildRecentButtonClick();
 		ui_switchToNewWindow();
 		ui_wait(10);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(40);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(10);
 		new ServiceCreationPage().Verify_buildStatus("SUCCESS");
 		ui_wait(3);
 		new ServiceCreationPage().closeBuildWindow();
-		ui_wait(5);		
+		ui_wait(8);
+		new ServiceCreationPage().RefreshService_Click();
+		ui_wait(2);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(new ServiceCreationPage().buildArtifact, Pause.MEDIUM));
 		String ArtifactID=new ServiceCreationPage().buildArtifact.getText();
 		
@@ -283,7 +287,9 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_wait(60);
 		new ServiceCreationPage().deployRecentButtonClick();
 		ui_switchToNewWindow();
-		ui_wait(8);
+		ui_wait(20);
+		new ServiceCreationPage().RefreshBuildandDeploy_Click();
+		ui_wait(10);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
 		new ServiceCreationPage().Verify_deployStatus("SUCCESS");
@@ -291,8 +297,7 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
 		
-		//Promote Service
-		
+		//Promote Service		
 		new ServiceCreationPage().promoteService(reader.getCellData("MicroServiceData", "toEnv", 2),ArtifactID);
 		ui_wait(3);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
@@ -305,26 +310,30 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		ui_switchToNewWindow();
 		ui_wait(8);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
-		ui_wait(3);
-		ui_wait(10);
+		ui_wait(15);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
 		new ServiceCreationPage().Verify_promoteStatus("SUCCESS");
 		ui_wait(3);
 		new ServiceCreationPage().closeDeployWindow();
 		ui_wait(3);
+			
+		ui_wait(30);
 		
+		//Validate monitor Service
+		 new ServiceCreationPage().validateServiceMonitoring();
+		 ui_wait(3);
+		 
+		// Validate History Screen 
+		new ServiceCreationPage().serviceHistory();		
 		
+		// Switch to QA Environment and Validate Artifact ID on QA 
 		new ServiceCreationPage().switchEnvironmentTab("QA");
 		ui_wait(20);
 		String ArtifactID1=new ServiceCreationPage().deployandPromoteartifactID1.getText();
 		Assert.assertEquals(ArtifactID, ArtifactID1);
-		new ServiceCreationPage().switchEnvironmentTab("DEV");
-		ui_wait(10);
 		
-		//monitoring Service
-		 new ServiceCreationPage().monitorService();
-		 ui_wait(3);
+		
 	}
 
 

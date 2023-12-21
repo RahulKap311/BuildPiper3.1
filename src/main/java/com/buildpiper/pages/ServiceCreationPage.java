@@ -493,14 +493,19 @@ public class ServiceCreationPage extends BasePage {
 			ui_wait(3);
 			Assert.assertEquals(ui_IsElementPresent(buildButton, "5"), false);
 			Assert.assertEquals(ui_IsElementPresent(deployButton, "5"), false);
+			ui_wait(3);
 			// Again Click on Edit Link and Add Manual build and Deploy
 			ui_click(editEnvironment, "editEnvironment");
 			ui_wait(3);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(envDropdown, Pause.LOW));
+			Select dropdown = new Select(envDropdown);
+			dropdown.selectByVisibleText("devcommunity");
 			ui_click(saveAndContinue_Create_Page, "Poc_QA SubmitEnvPage");
-			ui_wait(3);
+			ui_wait(4);
 			Assert.assertEquals(ui_IsElementPresent(buildButton, "5"), true);
 			Assert.assertEquals(ui_IsElementPresent(deployButton, "5"), true);
-			ui_wait(2);
+			ui_wait(3);
+			//Delete Environment
 			ui_click(deleteEnvironment, "deleteEnvironment");
 			ui_wait(2);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(deletePopupInputField, Pause.MEDIUM));
@@ -1455,7 +1460,7 @@ public class ServiceCreationPage extends BasePage {
 	WebElement triggerBuild;
 	@FindBy(xpath = "//div[contains(@class,'popup-card mb')]//button[@class='btn-round border-navy bg-clear-btn']")
 	WebElement refreshBuildandDeploybutton;
-	
+		
 	@FindBy(xpath = "//button[contains(text(),'Trigger Build & Deploy')]")
 	WebElement triggerBuildAndDeploy;
 	
@@ -1500,6 +1505,15 @@ public class ServiceCreationPage extends BasePage {
 		return this;
 	}
 	
+	@FindBy(xpath = "//div[contains(@class,'service-lising-detailed-card card')]//button[@class='btn-round border-navy bg-clear-btn']")
+	WebElement refreshService;
+	public ServiceCreationPage RefreshService_Click() {
+		
+		ui_click(refreshService, "refresh BuildandDeploy button");
+		
+		return this;
+	}
+	
 	//RK
 	@FindBy(xpath = "//span[contains(text(),'Please note You are building image in Env.')]/following-sibling::span[1]")
 	WebElement environmentCheck;
@@ -1529,7 +1543,7 @@ public class ServiceCreationPage extends BasePage {
 		}
 		if (projectSelection) {
 			ui_IsElementDisplay(ui_waitForElementToDisplay(serviceOverViewTab, Pause.MEDIUM));
-			ui_click(serviceOverViewTab, "Poc_QA serviceOverviewLink");
+			ui_ActionMoveAndClick(serviceOverViewTab, "serviceOverViewTab");
 			ui_wait(3);
 		//Search with RandomString
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchServiceTextBox, Pause.MEDIUM));
@@ -2062,6 +2076,133 @@ public ServiceCreationPage VerifyHPAMonitoring(String ReplicationStatusMin,Strin
 
 		return this;
 	}
+	@FindBy(xpath = "//button[@title='View Activity Details']")
+	WebElement viewActivityDetails;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success'])[1]")
+	WebElement ActivityStatus1;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success']/following-sibling::div/a/span[1])[1]")
+	WebElement ActivityText1;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success'])[2]")
+	WebElement ActivityStatus2;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success']/following-sibling::div/a/span[1])[2]")
+	WebElement ActivityText2;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success'])[3]")
+	WebElement ActivityStatus3;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success']/following-sibling::div/a/span[1])[3]")
+	WebElement ActivityText3;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success'])[4]")
+	WebElement ActivityStatus4;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success']/following-sibling::div/a/span[1])[4]")
+	WebElement ActivityText4;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success'])[5]")
+	WebElement ActivityStatus5;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success']/following-sibling::div/a/span[1])[5]")
+	WebElement ActivityText5;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success'])[6]")
+	WebElement ActivityStatus6;
+	@FindBy(xpath = "(//div[@class='md-step active md-step-log']/div[@class='md-step-circle success']/following-sibling::div/a/span[1])[6]")
+	WebElement ActivityText6;
+	
+	@FindBy(xpath = "//button[@title='Rebuild']")
+	WebElement rebuildbutton;
+	@FindBy(xpath = "//button[@title='Redeploy']")
+	WebElement reDeploybutton;
+	@FindBy(xpath = "(//button[@title='Revoke Build'])[1]")
+	WebElement revokeBuildbutton;
+	@FindBy(xpath = "(//button[@title='Revoke Deploy'])[1]")
+	WebElement revokeDeploybutton;
+	@FindBy(xpath = "(//div[contains(@class,'history-body')]//div//p[contains(@class,'round-chip')])[1]")
+	WebElement reBuildandDeployStatus;
+	@FindBy(xpath = "//div[contains(@class,'tab-with-refresh')]//button[@class='btn-round border-navy bg-clear-btn']")
+	WebElement buildandDeployRefresh;
+	public ServiceCreationPage serviceHistory() {
+
+		ui_click(history, "history button");
+		ui_wait(5);
+		ui_click(viewActivityDetails, "viewActivityDetails");
+		ui_wait(2);
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus1,"2"),true);
+		Assert.assertEquals(ActivityText1.getText().trim(),"Cloning Repository");		
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus2,"2"),true);
+		Assert.assertEquals(ActivityText2.getText().trim(),"Pre Hooks Executing");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus3,"2"),true);
+		Assert.assertEquals(ActivityText3.getText().trim(),"Build Docker Image");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus4,"2"),true);
+		Assert.assertEquals(ActivityText4.getText().trim(),"Push docker image");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus5,"2"),true);
+		Assert.assertEquals(ActivityText5.getText().trim(),"Post Hooks Executing");
+		
+		//Switch to Deploy and Validate Activity
+		switchServiceType("Deploy");
+		ui_wait(2);
+		ui_click(viewActivityDetails, "viewActivityDetails");
+		ui_wait(2);
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus1,"2"),true);
+		Assert.assertEquals(ActivityText1.getText().trim(),"Deployment rollout validation");		
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus2,"2"),true);
+		Assert.assertEquals(ActivityText2.getText().trim(),"Post Hooks Executing");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus3,"2"),true);
+		Assert.assertEquals(ActivityText3.getText().trim(),"Deploy Stateless app");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus4,"2"),true);
+		Assert.assertEquals(ActivityText4.getText().trim(),"Load Kube Config");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus5,"2"),true);
+		Assert.assertEquals(ActivityText5.getText().trim(),"Pre Hooks Executing");
+		Assert.assertEquals(ui_IsElementPresent(ActivityStatus6,"2"),true);
+		Assert.assertEquals(ActivityText6.getText().trim(),"Generate Manifest");
+		
+		//Switch to Deploy and Validate Activity
+		switchServiceType("Promote");
+		ui_wait(2);
+		//ui_click(viewActivityDetails, "viewActivityDetails");
+		ui_wait(2);
+		
+		//Switch to Build and Rebuild
+		switchServiceType("Build");
+		ui_wait(2);
+		ui_click(rebuildbutton, "rebuildbutton");
+		ui_wait(20);
+		//Assert.assertEquals(reBuildandDeployStatus.getText(), "RUNNING");
+		ui_wait(90);
+		ui_click(buildandDeployRefresh, "buildandDeployRefresh");
+		ui_wait(30);
+		ui_click(buildandDeployRefresh, "buildandDeployRefresh");
+		ui_wait(3);
+		Assert.assertEquals(reBuildandDeployStatus.getText(), "SUCCESS");
+		
+		//Switch to Deploy and Rebuild
+		switchServiceType("Deploy");
+		ui_wait(2);
+		ui_click(reDeploybutton, "reDeploybutton");
+		ui_wait(5);
+		//Assert.assertEquals(reBuildandDeployStatus.getText(), "RUNNING");
+		ui_wait(90);
+		ui_click(buildandDeployRefresh, "buildandDeployRefresh");
+		ui_wait(30);
+		ui_click(buildandDeployRefresh, "buildandDeployRefresh");
+		ui_wait(10);
+		ui_click(buildandDeployRefresh, "buildandDeployRefresh");
+		ui_wait(3);
+		Assert.assertEquals(reBuildandDeployStatus.getText(), "SUCCESS");
+		
+		//Switch to Build and Revoke
+		switchServiceType("Build");
+		ui_wait(3);
+		ui_click(rebuildbutton, "rebuildbutton");
+		ui_wait(5);
+		ui_click(revokeBuildbutton, "revokeBuildbutton");
+		ui_wait(4);
+		Assert.assertEquals(reBuildandDeployStatus.getText(), "REVOKED");
+		
+		//Switch to Deploy and Revoke
+		switchServiceType("Deploy");
+		ui_wait(3);
+		ui_click(reDeploybutton, "reDeploybutton");
+		ui_wait(5);
+		ui_click(revokeDeploybutton, "revokeDeploybutton");
+		ui_wait(4);
+		Assert.assertEquals(reBuildandDeployStatus.getText(), "REVOKED");		
+		return this;
+	}
 	
 	@FindBy(xpath = "//div[contains(@class,'bg-round')]//span")
 	WebElement monitoringStatus;
@@ -2081,6 +2222,62 @@ public ServiceCreationPage VerifyHPAMonitoring(String ReplicationStatusMin,Strin
 		ui_click(podsStatus, "podsStatus");
 		Assert.assertEquals(podsStatus.getText(), "Insufficient Space, cannot create pods");
 
+		return this;
+	}
+	
+	@FindBy(xpath = "(//table[contains(@class,'table table-responsive pd-')]/tr/td[1]/following-sibling::td/div)[1]")
+	WebElement initializedStatus;
+	@FindBy(xpath = "(//table[contains(@class,'table table-responsive pd-')]/tr/td[1]/following-sibling::td/div)[2]")
+	WebElement readyStatus;
+	@FindBy(xpath = "(//table[contains(@class,'table table-responsive pd-')]/tr/td[1]/following-sibling::td/div)[3]")
+	WebElement containersReadyStatus;
+	@FindBy(xpath = "(//table[contains(@class,'table table-responsive pd-')]/tr/td[1]/following-sibling::td/div)[4]")
+	WebElement podScheduledStatus;
+	@FindBy(xpath = "//ul[contains(@class,'headerul')]/..//button[contains(@class,'btn-round border-navy bg-clear-btn ml-')]")
+	WebElement refreshMonitor;
+	@FindBy(xpath = "//div[@class='bottom-panel']//li[text()='Events']")
+	WebElement eventsTab;
+	@FindBy(xpath = "//div[@class='bottom-panel']//li[text()='Containers']")
+	WebElement containersTab;
+	@FindBy(xpath = "//div[@class='view-lines monaco-mouse-cursor-text']/div[@class='view-line'][2]/span/span[1]")
+	WebElement containersTabData;
+	@FindBy(xpath = "//div[@class='bottom-panel']//li[text()='Logs']")
+	WebElement logsTab;
+	@FindBy(xpath = "//div[@id='podsLogViewSCreen']/div[1]")
+	WebElement logsTabData;
+	
+	public ServiceCreationPage validateServiceMonitoring() {
+
+		ui_click(monitoring, "monitoring button");
+		ui_wait(10);
+		ui_click(refreshMonitor, "refreshMonitor");
+		ui_wait(3);
+		SoftAssert softAssert = new SoftAssert(); 
+		softAssert.assertEquals(monitoringStatus.getText(), "Success");
+		ui_wait(3);
+		ui_click(podsStatusTab, "podsStatusTab");
+		ui_wait(10);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(podsStatus, Pause.MEDIUM));
+		softAssert.assertEquals(podsStatus.getText(), "Ready");
+		ui_wait(1);
+		softAssert.assertEquals(initializedStatus.getText(), "True");
+		softAssert.assertEquals(readyStatus.getText(), "True");
+		softAssert.assertEquals(containersReadyStatus.getText(), "True");
+		softAssert.assertEquals(podScheduledStatus.getText(), "True");
+		
+		//Switch to Events Tab
+		ui_click(eventsTab, "eventsTab");
+		
+		//Switch to Container Tab
+		ui_click(containersTab, "containersTab");
+		ui_wait(2);
+        Assert.assertEquals(containersTabData.getText().contains("containerID"), true);
+        
+		//Switch to logs Tab
+		ui_click(logsTab, "logsTab");
+		ui_wait(2);
+		Assert.assertEquals(logsTabData.getText().contains("POD: "), true);
+		ui_click(historywindow_closeButton, "historywindow_closeButton");
 		return this;
 	}
 	

@@ -6,31 +6,30 @@
   </listeners>
   <test thread-count="5" name="RegressionSuite(failed)">
     <classes>
-      <class name="com.buildpiper.testcases.JobExecutionActivityTestcases">
+      <class name="com.buildpiper.testcases.ServiceCreationTestcases">
         <methods>
-          <include name="StopDriver"/>
+          <include name="EditandDeleteService"/>
           <include name="setUp"/>
           <include name="testName"/>
-          <include name="tearDown"/>
-          <include name="ActivityFilterby_Users"/>
-          <include name="Reportsetup"/>
           <include name="StartDriver"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- com.buildpiper.testcases.JobExecutionActivityTestcases -->
-      <class name="com.buildpiper.testcases.LenskartScan">
-        <methods>
-          <include name="setUp"/>
-          <include name="ManualBuildandDeployHelmService"/>
-          <include name="testName"/>
           <include name="tearDown"/>
-          <include name="StartDriver"/>
           <include name="Reportsetup"/>
-          <include name="HealthCheck"/>
           <include name="getResult"/>
           <include name="StopDriver"/>
         </methods>
-      </class> <!-- com.buildpiper.testcases.LenskartScan -->
+      </class> <!-- com.buildpiper.testcases.ServiceCreationTestcases -->
+      <class name="com.buildpiper.testcases.ServiceCreationComprehensiveTestCases">
+        <methods>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="StopDriver"/>
+          <include name="tearDown"/>
+          <include name="Reportsetup"/>
+          <include name="serviceOverview_Promote"/>
+          <include name="getResult"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.ServiceCreationComprehensiveTestCases -->
     </classes>
   </test> <!-- RegressionSuite(failed) -->
 </suite> <!-- Failed suite [testsuite] -->
