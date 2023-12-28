@@ -309,7 +309,7 @@ public class ServiceCreationPage extends BasePage {
 	}
 
 	public ServiceCreationPage accountPreRequisites() {
-		if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox")) {
+		if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox") || Configuration.get("environment").equals("demo")){
 		ui_click(userMenuAppBar, "userMenuAppBar");
 		boolean switchTypeCheck = ui_IsElementPresent(switchToUSer, "5");
 		if (switchTypeCheck == true) {
@@ -1324,6 +1324,9 @@ public class ServiceCreationPage extends BasePage {
 
 	@FindBy(xpath = "//button[@class='btn btn-v2-primary btn-sm']")
 	WebElement addAccessBtn;
+	
+	@FindBy(xpath = "//select[@name='image_pull_policy']")
+	WebElement imagePullPolicy;
 
 	public ServiceCreationPage addNewEnvironmentToService(String ProjectName, ArrayList<String> UserRoles,
 			String JobTemplateValue, String cloneText, String envCloneValue, String BranchName,String AccessType, String AccessName,
@@ -1428,6 +1431,9 @@ public class ServiceCreationPage extends BasePage {
 		ui_clearAndSetValue(port, portNumber);
 		ui_clearAndSetValue(targetPort, TargetPort);
 		ui_click(addAccessBtn, "clicks add button");
+		ui_wait(2);
+		Select imagepule=new Select(imagePullPolicy);
+		imagepule.selectByValue("Always");
 		ui_click(continueBtn, "clicks continue button");
 		ui_wait(2);
 		ui_click(continueBtn, "clicks continue button");

@@ -6,18 +6,6 @@
   </listeners>
   <test thread-count="5" name="RegressionSuite(failed)">
     <classes>
-      <class name="com.buildpiper.testcases.ServiceCreationTestcases">
-        <methods>
-          <include name="EditandDeleteService"/>
-          <include name="setUp"/>
-          <include name="testName"/>
-          <include name="StartDriver"/>
-          <include name="tearDown"/>
-          <include name="Reportsetup"/>
-          <include name="getResult"/>
-          <include name="StopDriver"/>
-        </methods>
-      </class> <!-- com.buildpiper.testcases.ServiceCreationTestcases -->
       <class name="com.buildpiper.testcases.ServiceCreationComprehensiveTestCases">
         <methods>
           <include name="setUp"/>
@@ -30,6 +18,20 @@
           <include name="StartDriver"/>
         </methods>
       </class> <!-- com.buildpiper.testcases.ServiceCreationComprehensiveTestCases -->
+      <class name="com.buildpiper.testcases.EnvironmentTestcasesExecution">
+        <methods>
+          <include name="StopDriver"/>
+          <include name="DeleteEnvironment"/>
+          <include name="setUp"/>
+          <include name="testName"/>
+          <include name="CreateEnvironment"/>
+          <include name="tearDown"/>
+          <include name="StartDriver"/>
+          <include name="Reportsetup"/>
+          <include name="EnvironmentLevelSearch"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.buildpiper.testcases.EnvironmentTestcasesExecution -->
     </classes>
   </test> <!-- RegressionSuite(failed) -->
 </suite> <!-- Failed suite [testsuite] -->

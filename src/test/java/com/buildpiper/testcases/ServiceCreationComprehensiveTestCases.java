@@ -305,12 +305,12 @@ public class ServiceCreationComprehensiveTestCases extends BaseTest {
 		new ServiceCreationPage().Verify_promoteStatus("RUNNING");	
 		ui_wait(4);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
-		ui_wait(40);
+		ui_wait(60);
 		new ServiceCreationPage().promoteRecentButtonClick();
 		ui_switchToNewWindow();
 		ui_wait(8);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
-		ui_wait(15);
+		ui_wait(30);
 		new ServiceCreationPage().RefreshBuildandDeploy_Click();
 		ui_wait(3);
 		new ServiceCreationPage().Verify_promoteStatus("SUCCESS");

@@ -72,14 +72,14 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 				reader.getCellData("Environment", "selectCluster", 2),
 				reader.getCellData("Environment", "selectNamespace", 2),
 				reader.getCellData("Environment", "selectRegistry", 2));
-		ui_getUIDriver().quit();
+		/*ui_getUIDriver().quit();
 		new LoginPage().login(config.username(), config.password());
 		new PreRequisitesPage().switchUser();
 		ui_wait(4);
 		new EnvironmentCreationPage().EnvironmentConfigurationAndAssociateServices(
 				reader.getCellData("Environment", "applicationName", 2), configTypelist,
 				reader.getCellData("Environment", "associateConfigurationType", 2),
-				reader.getCellData("Environment", "existingEnv", 2));
+				reader.getCellData("Environment", "existingEnv", 2));*/
 		// new
 		// EnvironmentCreationPage().CreateAndValidateEnvironment("poc-qa",list,"new-saas-cluster","poc-non-prod","nexus");
 

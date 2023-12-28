@@ -66,7 +66,7 @@ public class PreRequisitesPage extends BasePage {
 	}
 
 	public PreRequisitesPage switchUser() {
-		if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox") ) {
+		if(Configuration.get("environment").equals("pt") || Configuration.get("environment").equals("sandbox") || Configuration.get("environment").equals("demo") ) {
 			ui_click(userMenuAppBar, "userMenuAppBar");
 			ui_click(switchToUSer, "switching to user account");
 			}

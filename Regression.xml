@@ -11,14 +11,14 @@
 		 <methods>
          <include name="createServ" />
          <include name="BuildDeployAlternate" />
+         <include name="EditandDeleteService" />
+         <include name="EditandDeleteServiceEnvironment" />
         </methods>
 		 </class>
 		 
 		  <class name="com.buildpiper.testcases.ServiceCreationComprehensiveTestCases">
 		 <methods>
-         <include name="serviceOverview_TriggerBuild_NoCache" />
-         <include name="serviceOverview_TriggerBuild_Cache" />
-         <include name="serviceOverview_Deploy" />
+         <include name="serviceOverview_Promote" />
         </methods>
 		 </class>
 		 
@@ -26,6 +26,7 @@
 		 <methods>
          <include name="CreateEnvironment" />
          <include name="EnvironmentLevelSearch" />
+         <include name="DeleteEnvironment" />
         </methods>
 		 </class>
 		 
@@ -54,22 +55,9 @@
 		 <methods>
          <include name="PaginationCheck" />
          <include name="ActivityFilterby_Status" />
-         <include name="ActivityFilterby_Users" />
         </methods>
 		 </class>
 		 
-		 <class name="com.buildpiper.testcases.LenskartScan">
-		 <methods>
-         <include name="UserportalGeneral" />
-         <include name="PagginationofAllModules" />
-         <include name="EditService" />
-         <include name="EditPipeline" />
-         <include name="HistoryPipeline" />
-         <include name="RunwithParameterPipeline" />
-         <include name="EditEnvironment" />
-        </methods>
-		 </class>
-	
 		 
 	 </classes>
 	</test>

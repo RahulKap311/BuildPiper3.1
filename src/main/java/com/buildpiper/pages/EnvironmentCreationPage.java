@@ -362,7 +362,7 @@ public class EnvironmentCreationPage extends BasePage {
 
 	public EnvironmentCreationPage DeleteNonEmptyEnvironment(String appName, ArrayList<String> EnvironmentType,
 			String BranchName, String NameSpace, String RegistryName) {
-		String ServiceName="test-";
+		String ServiceName="Automation-";
 		boolean projectSelection = false;
 		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
 		for (WebElement element : poc_qaProjectLink) {

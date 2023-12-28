@@ -50,6 +50,9 @@ public class DeployConfigurationPage extends BasePage {
 	@FindBy(xpath = "//button[@class='btn btn-v2-primary btn-sm']")
 	WebElement addAccessBtn;
 	
+	@FindBy(xpath = "//select[@name='image_pull_policy']")
+	WebElement imagePullPolicy;
+	
 	@FindBy(xpath = "//button[@class='btn btn-submit']")
 	WebElement continueBtn;
 	
@@ -135,6 +138,9 @@ public class DeployConfigurationPage extends BasePage {
 		ui_clearAndSetValue(port, portNumber);
 		ui_clearAndSetValue(targetPort, TargetPort);
 		ui_click(addAccessBtn, "clicks add button");
+		ui_wait(2);
+		Select imagepule=new Select(imagePullPolicy);
+		imagepule.selectByValue("Always");
 		ui_click(continueBtn, "clicks continue button");
 		ui_wait(2);
 		ui_click(continueBtn, "clicks continue button");

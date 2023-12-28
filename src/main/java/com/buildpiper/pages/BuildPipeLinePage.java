@@ -6,8 +6,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.json.simple.JSONObject;
 import org.openqa.selenium.Keys;
@@ -237,6 +239,7 @@ public BuildPipeLinePage RunwithParameter(String appName,String pipeline) {
 		ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
 		ui_clearAndSetValue(searchPipeLine, existingPipelineName);
 		searchPipeLine.sendKeys(Keys.ENTER);
+		ui_wait(4);
 		ui_click(pipeLineExecutionHistory, "view pipeline excution history");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(reExecutePipeLineBtn, Pause.MEDIUM));
 		ui_click(reExecutePipeLineBtn, "view pipeline re-excution history");
@@ -244,16 +247,39 @@ public BuildPipeLinePage RunwithParameter(String appName,String pipeline) {
 		ui_wait(5);
 		ui_IsElementDisplay(ui_waitForElementToDisplay(existingPipeLine, Pause.MEDIUM));
 		ui_click(existingPipeLine, "Poc_QA execution Start");
-		
+		ui_click(jobdrops.get(0), "Expend Build");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(viewLogsLink, Pause.MEDIUM));
 		ui_click(viewLogsLink, "Poc_QA click on View Logs");
 		ui_switchToNewWindow();
+		
+		String parent=ui_getUIDriver().getWindowHandle();
+
+		Set<String>s=ui_getUIDriver().getWindowHandles();
+
+		// Now iterate using Iterator
+		Iterator<String> I1= s.iterator();
+
+		while(I1.hasNext())
+		{
+
+		String child_window=I1.next();
+
+		if(!parent.equals(child_window))
+		{
+		ui_getUIDriver().switchTo().window(child_window);
+
 		ui_IsElementDisplay(ui_waitForElementToDisplay(postHookExecutingSuccessLink, Pause.MEDIUM));
 		ui_click(postHookExecutingSuccessLink, "postHookExecuting click for Console Logs");
 		ui_wait(10);
 		List<String> consoleLogs = ui_getTextForElements("//div[@class='d-grid grid-temp-log-line']//span");
 		boolean status = consoleLogs.get(0).length()>0;
 		Reporter.log("Successful Validate the Console logs", status);
+		ui_getUIDriver().close();
+		}
+
+		}
+		//switch to the parent window
+		ui_getUIDriver().switchTo().window(parent);
 		}
 		return this;
 	}
@@ -643,6 +669,7 @@ public BuildPipeLinePage RunwithParameter(String appName,String pipeline) {
 			ui_click(addStageBtn, "clicks add stage btn");
 			ui_IsElementDisplay(ui_waitForElementToDisplay(stageName, Pause.MEDIUM));
 	        ui_setvalue(stageName, "sets first stage name", StageName);
+	        ui_wait(3);
 			ui_click(addStageBtn, "clicks add stage btn");
 		return this;
 	}	
@@ -2331,8 +2358,122 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 				ui_wait(3);
 				
 				}
-
 		
 }
+
+	@FindBy(xpath = "//button[text()='Save Basic Info']")
+	WebElement saveBasicInfoPipeline;
+	@FindBy(xpath = "(//*[@class='MuiButtonBase-root MuiIconButton-root'])[2]")
+	WebElement deletePipeline;
+	@FindBy(xpath = "//*[@placeholder='Please enter the reason to delete']")
+	WebElement deletePipelineMessage;
+	@FindBy(xpath = "//button[text()='Delete']")
+	WebElement deletepipelineconfrm;
+	@FindBy(xpath = "//div[@class='blank-div-text']")
+	WebElement noPipelineMessage;
+	
+public BuildPipeLinePage EditandDeletePipeline(String appName,String versionType,String retentionCount,String triggerType,ArrayList<String>pipelineUser,String jobType,String fromEnv,String jobType2,String toEnv,String ArtifactName,String jobType3,String ArtifactName2,String prodEnv) {
+		
+//		ui_IsElementDisplay(ui_waitForElementToDisplay(userMenuAppBar, Pause.MEDIUM));
+//		ui_click(userMenuAppBar, "userMenuAppBar");		
+//		ui_click(switchToUSer, "switching to user account");
+		
+		boolean projectSelection = false;
+		ui_wait(5);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for(WebElement element:poc_qaProjectLink) {
+			if(element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if(projectSelection) {
+		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+		ui_click(continueBtn, "clicks on add pipeline button");
+		ui_setvalue(addNameToNewPipeline, "Gives unique name to pipeline", pipelineName);
+		Select dropdown = new Select(selectPipelineVersionDropdown);
+		dropdown.selectByVisibleText(versionType);
+		ui_clearAndSetValue(retentionCountField, retentionCount);
+//		String PipelineSearch = pipelineName;
+		
+		
+        for (int i = 0; i < triggerTypeRadioBtn.size(); i++) {
+        	if (triggerType.contains(triggerTypeRadioBtn.get(i).getAttribute("value").trim()) && !(MUIRadioButtonsChecked.get(i).getAttribute("class").contains("Mui-checked"))) {
+        		ui_click(triggerTypeRadioBtn.get(i),"Selecting the Radio button named as -"+triggerTypeRadioBtn.get(i).getAttribute("value").trim());
+        		break;
+        	}
+        }
+     	
+        ui_wait(5);
+        for (int i = 0; i < pipelineAssignUserRoleCheckbox.size(); i++) {
+        	if (pipelineUser.contains(pipelineAssignUserRoleCheckbox.get(i).getAttribute("value").trim())) {
+        		
+        		ui_ActionMoveAndClick(pipelineAssignUserRoleCheckbox.get(i),"Clicking on radio Button-"+pipelineAssignUserRoleCheckbox.get(i));
+        	}
+        		//.click();        	}
+        }
+        ui_wait(5);
+        ui_click(savePipeline, "clicks on save pipeline button");
+        ui_wait(3);      
+		// adds first stage		
+        ui_click(addNewStageToPipeline, "adds first stage"); 
+		ui_IsElementDisplay(ui_waitForElementToDisplay(stageName, Pause.MEDIUM));
+        ui_setvalue(stageName, "sets first stage name", StageName1);
+        ui_wait(5);
+        ui_click(addStageBtn, "adds button for first stage");
+		ui_IsElementDisplay(ui_waitForElementToDisplay(addNewJobBtn, Pause.MEDIUM));
+		//ui_click(addNewJobBtn, "clicks on new job");  
+		
+		// adds build job to dev
+		AddNewJobButtonClick();
+		createBuildJob(jobType, fromEnv, false, true, true, true, true, true);
+		
+        // adds deploy job to dev
+		AddNewJobButtonClick();
+		createDeployJob(jobType2, fromEnv, ArtifactName, true, true, true, true, true);
+		
+        // adds second stage
+        AddNewStage(StageName2);
+        
+        // adds promote job from dev
+        AddNewJobButtonClickUnderSecondStage();
+    	createPromoteJob(jobType3, fromEnv, toEnv, ArtifactName2, true, true, true, true);
+			
+		ui_wait(3);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(saveWorkFlowBtn, Pause.MEDIUM));
+        ui_click(saveWorkFlowBtn, "clicks save workflow btn");
+        ui_wait(6);
+        ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
+		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+        ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+		ui_clearAndSetValue(searchPipeLine, pipelineName);
+		searchPipeLine.sendKeys(Keys.ENTER);
+		ui_wait(3);
+		ui_click(firstpipelineEditLink, "first pipeline EditLink");
+		ui_click(editPipelineInfo, "clicks on edit pipeline info");
+		ui_IsElementDisplay(ui_waitForElementToDisplay(basicInfoText, Pause.MEDIUM));
+	   ui_click(basicInfoText, "basicInfoText");
+	   String updatedPipeline=pipelineName+"123";
+	   ui_clearAndSetValue(addNameToNewPipeline, updatedPipeline);
+	   ui_click(saveBasicInfoPipeline, "saveBasicInfoPipeline");
+	   ui_wait(6);
+       ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
+	   ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+       ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+		ui_clearAndSetValue(searchPipeLine, updatedPipeline);
+		searchPipeLine.sendKeys(Keys.ENTER);
+		ui_wait(3);
+		Assert.assertEquals(pipelineHyperLink.getText(), updatedPipeline);
+		ui_click(deletePipeline, "deletePipeline");
+	    ui_IsElementDisplay(ui_waitForElementToDisplay(deletePipelineMessage, Pause.MEDIUM));
+		ui_setvalue(deletePipelineMessage, "deletePipelineMessage", "Automation");
+		ui_click(deletepipelineconfrm, "deletepipelineconfrm");
+		ui_wait(3);
+		Assert.assertEquals(noPipelineMessage.getText(), "You have 0 pipeline associated with this app");
+		
+		}
+		return this;
+	}	
 
 }

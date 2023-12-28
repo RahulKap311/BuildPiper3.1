@@ -214,6 +214,38 @@ public class BuildPiperTestcasesExecution extends BaseTest {
 		new BuildPipeLinePage().runwithParameter();
 		
 	}
+	
+	@Test(groups = { "Regression" },priority = 1)
+	@RetryCountIfFailed(2)	
+	public void EditPipeline() {
+		
+		ArrayList<String> userRoleList = new ArrayList<String>();
+		userRoleList.add("DEV");
+		userRoleList.add("QA");
+		userRoleList.add("DEVOPS");
+		int RowNumber=reader.getRowByTestCaseName("Pipeline", "EditPipeline");
+		
+		String ApplicationName=reader.getCellData("Pipeline", "applicationName", RowNumber);
+		String VersionType=reader.getCellData("Pipeline", "versionType", RowNumber);
+		String RetentionCount=reader.getCellData("Pipeline", "retentionCount", RowNumber);
+		String TriggerType=reader.getCellData("Pipeline", "triggerType", RowNumber);
+		String JobType=reader.getCellData("Pipeline", "jobType", RowNumber);
+		String EnvFrom=reader.getCellData("Pipeline", "fromEnv", RowNumber);
+		String JobType2=reader.getCellData("Pipeline", "jobType2", RowNumber);
+		String ToEnv=reader.getCellData("Pipeline", "toEnv", RowNumber);
+		String ArtifactName=reader.getCellData("Pipeline", "ArtifactName", RowNumber);
+		String JobType3=reader.getCellData("Pipeline", "jobType3", 2);
+		String ArtifactName2=reader.getCellData("Pipeline", "ArtifactName2", RowNumber);
+		String ProdEnv=reader.getCellData("Pipeline", "prodEnv", RowNumber);
+		
+		//new LoginPage().login(config.username(), config.password());
+		//RK
+		new PreRequisitesPage().switchUser();
+		ui_wait(4);
+		new BuildPipeLinePage().EditandDeletePipeline(ApplicationName,VersionType,RetentionCount,TriggerType,userRoleList,JobType,EnvFrom,JobType2,ToEnv,ArtifactName,JobType3,ArtifactName2,ProdEnv);
+		//new BuildPipeLinePage().executeBasicPipeline();
+		
+	}
 
 	
 }

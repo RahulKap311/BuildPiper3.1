@@ -72,6 +72,13 @@ public class ExcelUtility {
 				this.sheet = workbook.getSheetAt(0);
 				load();	
 			}
+			if(Configuration.get("environment").equals("demo")) {
+				String filePath= System.getProperty("user.dir")+Configuration.get("testDataLocation3");
+				FileInputStream excelFile=new FileInputStream(new File(filePath));
+				workbook = new XSSFWorkbook(excelFile);
+				this.sheet = workbook.getSheetAt(0);
+				load();	
+			}
 			
 		} catch (IOException e) {
 			Log.info("");
