@@ -54,6 +54,8 @@ public class LoginPage extends BasePage {
 	public LoginPage() {
 
 		ui_launch(config.url());
+		ui_getUIDriver().navigate().refresh();
+		ui_wait(2);
 		ui_waitForPageLoad();
 
 	}

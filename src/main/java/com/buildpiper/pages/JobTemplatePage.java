@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.buildpiper.base.BasePage;
 import com.buildpiper.utils.Pause;
+import com.buildpiper.utils.RandomStrings;
+
+import groovyjarjarantlr4.v4.parse.ANTLRParser.throwsSpec_return;
 
 public class JobTemplatePage extends BasePage {
 
@@ -19,10 +24,10 @@ public class JobTemplatePage extends BasePage {
 	@FindBy(xpath = "//button//span[2][@class='flaticon-expand-arrow']/../..//div//span[@title='Job Templates']")
 	WebElement jobTemplateLink;
 
-	@FindBy(xpath = "//div[text()='perfeasy-testing-v3']")
+	@FindBy(xpath = "//div[contains(text(),'perfeasy-testing-')]")
 	WebElement v3TemplateName;
 
-	@FindBy(xpath = "//div//p//div[text()='perfeasy-testing-v3']/../../../../..//a[@class='text-anchor-blue'][contains(@href,'/application/')][contains(@href,'/application/')]")
+	@FindBy(xpath = "//div//p//div[contains(text(),'perfeasy-testing-')]/../../../../..//a[@class='text-anchor-blue'][contains(@href,'/application/')][contains(@href,'/application/')]")
 	WebElement jobTemplateEditLink;
 
 	@FindBy(xpath = "//label[text()='integration_Job']/..//button[@class='transparent-btn nowrap']")
@@ -111,6 +116,7 @@ public class JobTemplatePage extends BasePage {
 
 			ui_IsElementDisplay(ui_waitForElementToDisplay(jobTemplateLink, Pause.MEDIUM));
 			ui_click(jobTemplateLink, "User clicks on job template link in left panel");
+			ui_wait(2);
 			ui_IsElementDisplay(ui_waitForElementToDisplay(v3TemplateName, Pause.MEDIUM));
 			ui_click(jobTemplateEditLink, "User clicks on job template edit");
 			ui_click(jiraIntegrationJobEyeLink, "User Clicks on eye button over Integration Job");
@@ -211,6 +217,232 @@ public class JobTemplatePage extends BasePage {
 
 		return this;
 
+	}
+	
+	@FindBy(xpath = "//a[text()='New Job Templates']")
+	WebElement addNewTemplatebutton;
+	@FindBy(xpath = "//label[@class='switch']/span[@class='switch-handle']")
+	WebElement cloneTemplateSwitchbutton;
+	@FindBy(xpath = "//input[@placeholder='Enter Name']")
+	WebElement templateNamefield;
+	@FindBy(xpath = "//textarea[@name='description']")
+	WebElement templateDescription;
+	@FindBy(xpath = "//span[text()='Save']")
+	WebElement saveButton;
+	@FindBy(xpath = "//select[@name='clone_template']/option")
+	List<WebElement> cloneTemplateDropdownOptions;
+	@FindBy(xpath = "(//div[@class='template-name-ellipsis'])[1]")
+	WebElement createdtemplateName;
+	@FindBy(xpath = "(//div[@class='d-flex align-center']//a[@class='text-anchor-blue'])[1]")
+	WebElement firsttemplateEditbutton;
+	@FindBy(xpath = "(//div[@class='d-flex align-center']//button[@class='MuiButtonBase-root MuiIconButton-root'])[1]")
+	WebElement firsttemplateDeletebutton;
+	@FindBy(xpath = "(//div[@class='overlay-wrap']/div[text()='Select step'])[1]")
+	WebElement selectFirstStep;
+	@FindBy(xpath = "(//button[@class='btn btn-submit'])[2]")
+	WebElement saveStepWindow;
+	@FindBy(xpath = "//div[@class='d-flex align-centre']/button")
+	List<WebElement> kebobIcon;
+	@FindBy(xpath = "//label[text()='View Step']")
+	List<WebElement> viewStep;
+	@FindBy(xpath = "//div[@class='env-var-table']/following-sibling::div/label")
+	WebElement viewStepVariablevalue;
+	@FindBy(xpath = "//div[text()='Edit Step']")
+	List<WebElement> editStep;
+	@FindBy(xpath = "//input[@name='rest_api']")
+	WebElement editStepInputField;
+	@FindBy(xpath = "//div[text()='Delete Step']")
+	List<WebElement> deleteStep;
+	@FindBy(xpath = "//label[text()='Step : Slack Notification']")
+	WebElement slackPopupheading;
+	@FindBy(xpath = "(//button[@class='MuiButtonBase-root MuiIconButton-root'])[3]")
+	WebElement closeSlackPopup;
+	@FindBy(xpath = "//button[text()='Back']")
+	WebElement backTemplatebutton;
+	@FindBy(xpath = "//input[@placeholder='Please enter the reason to delete']")
+	WebElement deleteConfirmation;
+	@FindBy(xpath = "//button[text()='Delete']")
+	WebElement deleteButton;
+	
+	public JobTemplatePage AddNewTemplate(String appName, String templateName) {
+
+		boolean projectSelection = false;
+		ui_wait(5);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			
+			ui_IsElementDisplay(ui_waitForElementToDisplay(jobTemplateLink, Pause.MEDIUM));
+			ui_click(jobTemplateLink, "User clicks on job template link in left panel");
+			ui_wait(2);
+			ui_click(addNewTemplatebutton, "Add New Template Button");
+			ui_wait(2);
+			ui_click(cloneTemplateSwitchbutton, "cloneTemplateSwitchbutton");
+			boolean flag=false;
+			for(int i=0;i<cloneTemplateDropdownOptions.size();i++) {
+				
+				if(cloneTemplateDropdownOptions.get(i).getText().contains("perfeasy-testing")) {
+					flag=true;
+				}			
+			}
+			if(flag=false) {
+				throw new ElementNotVisibleException("Element not Found");
+			}	
+			ui_click(cloneTemplateSwitchbutton, "cloneTemplateSwitchbutton");
+			ui_wait(2);
+			ui_setvalue(templateNamefield, "templateName", templateName);
+			ui_wait(2);
+			ui_setvalue(templateDescription, "templateDescription", "test");
+			ui_wait(2);
+			ui_click(saveButton, "saveButton");
+			ui_wait(2);
+			Assert.assertEquals(createdtemplateName.getText(), templateName);
+			ui_click(firsttemplateEditbutton, "firsttemplateEditbutton");
+			
+			ui_click(addNewIntegrationStep, "User clicks on add new step for integration job");
+			ui_wait(2);
+			ui_click(selectFirstStep, "select FirstStep");
+			ui_wait(2);
+			ui_click(saveStepWindow, "save StepWindow");
+			ui_wait(2);
+			ui_click(saveStep, "User clicks on save step button");
+			ui_wait(4);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(kebobIcon.get(0), Pause.MEDIUM));
+			int size=kebobIcon.size()-1;
+			// View Step
+			ui_click(kebobIcon.get(size), "kebobIcon");
+			for(int i=0;i<viewStep.size();i++) {
+				if(ui_IsElementDisplay(viewStep.get(i))){
+					ui_click(viewStep.get(i), "view Step Click");
+					
+				}
+			}
+			Assert.assertEquals(ui_IsElementPresent(slackPopupheading, "4"), true);
+			Assert.assertEquals(viewStepVariablevalue.getText(), "test");
+			ui_click(closeSlackPopup, "closeSlackPopup");
+			
+			//Edit Step
+			ui_click(kebobIcon.get(size), "kebobIcon");
+			for(int i=0;i<editStep.size();i++) {
+				if(ui_IsElementDisplay(editStep.get(i))){
+					ui_click(editStep.get(i), "edit Step Click");
+					
+				}
+			}
+			ui_wait(2);
+			ui_setvalue(editStepInputField, "editStepInputField", "123");
+			ui_wait(2);
+			ui_click(saveStepWindow, "save StepWindow");
+			ui_wait(2);
+			
+			//After Edit Verify Detail on View Step
+			ui_click(kebobIcon.get(size), "kebobIcon");
+			for(int i=0;i<viewStep.size();i++) {
+				if(ui_IsElementDisplay(viewStep.get(i))){
+					ui_click(viewStep.get(i), "view Step Click");
+					
+				}
+			}
+			ui_wait(2);
+			Assert.assertEquals(ui_IsElementPresent(slackPopupheading, "4"), true);
+			Assert.assertEquals(viewStepVariablevalue.getText(), "test123");
+			ui_click(closeSlackPopup, "closeSlackPopup");						
+			
+			//Delete Step
+			ui_click(kebobIcon.get(size), "kebobIcon");
+			for(int i=0;i<deleteStep.size();i++) {
+				if(ui_IsElementDisplay(deleteStep.get(i))){
+					ui_click(deleteStep.get(i), "delete Step Click");
+					
+				}
+			}
+			ui_click(backTemplatebutton, "back Template button");
+			ui_wait(2);
+			ui_click(firsttemplateDeletebutton, "first template Delete button");
+			ui_wait(2);
+			ui_setvalue(deleteConfirmation, "deleteConfirmation", "Automation");
+			ui_wait(2);
+			ui_click(deleteButton, "delete Button");
+		}
+		return this;
+	}
+	
+	@FindBy(xpath = "(//li//a[contains(@class,'main-nav-1')]//span/span[@class='color-black'])[1]")
+	WebElement poc_stepCatelog;
+	@FindBy(xpath = "//a[text()='New Step']")
+	WebElement newStepButton;
+	@FindBy(xpath = "//input[@placeholder='Clone Repository']")
+	WebElement stepNameField;
+	@FindBy(xpath = "//input[@placeholder='Step Code (Must be Unique)']")
+	WebElement stepCodeField;
+	@FindBy(xpath = "(//input[@name='category'])[1]")
+	WebElement stepCategoryAllCheckbox;
+	@FindBy(xpath = "(//input[@name='container_type'])[1]")
+	WebElement containertypeRadiobutton;
+	@FindBy(xpath = "//input[@name='image_name_with_tag']")
+	WebElement dockerImagetag;
+	@FindBy(xpath = "//select[@name='mount_path']")
+	WebElement mountNameDropdown;
+	@FindBy(xpath = "(//input[@name='data_requirement'])[1]")
+	WebElement buildDataPathCheckbox;
+	@FindBy(xpath = "//select[@name='input_type']")
+	WebElement variableDataTypeDropdown;
+	@FindBy(xpath = "//input[@name='key']")
+	WebElement variableName;
+	@FindBy(xpath = "//input[@name='default_value']")
+	WebElement variableValue;
+	@FindBy(xpath = "//button[text()='Save']")
+	WebElement saveNewStep;
+	@FindBy(xpath = "//button[@class='transparent-btn nowrap']//*[@class='MuiSvgIcon-root MuiSvgIcon-fontSizeLarge']")
+	WebElement stepKebobIcon;
+	@FindBy(xpath = "//label[text()='Delete']")
+	WebElement deleteNewStep;
+	public JobTemplatePage AddNewStep() {
+
+		boolean projectSelection = false;
+		ui_wait(5);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_stepCatelog, Pause.MEDIUM));
+		ui_click(poc_stepCatelog, "Step Catalog");
+		projectSelection = true;
+		if (projectSelection) {
+			
+			ui_IsElementDisplay(ui_waitForElementToDisplay(newStepButton, Pause.MEDIUM));
+			ui_click(newStepButton, "New Step Button");
+			ui_wait(2);
+			ui_setvalue(stepNameField, "stepNameField", "New Step1");
+			ui_wait(2);
+			ui_setvalue(stepCodeField, "stepCodeField", "test");
+			ui_wait(1);
+			ui_click(stepCategoryAllCheckbox, "stepCategoryAllCheckbox");
+			ui_wait(1);
+			ui_setvalue(dockerImagetag, "dockerImagetag", "test");
+			ui_wait(1);			
+			ui_click(containertypeRadiobutton, "containertypeRadiobutton");
+			Select mountname=new Select(mountNameDropdown);
+			mountname.selectByVisibleText("Docker daemon file");
+			ui_wait(1);
+			ui_click(buildDataPathCheckbox, "stepCategoryAllCheckbox");
+			ui_wait(1);
+			Select datatype=new Select(variableDataTypeDropdown);
+			datatype.selectByVisibleText("Text box");
+			ui_wait(2);
+			ui_setvalue(variableName, "variableName", "rest_api");
+			ui_wait(2);
+			ui_setvalue(variableValue, "variableValue", "test");
+			ui_wait(1);
+			ui_click(saveNewStep, "save NewStep");
+			ui_wait(4);
+			ui_click(stepKebobIcon, "step KebobIcon");
+			ui_wait(1);
+			ui_click(deleteNewStep, "Delete Created Step");
+		}
+		return this;
 	}
 
 }

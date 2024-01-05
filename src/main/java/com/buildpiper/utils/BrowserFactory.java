@@ -29,6 +29,8 @@ public class BrowserFactory {
 			WebDriverManager.chromedriver().setup();
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			ChromeOptions options = new ChromeOptions();
+			//options.addArguments("--headless");
+		    //options.addArguments("--disable-gpu");
 		   // options.addArguments("--incognito");
 			driver = new ChromeDriver(options);
 			String resolution=Configuration.get("BrowserSize");

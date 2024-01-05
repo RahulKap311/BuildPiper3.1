@@ -44,7 +44,7 @@ public class BuildPiperTestcasesExecution extends BaseTest {
 	    }
 	   @AfterMethod
 	    public void StopDriver() {
-	    	ui_getUIDriver().quit();
+	    ui_getUIDriver().quit();
 	    }
 	
 	@Test(groups = { "Regression" },priority = 0)

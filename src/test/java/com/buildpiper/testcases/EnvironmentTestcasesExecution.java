@@ -290,6 +290,31 @@ public class EnvironmentTestcasesExecution extends BaseTest {
 				reader.getCellData("Environment", "selectNamespace", 2),
 				reader.getCellData("Environment", "selectRegistry", 2));
 	}
+	
+	@Test(groups = { "Regression" }, priority = 0)
+//	@RetryCountIfFailed(2)
+	public void EditEnvironmentDetail() throws Exception {
+    ArrayList<String> list = new ArrayList<String>();
+	list.add("qa");
+	// list.add("dev");
+	// list.add("staging");
+	// list.add("uat");
+	// list.add("prod");
+
+	ArrayList<String> configTypelist = new ArrayList<String>();
+	// configTypelist.add("Upload Custom Manifest file / GitOps");
+	configTypelist.add("Guided Form");
+	// configTypelist.add("Use Editor");
+		//new LoginPage().login(config.username(), config.password());
+		new PreRequisitesPage().switchUser();
+		ui_wait(5);
+		new EnvironmentCreationPage().EditEnvironmentDetail(
+				reader.getCellData("Environment", "applicationName", 2), list,
+				reader.getCellData("Environment", "selectCluster", 2),
+				reader.getCellData("Environment", "selectNamespace", 2),
+				reader.getCellData("Environment", "selectRegistry", 2));
+		ui_wait(5);
+	}
 
 	@Test(groups = { "Regression" }, priority = 0)
 //	@RetryCountIfFailed(2)

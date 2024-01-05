@@ -2371,6 +2371,10 @@ public BuildPipeLinePage createSCMPollPipeline(String appName,String versionType
 	WebElement deletepipelineconfrm;
 	@FindBy(xpath = "//div[@class='blank-div-text']")
 	WebElement noPipelineMessage;
+	@FindBy(xpath = "//div[text()='UPDATE']")
+	WebElement updateStagebutton;
+	@FindBy(xpath = "(//div[@class='pipeline-stage-card']//div/p)[3]")
+	WebElement thridStagename;
 	
 public BuildPipeLinePage EditandDeletePipeline(String appName,String versionType,String retentionCount,String triggerType,ArrayList<String>pipelineUser,String jobType,String fromEnv,String jobType2,String toEnv,String ArtifactName,String jobType3,String ArtifactName2,String prodEnv) {
 		
@@ -2425,18 +2429,18 @@ public BuildPipeLinePage EditandDeletePipeline(String appName,String versionType
 		ui_IsElementDisplay(ui_waitForElementToDisplay(addNewJobBtn, Pause.MEDIUM));
 		//ui_click(addNewJobBtn, "clicks on new job");  
 		
-		// adds build job to dev
+		// add build job to dev
 		AddNewJobButtonClick();
 		createBuildJob(jobType, fromEnv, false, true, true, true, true, true);
 		
-        // adds deploy job to dev
+        // add deploy job to dev
 		AddNewJobButtonClick();
 		createDeployJob(jobType2, fromEnv, ArtifactName, true, true, true, true, true);
 		
-        // adds second stage
+        // add second stage
         AddNewStage(StageName2);
         
-        // adds promote job from dev
+        // add promote job from dev
         AddNewJobButtonClickUnderSecondStage();
     	createPromoteJob(jobType3, fromEnv, toEnv, ArtifactName2, true, true, true, true);
 			
@@ -2444,12 +2448,16 @@ public BuildPipeLinePage EditandDeletePipeline(String appName,String versionType
 		ui_IsElementDisplay(ui_waitForElementToDisplay(saveWorkFlowBtn, Pause.MEDIUM));
         ui_click(saveWorkFlowBtn, "clicks save workflow btn");
         ui_wait(6);
+		
+        //Search pipeline and Run Pipeline and Edit pipeline Name
         ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
 		ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
         ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
 		ui_clearAndSetValue(searchPipeLine, pipelineName);
 		searchPipeLine.sendKeys(Keys.ENTER);
 		ui_wait(3);
+		ui_click(runPipeline, "Poc_QA runPipeline");
+		ui_wait(30);			
 		ui_click(firstpipelineEditLink, "first pipeline EditLink");
 		ui_click(editPipelineInfo, "clicks on edit pipeline info");
 		ui_IsElementDisplay(ui_waitForElementToDisplay(basicInfoText, Pause.MEDIUM));
@@ -2465,6 +2473,69 @@ public BuildPipeLinePage EditandDeletePipeline(String appName,String versionType
 		searchPipeLine.sendKeys(Keys.ENTER);
 		ui_wait(3);
 		Assert.assertEquals(pipelineHyperLink.getText(), updatedPipeline);
+		
+		// Add New Stage into existing Pipeline
+		ui_click(firstpipelineEditLink, "first pipeline EditLink");
+		ui_wait(6);
+		AddNewStage(StageName3);
+	   AddNewJobButtonClickUnderThirdStage();
+	   createJiraJob("Jira Ticket","Create Ticket","Task","Initiating production release for services","BDS-1",true,true,true,true,true);
+		ui_IsElementDisplay(ui_waitForElementToDisplay(saveWorkFlowBtn, Pause.MEDIUM));
+        ui_click(saveWorkFlowBtn, "clicks save workflow btn");
+        
+        // Edit Stage and Add New Job into New Stage
+     	ui_wait(6);
+     	EditStage3();
+     	String Stagename=stageName.getText();
+     	String UpdatedStagename="Stage3";
+     	ui_wait(3);
+     	ui_clearAndSetValue(stageName, UpdatedStagename);
+   		ui_IsElementDisplay(ui_waitForElementToDisplay(updateStagebutton, Pause.MEDIUM));
+   		ui_click(updateStagebutton, "updateStagebutton");   		
+     	ui_wait(4);
+   		Assert.assertEquals(UpdatedStagename, thridStagename.getText());   		
+   		ui_wait(3);
+   		
+   		//Edit Job
+   		ui_click(fourthJobKabobIcon, "fourthJobKabobIcon");
+   		for(int i=0;i<EditjobList.size();i++) {
+   			if(ui_IsElementDisplay(EditjobList.get(i))) {
+   				ui_click(EditjobList.get(i), "Edit Job");
+   			}
+   		}
+   		ui_wait(2);
+   		ui_clearAndSetValue(summary, "BDS-02");
+   		ui_wait(2);
+   		ui_click(updateStagebutton, "update job button");   
+   		ui_wait(2);
+   		ui_click(updateStagebutton, "update job button");  
+   		
+   		//Delete Job
+   		ui_click(fourthJobKabobIcon, "fourthJobKabobIcon");
+   		for(int i=0;i<DeletejobList.size();i++) {
+   			if(ui_IsElementDisplay(DeletejobList.get(i))) {
+   				ui_click(DeletejobList.get(i), "Delete Job");
+   			}
+   		}
+   		ui_wait(3);
+   		
+   		//Delete Stage and Verify Stage is Deleted
+   		ui_click(stagekabobIcon3, "stagekabobIcon3");
+   		for(int i=0;i<DeleteStageList.size();i++) {
+   			if(ui_IsElementDisplay(DeleteStageList.get(i))) {
+   				ui_click(DeleteStageList.get(i), "Delete Stage");
+   			}
+   		}
+        Assert.assertEquals(ui_IsElementPresent(thridStagename, "3"), false);
+   		
+        //Delete Pipeline
+   	    ui_wait(6);
+        ui_IsElementDisplay(ui_waitForElementToDisplay(pipelineOverviewLink, Pause.MEDIUM));
+	    ui_click(pipelineOverviewLink, "Poc_QA pipelineOverviewLink");
+        ui_IsElementDisplay(ui_waitForElementToDisplay(searchPipeLine, Pause.MEDIUM));
+		ui_clearAndSetValue(searchPipeLine, updatedPipeline);
+		searchPipeLine.sendKeys(Keys.ENTER);
+		ui_wait(3);
 		ui_click(deletePipeline, "deletePipeline");
 	    ui_IsElementDisplay(ui_waitForElementToDisplay(deletePipelineMessage, Pause.MEDIUM));
 		ui_setvalue(deletePipelineMessage, "deletePipelineMessage", "Automation");
@@ -2475,5 +2546,32 @@ public BuildPipeLinePage EditandDeletePipeline(String appName,String versionType
 		}
 		return this;
 	}	
+
+@FindBy(xpath = "(//div[@class='if-Approval']/following-sibling::span)[3]")
+WebElement stagekabobIcon1;
+@FindBy(xpath = "(//div[@class='if-Approval']/following-sibling::span)[3]")
+WebElement stagekabobIcon2;
+@FindBy(xpath = "(//div[@class='if-Approval']/following-sibling::span)[3]")
+WebElement stagekabobIcon3;
+@FindBy(xpath = "//ul[@class='MuiList-root MuiMenu-list MuiList-padding']//li[text()=' Edit Stage']")
+List<WebElement> EditStagelist;
+@FindBy(xpath = "(//div[@class='more-option']/span)[4]")
+WebElement fourthJobKabobIcon;
+@FindBy(xpath = "//ul[@class='MuiList-root MuiMenu-list MuiList-padding']//li[text()=' Edit Job']")
+List<WebElement> EditjobList;
+@FindBy(xpath = "//ul[@class='MuiList-root MuiMenu-list MuiList-padding']//li[text()=' Delete Job']")
+List<WebElement> DeletejobList;
+@FindBy(xpath = "//ul[@class='MuiList-root MuiMenu-list MuiList-padding']//li[text()=' Delete Stage']")
+List<WebElement> DeleteStageList;
+
+public BuildPipeLinePage EditStage3() {
+ui_click(stagekabobIcon3, "stagekabobIcon3");
+for(int i=0;i<EditStagelist.size();i++) {
+	if(ui_IsElementDisplay(EditStagelist.get(i))) {
+		ui_click(EditStagelist.get(i), "Edit Stage");
+	}
+}
+return this;
+}
 
 }

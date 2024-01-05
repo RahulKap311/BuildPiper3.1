@@ -298,6 +298,69 @@ public class EnvironmentCreationPage extends BasePage {
 	
 	@FindBy(xpath = "//div[@class='dialogue-heading']")
 	WebElement errorMessagePopupforDeleteEnvironnment;
+	@FindBy(xpath = "//a[@class='text-anchor-blue']/p")
+	WebElement firstEnvironmentLink;
+	
+	public EnvironmentCreationPage EditEnvironmentDetail(String appName, ArrayList<String> EnvironmentType,
+			String BranchName, String NameSpace, String RegistryName) {
+		boolean projectSelection = false;
+		ui_IsElementDisplay(ui_waitForElementToDisplay(poc_qaProjectLink.get(0), Pause.MEDIUM));
+		for (WebElement element : poc_qaProjectLink) {
+			if (element.getText().trim().equalsIgnoreCase(appName)) {
+				element.click();
+				projectSelection = true;
+				break;
+			}
+		}
+		if (projectSelection) {
+			ui_IsElementDisplay(ui_waitForElementToDisplay(environmentOverview, Pause.MEDIUM));
+			ui_click(environmentOverview, "clicks on environment overview tab under applicartion name");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(addNewEnvironment, Pause.MEDIUM));
+			ui_click(addNewEnvironment, "clicks on add new environment button");
+			ui_IsElementDisplay(ui_waitForElementToDisplay(environmentName, Pause.LOW));
+			ui_setvalue(environmentName, "", EnvironmentName);
+			// environmentTypeCheckbox.get(0).click();
+			for (int i = 0; i < environmentTypeCheckbox.size(); i++) {
+				if (EnvironmentType.contains(environmentTypeCheckbox.get(i).getAttribute("value").trim())) {
+					environmentTypeCheckbox.get(i).click();
+				}
+			}
+			ui_wait(2);
+			if (manualBuildYes.getAttribute("value").equals("false"))
+				ui_click(manualBuildYes, "Poc_QA allowManualBuildYes");
+			if (manualDeployYes.getAttribute("value").equals("false"))
+				ui_click(manualDeployYes, "Poc_QA allowManualDeployYes");
+			// ui_selectValueFromDropDownByXPath(selectCluster, "Selects cluster Name");
+			Select dropdown = new Select(selectCluster);
+			dropdown.selectByVisibleText(BranchName);
+			ui_selectValueFromDropDownByXPath(selectNameSpace, "Selects namespace");
+			Select dropdown1 = new Select(selectNameSpace);
+			dropdown1.selectByVisibleText(NameSpace);
+			ui_selectValueFromDropDownByXPath(selectRegistry, "Selects Registry");
+			Select dropdown2 = new Select(selectRegistry);
+			dropdown2.selectByVisibleText(RegistryName);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(continueBtn, Pause.MEDIUM));
+			ui_click(continueBtn, "user clicks save button");
+			ui_wait(3);
+			ui_clearAndSetValue(envSearchByName, EnvironmentName);
+			envSearchByName.sendKeys(Keys.ENTER);
+			ui_wait(3);
+			ui_click(firstEnvironmentEditLink, "first Environment Edit Link");
+			ui_wait(3);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(environmentName, Pause.LOW));
+			String UpdateEnvironment=EnvironmentName+"123";
+			ui_clearAndSetValue(environmentName, UpdateEnvironment);
+			ui_wait(2);
+			ui_IsElementDisplay(ui_waitForElementToDisplay(continueBtn, Pause.MEDIUM));
+			ui_click(continueBtn, "user clicks save button");
+			ui_wait(2);
+			ui_clearAndSetValue(envSearchByName, UpdateEnvironment);
+			envSearchByName.sendKeys(Keys.ENTER);
+			ui_wait(3);
+			Assert.assertEquals(firstEnvironmentLink.getText(), UpdateEnvironment);
+		}
+		return this;
+		}
 	
 	public EnvironmentCreationPage DeleteEmptyEnvironment(String appName, ArrayList<String> EnvironmentType,
 			String BranchName, String NameSpace, String RegistryName) {
